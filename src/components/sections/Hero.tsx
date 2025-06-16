@@ -4,6 +4,7 @@ import Link from "next/link"
 import { FileText, Briefcase, User} from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
+import { EmailButton } from "./EmailButton"
 
 const links = [
   { name: "About", href: "/about", icon: User },
@@ -21,7 +22,7 @@ const links = [
 export function Hero() {
   return (
     <section className="flex flex-col items-center justify-center min-h-[calc(100vh-200px)] text-center space-y-10 px-4">
-     
+      <EmailButton />
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}

@@ -36,11 +36,11 @@ export function Footer() {
       <div className="container mx-auto max-w-4xl py-4">
         <div className="flex flex-col items-center space-y-3">
           {/* Controls and Stats in a single row */}
-          <div className="flex flex-wrap items-center justify-center gap-2">
+          <div className="flex flex-wrap items-center justify-center gap-3">
             <VisitorCount />
             <TimeSpent />
             <MusicPlayer />
-            <div className="flex gap-1">
+            <div className="flex gap-2">
               <Button
                 variant="ghost"
                 size="icon"

@@ -51,7 +51,7 @@ export function MessageBox() {
       <DialogTrigger asChild>
         <Button
           variant="outline"
-          className="fixed bottom-6 right-6 z-50 rounded-full p-3 shadow-lg hover:bg-primary hover:text-white transition"
+          className="fixed top-8 right-6 z-50 rounded-full p-3 shadow-lg hover:bg-primary hover:text-white transition"
         >
           <MessageSquare className="h-5 w-5" />
         </Button>
