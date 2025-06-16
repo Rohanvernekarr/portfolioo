@@ -2,31 +2,50 @@
 
 import { Sparkles, ArrowLeft } from "lucide-react"
 import { useRouter } from "next/navigation"
+import Image from "next/image"
 
 export default function AboutPage() {
   const router = useRouter()
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-16 space-y-16">
+      {/* Top Banner Image */}
+     
+
       {/* Back Button */}
       <button
         onClick={() => router.back()}
-        className="flex items-center text-sm font-medium text-muted-foreground hover:text-foreground transition mb-4"
+        className="flex items-center text-sm font-medium text-muted-foreground hover:text-foreground transition"
       >
         <ArrowLeft className="h-4 w-4 mr-1" />
         Go back
       </button>
+      <div className="relative w-full h-60 md:h-72 lg:h-80 rounded-xl overflow-hidden  mb-4">
+        <Image
+          src="/about-banner.jpg" 
+          alt="About Rohan Banner"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center">
+          <h1 className="text-4xl font-serif tracking-tight text-foreground">
+          <span className="text-primary ">Crafting Code , {" "}</span> 
+          Shaping Tomorrow’s Web ✨
+          </h1>
+        </div>
+      </div>
 
       {/* About Me Section */}
       <section className="text-center space-y-4">
-        <h1 className="text-5xl font-extrabold tracking-tight text-foreground">
-          Hello, I'm <span className="text-primary">Rohan</span> 👋
+        <h1 className="text-4xl font-serif tracking-tight text-foreground">
+          <span className="text-primary">Rohan Vernekar</span> 👋
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          A <span className="text-primary font-medium">Full-Stack Developer</span> who crafts fast,
-          responsive, and intelligent web apps. I build <span className="font-medium">AI tools</span>, scale{" "}
-          <span className="font-medium">MERN dashboards</span>, and love making the web more beautiful.
-        </p>
+  A <span className="text-primary font-medium">Full-Stack Developer</span> based in <span className="font-medium">Bengaluru</span> who crafts fast,
+  responsive, and intelligent web apps. I build <span className="font-medium">AI tools</span> and love making the web more beautiful.
+</p>
+
       </section>
 
       {/* Skills Section */}
@@ -54,7 +73,7 @@ export default function AboutPage() {
 
       {/* Projects Section */}
       <section className="space-y-6">
-        <h2 className="text-3xl font-semibold text-center">🚀 Projects</h2>
+        <h2  className="text-3xl font-semibold text-center">🚀 Projects </h2>
         <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2">
           {[{
               title: "BioMLStudio",
