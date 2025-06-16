@@ -58,7 +58,7 @@ export default function AboutPage() {
         />
         <div className="absolute inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center">
           <h1 className="text-4xl font-serif tracking-tight text-foreground text-center px-4">
-            <span className="text-primary">Crafting Code</span>, Shaping Tomorrow’s Web ✨
+            <span className="dark:text-primary text-zinc-200">Crafting Code, Shaping Tomorrow’s Web ✨</span>
           </h1>
         </div>
       </div>
