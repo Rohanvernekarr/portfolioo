@@ -25,7 +25,7 @@ export function TimeSpent() {
   return (
     <div className="flex items-center gap-2 bg-muted/40 rounded-full px-4 py-2 min-w-[120px] justify-center">
       <Clock className="h-4 w-4 text-muted-foreground" />
-      <span className="text-xs font-medium text-muted-foreground">Time</span>
+      <span className="text-xs font-medium text-muted-foreground">Time Spent</span>
       <span className="ml-2 text-base font-bold text-foreground">{formatTime(timeSpent)}</span>
     </div>
   )

@@ -22,7 +22,7 @@ export function MusicPlayer() {
   return (
     <div className="flex items-center gap-2 bg-muted/40 rounded-full px-4 py-2 min-w-[120px] justify-center">
       <Music className="h-4 w-4 text-muted-foreground" />
-      <span className="text-xs font-medium text-muted-foreground">Music</span>
+      <span className="text-xs font-medium text-muted-foreground">Vibe</span>
       <Button
         variant="ghost"
         size="icon"

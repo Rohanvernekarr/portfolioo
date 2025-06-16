@@ -4,7 +4,15 @@ import { useState } from "react"
 import { toast } from "sonner"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog"
+import { MessageSquare } from "lucide-react"
 
 export function MessageBox() {
   const [message, setMessage] = useState("")
@@ -23,9 +31,7 @@ export function MessageBox() {
         body: JSON.stringify({ message }),
       })
 
-      if (!response.ok) {
-        throw new Error("Failed to send message")
-      }
+      if (!response.ok) throw new Error("Failed to send message")
 
       setMessage("")
       toast.success("Message sent!", {
@@ -41,15 +47,25 @@ export function MessageBox() {
   }
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Anonymous Message</CardTitle>
-        <CardDescription>
-          Leave an anonymous message. Your identity will not be revealed.
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-4">
+    <Dialog>
+      <DialogTrigger asChild>
+        <Button
+          variant="outline"
+          className="fixed bottom-6 right-6 z-50 rounded-full p-3 shadow-lg hover:bg-primary hover:text-white transition"
+        >
+          <MessageSquare className="h-5 w-5" />
+        </Button>
+      </DialogTrigger>
+
+      <DialogContent className="sm:max-w-md">
+        <DialogHeader>
+          <DialogTitle>Anonymous Message</DialogTitle>
+          <DialogDescription>
+            Leave an anonymous message. Your identity will not be revealed.
+          </DialogDescription>
+        </DialogHeader>
+
+        <form onSubmit={handleSubmit} className="space-y-4 mt-4">
           <Textarea
             placeholder="Type your message here..."
             value={message}
@@ -57,11 +73,11 @@ export function MessageBox() {
             required
             className="min-h-[100px]"
           />
-          <Button type="submit" disabled={isSubmitting}>
+          <Button type="submit" disabled={isSubmitting} className="w-full">
             {isSubmitting ? "Sending..." : "Send Message"}
           </Button>
         </form>
-      </CardContent>
-    </Card>
+      </DialogContent>
+    </Dialog>
   )
-} 
+}

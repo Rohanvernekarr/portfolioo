@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { Moon, Sun, Github, Linkedin, Twitter } from "lucide-react"
-import { useTheme } from "next-themes"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { VisitorCount } from "@/components/sections/VisitorCount"
-import { TimeSpent } from "@/components/sections/TimeSpent"
-import { MusicPlayer } from "@/components/sections/MusicPlayer"
+import { Moon, Sun, Github, Linkedin, Twitter } from "lucide-react";
+import { useTheme } from "next-themes";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { VisitorCount } from "@/components/sections/VisitorCount";
+import { TimeSpent } from "@/components/sections/TimeSpent";
+import { MusicPlayer } from "@/components/sections/MusicPlayer";
 
 const socialLinks = [
   {
@@ -24,10 +24,10 @@ const socialLinks = [
     href: "https://twitter.com/yourusername",
     icon: Twitter,
   },
-]
+];
 
 export function Footer() {
-  const { setTheme } = useTheme()
+  const { setTheme } = useTheme();
 
   return (
     <footer className="border-t">
@@ -80,30 +80,11 @@ export function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Rohan Vernekar. All rights not reserved.</p>
-          <p className="mt-1">
-            Built with{" "}
-            <Link
-              href="https://nextjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline underline-offset-4 hover:text-foreground"
-            >
-              Next.js
-            </Link>{" "}
-            and{" "}
-            <Link
-              href="https://tailwindcss.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline underline-offset-4 hover:text-foreground"
-            >
-              Tailwind CSS
-            </Link>
-          </p>
-        </div>
+        <footer className="text-center text-sm text-muted-foreground py-6">
+          <p>Made from scratch with 🍵 & 💻 in Hostel</p>
+          <p className="mt-1">No rights reserved. Steal like an artist.</p>
+        </footer>
       </div>
     </footer>
-  )
-} 
+  );
+}
