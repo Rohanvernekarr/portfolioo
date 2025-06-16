@@ -8,64 +8,64 @@ const projects = [
   {
     title: "Githive",
     description: "GitHub-powered project hub to manage, tag, and search repos easily. Built with Next.js + GitHub API.",
-    github: "https://github.com/yourusername/githive",
-    demo: "https://biomlstudio.example.com",
+    github: "https://github.com/Rohanvernekarr/githive",
+    demo: "https://githive.vercel.app/",
     status: "deployed",
   },
   {
     title: "ContestTracker",
     description: "Track competitive programming contests from Codeforces, LeetCode, AtCoder and more. Alerts and calendar integration.",
-    github: "https://github.com/yourusername/contesttracker",
-    demo: "https://biomlstudio.example.com",
+    github: "https://github.com/Rohanvernekarr/contesttracker",
+    demo: "https://contesttracker-ruby.vercel.app/",
     status: "deployed",
   },
   {
     title: "FusionChat",
     description: "Real-time chat app built using Socket.io and MongoDB with custom avatars and group support.",
-    github: "https://github.com/yourusername/fusionchat",
-    demo: "https://biomlstudio.example.com",
+    github: "https://github.com/Rohanvernekarr/FusionChat",
+    demo: "https://fusion-chat-plum.vercel.app/",
     status: "deployed",
   },
   {
     title: "NewsReader",
     description: "Minimalist Hacker News reader built for focus and speed. Keyboard-first UX with search and filters.",
-    github: "https://github.com/yourusername/hackernewsreader.vi",
-    demo: "https://biomlstudio.example.com",
+    github: "https://github.com/Rohanvernekarr/hackernewsreader",
+    demo: "https://hackernewsreader.vercel.app/",
     status: "deployed",
   },
   {
     title: "BioMLStudio",
     description: "AI-based no-code bioinformatics platform for protein & DNA sequence analysis. React + Python + MongoDB.",
-    github: "https://github.com/yourusername/biomlstudio",
+    github: "https://github.com/Rohanvernekarr/biomlstudio",
     demo: "",
     status: "in-progress",
   },
   {
     title: "Coinly",
     description: "Crypto dashboard and portfolio tracker using MERN stack and CoinGecko API. Graphs and real-time price updates.",
-    github: "https://github.com/yourusername/coinly",
+    github: "https://github.com/Rohanvernekarr/coinlycrypto",
     demo: "",
     status: "in-progress",
   },
  
   {
     title: "Vibeoo",
-    description: "A curated link-saving app for organizing bookmarks, articles, and tools. Built with Next.js and Supabase.",
-    github: "https://github.com/yourusername/beoo",
+    description: "Vibeoo is an AI-powered extension that summarizes videos and generates smart timestamps for faster, focused viewing.",
+    github: "https://github.com/Rohanvernekarr/vibeoo",
     demo: "",
     status: "in-progress",
   },
   {
     title: "TruthLens",
-    description: "Fake news detection tool using AI and fact-check APIs. Built with Python and Flask.",
-    github: "https://github.com/yourusername/truthlens",
+    description: "Fake news detection extension using AI and fact-check APIs. Built with Python and Flask.",
+    github: "https://github.com/Rohanvernekarr/truthlens",
     demo: "",
     status: "in-progress",
   },
   {
-    title: "Neoneverse",
+    title: "NeonVerse",
     description: "3D cosmic experience using React Three Fiber, Drei, and GSAP. A storytelling journey through the stars.",
-    github: "https://github.com/yourusername/neoneverse",
+    github: "https://github.com/Rohanvernekarr/NeonVerse",
     demo: "",
     status: "in-progress",
   },
@@ -85,7 +85,7 @@ export default function ProjectsPage() {
         Go back
       </button>
 
-      <h1 className="text-4xl font-serif text-center mb-12">🚀 Projects Showcase</h1>
+      <h1 className="text-2xl font-serif text-center mb-12">🚀 Projects Showcase</h1>
 
       <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2">
         {projects.map((project) => (

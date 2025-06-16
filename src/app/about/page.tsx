@@ -25,12 +25,12 @@ export default function AboutPage() {
 
   const featuredProjects = [
     {
-      title: "BioMLStudio",
-      description: "AI-based no-code bioinformatics platform for protein & DNA sequence analysis. Built with React, MongoDB, Python APIs.",
+      title: "GitHive",
+      description: "GitHub-powered project hub to manage, tag, and search repos easily. Built with Next.js + GitHub API.",
     },
     {
-      title: "SkillShare Hub",
-      description: "Peer-to-peer skill learning platform using Supabase Auth and Next.js. Clean UI and session bookings.",
+      title: "Fusion Chat",
+      description: "Real-time chat app built using Socket.io and MongoDB with custom avatars and group support.",
     },
   ]
 
@@ -38,7 +38,7 @@ export default function AboutPage() {
     <div className="max-w-5xl mx-auto px-6 py-16 space-y-16">
      
 
-      {/* Back Button */}
+     
       <button
         onClick={() => router.back()}
         className="flex items-center text-sm font-medium text-muted-foreground hover:text-foreground transition"
@@ -47,7 +47,7 @@ export default function AboutPage() {
         Go back
       </button>
 
-       {/* Banner Image */}
+      
       <div className="relative w-full h-60 md:h-72 lg:h-80 rounded-xl overflow-hidden mb-4">
         <Image
           src="/about-banner.jpg"
@@ -63,21 +63,20 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* About Section */}
+      
       <section className="text-center space-y-4">
         <h1 className="text-4xl font-serif tracking-tight text-foreground">
           <span className="text-primary">Rohan Vernekar</span> 
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          A <span className="text-primary font-medium">Full-Stack Developer</span> based in{" "}
-          <span className="font-medium">Bengaluru</span> who crafts fast, responsive, and intelligent web apps.
-          I build <span className="font-medium">AI tools</span> and love making the web more beautiful.
-        </p>
+  I'm a <span className="text-primary font-medium">Full-Stack Developer</span> based in <span className="font-medium">Bengaluru</span>, currently pursuing my Bachelor's in Computer Science. I build fast, responsive, and intelligent web applications using modern tech stacks and <span className="font-medium">AI tools</span>. Beyond the screen, I'm passionate about sports — especially <span className="font-medium">football</span>, <span className="font-medium">cricket</span>, and <span className="font-medium">volleyball</span>. Always learning, always building — one line of code and one game at a time.
+</p>
+
       </section>
 
-      {/* Tech Stack */}
+     
       <section className="space-y-6">
-        <h2 className="text-3xl font-semibold text-center">⚒️ Tech Stack</h2>
+        <h2 className="text-3xl font-serif text-center">⚒️ Tech Stack</h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {techStack.map((stack) => (
             <div
@@ -95,9 +94,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Featured Projects */}
+      
       <section className="space-y-6">
-        <h2 className="text-3xl font-semibold text-center">🚀 Featured Projects</h2>
+        <h2 className="text-3xl font-serif text-center">🚀 Featured Projects</h2>
         <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2">
           {featuredProjects.map((project) => (
             <div
@@ -112,7 +111,7 @@ export default function AboutPage() {
           ))}
         </div>
 
-        {/* Link to All Projects */}
+       
         <div className="text-center">
           <Link href="/projects">
             <button className="text-sm font-medium text-primary hover:underline mt-4">

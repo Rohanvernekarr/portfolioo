@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { FileText, Briefcase, User, ExternalLink } from "lucide-react"
+import { FileText, Briefcase, User} from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 
@@ -21,17 +21,17 @@ const links = [
 export function Hero() {
   return (
     <section className="flex flex-col items-center justify-center min-h-[calc(100vh-200px)] text-center space-y-10 px-4">
-      {/* Animated Gradient Text */}
+     
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent"
+        className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-primary to-zinc-700 bg-clip-text text-transparent leading-[1.2]"
       >
-        Turning Ideas into Magic with Code.
+        Turning Ideas into Magic with Code
       </motion.h1>
 
-      {/* Subheading */}
+    
       <motion.p
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -42,10 +42,10 @@ export function Hero() {
         <span className="bg-muted px-2 py-1 rounded text-foreground font-semibold">
           Full-Stack Developer
         </span>{" "}
-        from Bengaluru who builds intelligent, scalable, and beautiful web experiences.
+        from Bengaluru who loves to code, experiment with AI, and build the future one app at a time.
       </motion.p>
 
-      {/* Buttons */}
+     
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -82,22 +82,7 @@ export function Hero() {
         )}
       </motion.div>
 
-      {/* Old Portfolio Link */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.7 }}
-      >
-        <a
-          href="https://rohanrv.me" // replace with your real old portfolio URL
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-2 inline-flex items-center text-sm text-muted-foreground hover:text-primary transition"
-        >
-          <ExternalLink className="h-4 w-4 mr-1" />
-          Visit old portfolio
-        </a>
-      </motion.div>
+     
     </section>
   )
 }

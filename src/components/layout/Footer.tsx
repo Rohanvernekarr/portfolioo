@@ -7,21 +7,22 @@ import { Button } from "@/components/ui/button";
 import { VisitorCount } from "@/components/sections/VisitorCount";
 import { TimeSpent } from "@/components/sections/TimeSpent";
 import { MusicPlayer } from "@/components/sections/MusicPlayer";
+import {  ExternalLink } from "lucide-react"
 
 const socialLinks = [
   {
     name: "GitHub",
-    href: "https://github.com/yourusername",
+    href: "https://github.com/Rohanvernekarr",
     icon: Github,
   },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com/in/yourusername",
+    href: "https://www.linkedin.com/in/rohan-vernekar-b57913283/",
     icon: Linkedin,
   },
   {
     name: "Twitter",
-    href: "https://twitter.com/yourusername",
+    href: "https://x.com/Rohanvrnkr",
     icon: Twitter,
   },
 ];
@@ -83,8 +84,21 @@ export function Footer() {
         <footer className="text-center text-sm text-muted-foreground py-6">
           <p>Made from scratch with 🍵 & 💻 in Hostel</p>
           <p className="mt-1">No rights reserved. Steal like an artist.</p>
+           {/* Old Portfolio Link */}
+      
+        <a
+          href="https://rohanrv.me" // replace with your real old portfolio URL
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-1 inline-flex items-center text-sm text-muted-foreground hover:text-primary transition"
+        >
+          <ExternalLink className="h-4 w-4 mr-1" />
+          Visit old portfolio
+        </a>
         </footer>
       </div>
+      
+      
     </footer>
   );
 }
