@@ -27,7 +27,7 @@ export function MusicPlayer() {
         variant="ghost"
         size="icon"
         onClick={togglePlay}
-        className="h-6 w-6 ml-1.5 "
+        className="h-5  w-5 ml-1.5 "
       >
         {isPlaying ? (
           <Pause className="h-3.5 w-3.5" />
