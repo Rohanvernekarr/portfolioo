@@ -37,7 +37,7 @@ export function MessageBox() {
       toast.success("Message sent!", {
         description: "Thank you for your anonymous message.",
       })
-    } catch (error) {
+    } catch {
       toast.error("Error", {
         description: "Failed to send message. Please try again.",
       })

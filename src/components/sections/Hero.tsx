@@ -38,7 +38,7 @@ export function Hero() {
         transition={{ delay: 0.3 }}
         className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed"
       >
-        I'm <span className="text-primary font-medium">Rohan Vernekar</span>, a{" "}
+        I&apos;m <span className="text-primary font-medium">Rohan Vernekar</span>, a{" "}
         <span className="bg-muted px-2 py-1 rounded text-foreground font-semibold">
           Full-Stack Developer
         </span>{" "}

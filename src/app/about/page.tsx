@@ -58,7 +58,7 @@ export default function AboutPage() {
         />
         <div className="absolute inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center">
           <h1 className="text-4xl font-serif tracking-tight text-foreground text-center px-4">
-            <span className="dark:text-primary text-zinc-200">Crafting Code, Shaping Tomorrow’s Web ✨</span>
+            <span className="dark:text-primary text-zinc-200">Crafting Code, Shaping Tomorrow&apos;s Web ✨</span>
           </h1>
         </div>
       </div>
@@ -69,7 +69,7 @@ export default function AboutPage() {
           <span className="text-primary">Rohan Vernekar</span> 
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-  I'm a <span className="text-primary font-medium">Full-Stack Developer</span> based in <span className="font-medium">Bengaluru</span>, currently pursuing my Bachelor's in Computer Science. I build fast, responsive, and intelligent web applications using modern tech stacks and <span className="font-medium">AI tools</span>. Beyond the screen, I'm passionate about sports — especially <span className="font-medium">football</span>, <span className="font-medium">cricket</span>, and <span className="font-medium">volleyball</span>. Always learning, always building — one line of code and one game at a time.
+  I&apos;m a <span className="text-primary font-medium">Full-Stack Developer</span> based in <span className="font-medium">Bengaluru</span>, currently pursuing my Bachelor&apos;s in Computer Science. I build fast, responsive, and intelligent web applications using modern tech stacks and <span className="font-medium">AI tools</span>. Beyond the screen, I&apos;m passionate about sports — especially <span className="font-medium">football</span>, <span className="font-medium">cricket</span>, and <span className="font-medium">volleyball</span>. Always learning, always building — one line of code and one game at a time.
 </p>
 
       </section>
