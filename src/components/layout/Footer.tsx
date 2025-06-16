@@ -25,80 +25,78 @@ const socialLinks = [
     href: "https://x.com/Rohanvrnkr",
     icon: Twitter,
   },
+ 
 ];
 
 export function Footer() {
   const { setTheme } = useTheme();
 
   return (
-    <footer className="border-t">
-      <div className="container mx-auto max-w-4xl py-8 flex flex-col items-center">
-        {/* Responsive Controls and Stats */}
-        <div className="flex flex-row md:flex-row items-center justify-center gap-y-4 gap-x-6 mb-6 flex-wrap">
-          <div className="flex flex-row sm:flex-row gap-4 items-center justify-center">
+    <footer className="border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container mx-auto max-w-4xl py-4">
+        <div className="flex flex-col items-center space-y-3">
+          {/* Controls and Stats in a single row */}
+          <div className="flex flex-wrap items-center justify-center gap-2">
             <VisitorCount />
             <TimeSpent />
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
             <MusicPlayer />
-            <div className="flex gap-2 mt-2 sm:mt-0">
+            <div className="flex gap-1">
               <Button
                 variant="ghost"
                 size="icon"
                 onClick={() => setTheme("light")}
-                className="h-8 w-8"
+                className="h-6 w-6"
               >
-                <Sun className="h-4 w-4" />
+                <Sun className="h-3.5 w-3.5" />
                 <span className="sr-only">Light mode</span>
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
                 onClick={() => setTheme("dark")}
-                className="h-8 w-8"
+                className="h-6 w-6"
               >
-                <Moon className="h-4 w-4" />
+                <Moon className="h-3.5 w-3.5" />
                 <span className="sr-only">Dark mode</span>
               </Button>
             </div>
           </div>
-        </div>
 
-        {/* Social Links */}
-        <div className="flex justify-center gap-6 mb-4">
-          {socialLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <link.icon className="h-5 w-5" />
-              <span className="sr-only">{link.name}</span>
-            </Link>
-          ))}
-        </div>
+          {/* Social Links with hover effects */}
+          <div className="flex justify-center gap-6">
+            {socialLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors hover:scale-110"
+              >
+                <link.icon className="h-5 w-5" />
+                <span className="sr-only">{link.name}</span>
+              </Link>
+            ))}
+          </div>
 
-        {/* Copyright */}
-        <footer className="text-center text-sm text-muted-foreground py-6">
-          <p>Made from scratch with 🍵 & 💻 in Hostel</p>
-          <p className="mt-1">No rights reserved. Steal like an artist.</p>
-           {/* Old Portfolio Link */}
-      
-        <a
-          href="https://rohanrv.me" // replace with your real old portfolio URL
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-1 inline-flex items-center text-sm text-muted-foreground hover:text-primary transition"
-        >
-          <ExternalLink className="h-4 w-4 mr-1" />
-          Visit old portfolio
-        </a>
-        </footer>
+          {/* Copyright and Links */}
+          <div className="flex flex-col items-center text-center text-xs text-muted-foreground">
+           
+            <div className="flex items-center gap-2 mt-0.5">
+              <a
+                href="https://rohanrv.me"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-muted-foreground hover:text-primary transition hover:underline"
+              >
+                <ExternalLink className="h-3 w-3 mr-1" />
+                Old portfolio
+              </a>
+              <span className="text-muted-foreground/50">•</span>
+              <span>No rights reserved</span>
+            </div>
+          </div>
+        </div>
       </div>
-      
-      
     </footer>
   );
 }

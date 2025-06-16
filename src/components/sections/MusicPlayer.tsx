@@ -20,19 +20,19 @@ export function MusicPlayer() {
   }
 
   return (
-    <div className="flex items-center gap-2 bg-muted/40 rounded-full px-4 py-2 min-w-[120px] justify-center">
-      <Music className="h-4 w-4 text-muted-foreground" />
-      <span className="text-xs font-medium text-muted-foreground">Vibe</span>
+    <div className="flex items-center gap-1.5 bg-muted/40 rounded-full px-3 py-1.5 min-w-[100px] justify-center">
+      <Music className="h-3.5 w-3.5 text-muted-foreground" />
+      <span className="text-[10px] font-medium text-muted-foreground">Vibe</span>
       <Button
         variant="ghost"
         size="icon"
         onClick={togglePlay}
-        className="h-7 w-7 ml-2"
+        className="h-6 w-6 ml-1.5 "
       >
         {isPlaying ? (
-          <Pause className="h-4 w-4" />
+          <Pause className="h-3.5 w-3.5" />
         ) : (
-          <Play className="h-4 w-4" />
+          <Play className="h-3.5 w-3.5" />
         )}
         <span className="sr-only">
           {isPlaying ? "Pause music" : "Play music"}
