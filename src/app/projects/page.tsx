@@ -13,6 +13,13 @@ const projects = [
     status: "deployed",
   },
   {
+    title: "SmartCV",
+    description: "Full-stack AI web platform that helps users to create, customize, and optimize professional resumes. With built-in templates, live editing and AI-driven resume analysis.",
+    github: "https://github.com/Rohanvernekarr/smartcv",
+    demo: "https://smartcv-eta.vercel.app/",
+    status: "deployed",
+  },
+  {
     title: "ContestTracker",
     description: "Track competitive programming contests from Codeforces, LeetCode, AtCoder and more. Alerts and calendar integration.",
     github: "https://github.com/Rohanvernekarr/contesttracker",
