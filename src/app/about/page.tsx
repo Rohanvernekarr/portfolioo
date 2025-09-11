@@ -50,9 +50,9 @@ export default function AboutPage() {
 
   const featuredProjects = [
     {
-      title: "GitHive",
+      title: "SmartCV",
       description:
-        "GitHub-powered project hub to manage, tag, and search repos easily. Built with Next.js + GitHub API.",
+        "Full-stack AI web platform that helps users to create, customize, and optimize professional resumes. With built-in templates, live editing and AI-driven resume analysis.",
     },
     {
       title: "Fusion Chat",
