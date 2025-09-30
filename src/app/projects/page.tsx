@@ -27,6 +27,13 @@ const projects = [
     status: "deployed",
   },
   {
+    title: "SystemDesign.ai",
+    description: " A freehand tool where you can create your system design with AI.",
+    github: "https://github.com/Rohanvernekarr/sketchai",
+    demo: "",
+    status: "in-progress",
+  },
+  {
     title: "FusionChat",
     description: "Real-time chat app built using Socket.io and MongoDB with custom avatars and group support.",
     github: "https://github.com/Rohanvernekarr/FusionChat",
