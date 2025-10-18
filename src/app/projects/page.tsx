@@ -68,7 +68,6 @@ const projects = [
     demo: "",
     status: "in-progress",
   },
- 
   {
     title: "Vibeoo",
     description: "Vibeoo is an AI-powered extension that summarizes videos and generates smart timestamps for faster, focused viewing.",
@@ -96,7 +95,7 @@ export default function ProjectsPage() {
   const router = useRouter()
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-16 space-y-12">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-8 sm:space-y-12">
       {/* Back Button */}
       <button
         onClick={() => router.back()}
@@ -106,22 +105,22 @@ export default function ProjectsPage() {
         Go back
       </button>
 
-      <h1 className="text-2xl font-serif text-center mb-12">🚀 Projects Showcase</h1>
+      <h1 className="text-xl sm:text-2xl font-serif text-center mb-8 sm:mb-12">🚀 Projects Showcase</h1>
 
-      <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 place-items-center md:place-items-stretch">
         {projects.map((project) => (
           <div
             key={project.title}
-            className="relative group rounded-xl bg-muted/10 border border-muted backdrop-blur-md p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+            className="relative group rounded-xl bg-muted/10 border border-muted backdrop-blur-md p-5 sm:p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between w-full max-w-md md:max-w-none"
           >
             <div>
-              <h2 className="text-2xl font-semibold mb-2 flex items-center justify-between">
-                {project.title}
+              <h2 className="text-xl sm:text-2xl font-semibold mb-2 flex items-center justify-between gap-2">
+                <span className="truncate">{project.title}</span>
                 <span
-                  className={`inline-flex items-center gap-1 px-2 py-0.5 text-xs rounded-full ${
+                  className={`inline-flex items-center gap-1 px-2 py-0.5 text-xs rounded-full whitespace-nowrap flex-shrink-0 ${
                     project.status === "deployed"
-                      ? " text-green-700"
-                      : " text-yellow-800"
+                      ? "text-green-700"
+                      : "text-yellow-800"
                   }`}
                 >
                   {project.status === "deployed" ? (
@@ -135,7 +134,7 @@ export default function ProjectsPage() {
                   )}
                 </span>
               </h2>
-              <p className="text-muted-foreground mb-4 text-sm">{project.description}</p>
+              <p className="text-muted-foreground mb-4 text-sm leading-relaxed">{project.description}</p>
             </div>
 
             <div className="flex gap-4 mt-2">

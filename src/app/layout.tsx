@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`bg-grid-lines ${inter.className} antialiased min-h-screen `}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

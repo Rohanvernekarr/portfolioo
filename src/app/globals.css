@@ -120,3 +120,9 @@
     @apply bg-background text-foreground;
   }
 }
+.bg-grid-lines {
+  background-image: 
+    linear-gradient(to right, rgba(80, 76, 76, 0.05) 2.5px, transparent 1.5px),
+    linear-gradient(to bottom, rgba(65, 64, 64, 0.07) 2.5px, transparent 1.5px);
+  background-size: 55px 55px; /* spacing between lines */
+}
