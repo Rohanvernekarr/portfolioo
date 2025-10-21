@@ -30,7 +30,7 @@ const projects = [
     title: "SystemDesign.ai",
     description: " A freehand tool where you can create your system design with AI.Nextjs",
     github: "https://github.com/Rohanvernekarr/sketchai",
-    demo: "",
+    demo: "https://sketchai-xi.vercel.app/",
     status: "in-progress",
   },
   {
@@ -96,7 +96,7 @@ export default function ProjectsPage() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-8 sm:space-y-12">
-      {/* Back Button */}
+     
       <button
         onClick={() => router.back()}
         className="flex items-center text-sm font-medium text-muted-foreground hover:text-foreground transition mb-4"
