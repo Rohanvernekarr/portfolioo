@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { FileText, Briefcase, User} from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion"
-import { EmailButton } from "./EmailButton"
+import Link from "next/link";
+import { FileText, Briefcase, User } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { EmailButton } from "./EmailButton";
 
 const links = [
   { name: "About", href: "/about", icon: User },
@@ -17,7 +17,7 @@ const links = [
     rel: "noopener noreferrer",
     external: true,
   },
-]
+];
 
 export function Hero() {
   return (
@@ -29,24 +29,24 @@ export function Hero() {
         transition={{ duration: 0.7 }}
         className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-primary to-zinc-700 bg-clip-text text-transparent leading-[1.2]"
       >
-        Turning Ideas into Magic with Code
+        Code that speaks Imagination
       </motion.h1>
 
-    
       <motion.p
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
         className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed"
       >
-        I&apos;m <span className="text-primary font-medium">Rohan Vernekar</span>, a{" "}
+        I&apos;m{" "}
+        <span className="text-primary font-medium">Rohan Vernekar</span>, a{" "}
         <span className="bg-muted px-2 py-1 rounded text-foreground font-semibold">
           Full-Stack Developer
         </span>{" "}
-        from Bengaluru who loves to code, experiment with AI, and build the future one app at a time.
+        from Bengaluru who loves to code, experiment with AI, and build the
+        future one app at a time.
       </motion.p>
 
-     
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -79,11 +79,9 @@ export function Hero() {
                 {link.name}
               </Button>
             </Link>
-          )
+          ),
         )}
       </motion.div>
-
-     
     </section>
-  )
+  );
 }
