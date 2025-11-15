@@ -15,7 +15,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { EmailButton } from "./EmailButton";
-import { Textarea } from "@/components/ui/textarea";
 import {
   Dialog,
   DialogTrigger,
