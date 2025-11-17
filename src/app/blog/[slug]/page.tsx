@@ -59,7 +59,7 @@ function parseContent(content: string) {
       if (!inCodeBlock) {
         // Start of code block
         inCodeBlock = true;
-        codeLanguage = line.slice(3).trim() || 'tsx';
+        codeLanguage = line.slice(3).trim() || 'typescript';
         codeBlock = '';
       } else {
         // End of code block
