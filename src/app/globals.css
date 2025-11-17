@@ -120,7 +120,7 @@
         @apply bg-background text-foreground;
     }
 }
-.bg-grid-lines {
+/* .bg-grid-lines {
     background-image:
         linear-gradient(
             to right,
@@ -145,4 +145,4 @@
     50% {
         background-position: 50px 50px;
     }
-}
+} */
