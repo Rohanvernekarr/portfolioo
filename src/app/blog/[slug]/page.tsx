@@ -3,10 +3,8 @@
 import { useParams, useRouter } from "next/navigation";
 import { ArrowLeft, Calendar, Clock, Share2, Copy, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { useState } from "react";
 
-// Code Block Component
 function CodeBlock({ code, language = "typescript" }: { code: string; language?: string }) {
   const [copied, setCopied] = useState(false);
 
@@ -18,11 +16,11 @@ function CodeBlock({ code, language = "typescript" }: { code: string; language?:
 
   return (
     <div className="relative group my-6">
-      <div className="flex items-center justify-between bg-zinc-800 dark:bg-zinc-900 px-4 py-2 rounded-t-lg border border-zinc-700">
-        <span className="text-xs text-zinc-400 font-mono">{language}</span>
+      <div className="flex items-center justify-between bg-zinc-100 dark:bg-zinc-900 px-4 py-2 rounded-t-lg border border-zinc-700">
+        <span className="text-xs text-zinc-800 dark:text-zinc-300 font-mono">{language}</span>
         <button
           onClick={handleCopy}
-          className="flex items-center gap-1 text-xs text-zinc-400 hover:text-zinc-200 transition-colors"
+          className="flex items-center gap-1 text-xs text-zinc-800 dark:text-zinc-300 transition-colors"
         >
           {copied ? (
             <>
@@ -37,8 +35,8 @@ function CodeBlock({ code, language = "typescript" }: { code: string; language?:
           )}
         </button>
       </div>
-      <pre className="bg-zinc-900 dark:bg-black p-4 rounded-b-lg overflow-x-auto border border-t-0 border-zinc-700">
-        <code className="text-sm text-zinc-100 font-mono">{code}</code>
+      <pre className="bg-zinc-50 dark:bg-black p-4 rounded-b-lg overflow-x-auto border border-t-0 border-zinc-700">
+        <code className="text-sm text-zinc-800 dark:text-white font-mono">{code}</code>
       </pre>
     </div>
   );
