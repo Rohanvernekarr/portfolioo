@@ -35,7 +35,6 @@ export function Footer() {
     <footer >
       <div className="container mx-auto max-w-4xl py-4">
         <div className="flex flex-col items-center space-y-3">
-          {/* Controls and Stats in a single row */}
           <div className="flex flex-wrap items-center justify-center gap-4">
             <VisitorCount />
             <TimeSpent />
@@ -62,7 +61,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Social Links with hover effects */}
           <div className="flex justify-center gap-6">
             {socialLinks.map((link) => (
               <Link

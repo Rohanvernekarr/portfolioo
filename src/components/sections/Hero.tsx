@@ -11,6 +11,7 @@ import {
   ExternalLink,
   LoaderCircle,
   CheckCircle2,
+
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
@@ -24,6 +25,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
+
 
 const links = [
   { name: "About", icon: User, section: "about" as const },
@@ -116,14 +118,17 @@ export function Hero() {
 
   return (
     <section className="flex flex-col items-center text-center px-4 mt-50 relative">
-      <div className="flex flex-col items-center justify-center min-h-[50vh] space-y-10 w-full">
+     
+      {/* <AnimatedInsect /> */}
+      
+      <div className="flex flex-col items-center justify-center space-y-6 w-full">
         <EmailButton />
 
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-primary to-zinc-700 bg-clip-text text-transparent leading-[1.2]"
+          className="text-4xl sm:text-5xl md:text-6xl mt-30 font-extrabold tracking-tight bg-gradient-to-r from-primary to-zinc-700 bg-clip-text text-transparent leading-[1.2]"
         >
           Code that speaks Imagination
         </motion.h1>
@@ -142,21 +147,23 @@ export function Hero() {
           from Bengaluru who loves to code, experiment with AI, and build the
           future one app at a time.
         </motion.p>
+      </div>
 
+      <div className="sticky top-0 z-40 w-full flex justify-center  py-20 sm:py-10 transition-all duration-300">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.5 }}
-          className="flex flex-wrap gap-4 justify-center"
+          className="flex flex-wrap gap-1 justify-center"
         >
           {links.map((link) => (
             <Button
               key={link.section}
               variant={activeSection === link.section ? "default" : "outline"}
-              className="gap-2 transition-all hover:shadow-lg hover:scale-105 "
+              className="gap-1 sm:gap-2 text-xs sm:text-sm transition-all hover:shadow-lg hover:scale-105 px-3 sm:px-4"
               onClick={() => toggleSection(link.section)}
             >
-              <link.icon className="h-4 w-4" />
+              <link.icon className="h-3 w-3 sm:h-4 sm:w-4" />
               {link.name}
             </Button>
           ))}
@@ -165,9 +172,9 @@ export function Hero() {
             <DialogTrigger asChild>
               <Button
                 variant="outline"
-                className="gap-2 transition-all hover:shadow-lg hover:scale-105"
+                className="gap-1 sm:gap-2 text-xs sm:text-sm transition-all hover:shadow-lg hover:scale-105 px-3 sm:px-4"
               >
-                <FileText className="h-4 w-4" />
+                <FileText className="h-3 w-3 sm:h-4 sm:w-4" />
                 Resume
               </Button>
             </DialogTrigger>
@@ -206,7 +213,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="w-full max-w-6xl mx-auto pb-16 px-4"
+            className="w-full max-w-6xl mx-auto pb-16 px-4 mt-10"
           >
             {activeSection === "about" && (
               <div className="space-y-8">
