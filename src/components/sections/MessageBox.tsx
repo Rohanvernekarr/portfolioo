@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { toast } from "sonner"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
@@ -17,6 +17,16 @@ import { MessageSquare } from "lucide-react"
 export function MessageBox() {
   const [message, setMessage] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -52,6 +62,11 @@ export function MessageBox() {
         <Button
           variant="outline"
           className="fixed top-8 right-6 z-50 rounded-full p-3 shadow-lg hover:bg-primary hover:text-white transition"
+          style={{
+            opacity: isScrolled ? 0 : 1,
+            pointerEvents: isScrolled ? "none" : "auto",
+            transition: "opacity 0.7s ease"
+          }}
         >
           <MessageSquare className="h-5 w-5" />
         </Button>

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
@@ -14,6 +14,16 @@ import {
 
 export function EmailButton() {
   const [open, setOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   const handleEmailClick = () => {
     window.open(
@@ -29,6 +39,11 @@ export function EmailButton() {
         <Button
           variant="outline"
           className="fixed top-8 left-6 z-50 rounded-full p-3 shadow-lg hover:bg-primary hover:text-white transition"
+          style={{
+            opacity: isScrolled ? 0 : 1,
+            pointerEvents: isScrolled ? "none" : "auto",
+            transition: "opacity 0.3s ease"
+          }}
         >
           <Mail className="h-5 w-5" />
         </Button>

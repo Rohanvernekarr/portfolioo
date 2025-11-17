@@ -136,7 +136,7 @@ export function Hero() {
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.7 }}
           className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed"
         >
           I&apos;m{" "}
@@ -149,7 +149,7 @@ export function Hero() {
         </motion.p>
       </div>
 
-      <div className="sticky top-0 z-40 w-full flex justify-center  py-10 sm:py-10 transition-all duration-300">
+      <div className="sticky top-0 z-100 w-full flex justify-center  py-10 sm:py-10 transition-all duration-300">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
