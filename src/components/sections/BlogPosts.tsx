@@ -89,11 +89,13 @@ export function BlogPosts() {
         ))}
       </div>
 
-      <div className="text-center pt-4">
-        <p className="text-sm text-muted-foreground">
-          More posts coming soon! Follow my journey in full-stack development and AI.
-        </p>
-      </div>
+     <div className="text-center">
+                  <Link href="/blog">
+                    <Button variant="link" className="text-primary">
+                      View All Blogs →
+                    </Button>
+                  </Link>
+                </div>
     </div>
   );
 }
