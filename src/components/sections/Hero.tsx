@@ -15,6 +15,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { EmailButton } from "./EmailButton";
+import { BlogPosts } from "./BlogPosts";
 import {
   Dialog,
   DialogTrigger,
@@ -32,12 +33,11 @@ const links = [
 
 const projects = [
   {
-    title: "Githive",
-    description:
-      "GitHub-powered project hub to manage, tag, and search repos easily. Built with Next.js + GitHub API.",
-    github: "https://github.com/Rohanvernekarr/githive",
-    demo: "https://githive.vercel.app/",
-    status: "deployed",
+    title: "SystemDesign.ai",
+    description: " A freehand tool where you can create your own system design with AI.Nextjs",
+    github: "https://github.com/Rohanvernekarr/sketchai",
+    demo: "https://sketchai-xi.vercel.app/",
+    status: "in-progress",
   },
   {
     title: "SmartCV",
@@ -115,9 +115,8 @@ export function Hero() {
   };
 
   return (
-    <section className="flex flex-col items-center text-center px-4 relative">
-      {/* Fixed Hero Content */}
-      <div className="flex flex-col items-center justify-center min-h-[calc(100vh-200px)] space-y-10 w-full">
+    <section className="flex flex-col items-center text-center px-4 mt-50 relative">
+      <div className="flex flex-col items-center justify-center min-h-[50vh] space-y-10 w-full">
         <EmailButton />
 
         <motion.h1
@@ -154,7 +153,7 @@ export function Hero() {
             <Button
               key={link.section}
               variant={activeSection === link.section ? "default" : "outline"}
-              className="gap-2 transition-all hover:shadow-lg hover:scale-105"
+              className="gap-2 transition-all hover:shadow-lg hover:scale-105 "
               onClick={() => toggleSection(link.section)}
             >
               <link.icon className="h-4 w-4" />
@@ -310,7 +309,7 @@ export function Hero() {
                             )}
                           </span>
                         </h3>
-                        <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                        <p className="text-muted-foreground text-left mb-4 text-sm leading-relaxed">
                           {project.description}
                         </p>
                       </div>
@@ -348,25 +347,7 @@ export function Hero() {
               </div>
             )}
 
-            {activeSection === "blog" && (
-              <div className="space-y-6 text-center">
-                <h2 className="text-2xl font-serif">📝 Blog Posts</h2>
-                <p className="text-muted-foreground">
-                  Coming soon! Stay tuned for articles on web development, AI,
-                  and tech insights.
-                </p>
-                <div className="flex justify-center gap-4 flex-wrap">
-                  <div className="rounded-xl bg-muted/20 border backdrop-blur-md p-6 max-w-sm">
-                    <Sparkles className="h-8 w-8 text-primary mx-auto mb-3" />
-                    <h3 className="font-semibold mb-2">Blog Coming Soon</h3>
-                    <p className="text-sm text-muted-foreground">
-                      I&apos;ll be sharing insights on full-stack development,
-                      AI integration, and my coding journey.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )}
+            {activeSection === "blog" && <BlogPosts />}
           </motion.div>
         )}
       </AnimatePresence>
