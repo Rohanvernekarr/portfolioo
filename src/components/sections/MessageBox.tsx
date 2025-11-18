@@ -72,7 +72,7 @@ export function MessageBox() {
         </Button>
       </DialogTrigger>
 
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className="sm:max-w-md z-100">
         <DialogHeader>
           <DialogTitle>Anonymous Message</DialogTitle>
           <DialogDescription>

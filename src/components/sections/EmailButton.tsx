@@ -48,7 +48,7 @@ export function EmailButton() {
           <Mail className="h-5 w-5" />
         </Button>
       </DialogTrigger>
-      <DialogContent>
+      <DialogContent className="z-100">
         <DialogHeader>
           <DialogTitle>Contact Me</DialogTitle>
         </DialogHeader>

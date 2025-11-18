@@ -178,7 +178,7 @@ export function Hero() {
                 Resume
               </Button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-md">
+            <DialogContent className="sm:max-w-md z-100">
               <DialogHeader>
                 <DialogTitle>View Resume</DialogTitle>
                 <DialogDescription>
