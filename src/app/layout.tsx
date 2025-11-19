@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "sonner";
 import { Footer } from "@/components/layout/Footer";
+import RunningCat from "@/components/ui/Oneko";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <RunningCat startPos={{ x: 425, y: 290 }} />
           <div className="relative flex min-h-screen flex-col">
             <main className="flex-1">
               {children}
