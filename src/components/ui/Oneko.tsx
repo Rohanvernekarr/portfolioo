@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 interface RunningCatProps {
   /**
@@ -15,14 +15,19 @@ interface RunningCatProps {
   imgUrl?: string;
 }
 
+// Global state to track if cat is initialized
+let catInitialized = false;
+let cleanupFunction: (() => void) | null = null;
+
 export default function RunningCat({
   startPos = { x: 50, y: 50 },
   imgUrl = "https://raw.githubusercontent.com/adryd325/oneko.js/master/oneko.gif",
 }: RunningCatProps) {
   useEffect(() => {
-    // Check if cat already exists to prevent duplicates
-    const existingCat = document.getElementById("oneko");
-    if (existingCat) return;
+    // If already initialized, don't create a new one
+    if (catInitialized) return;
+    
+    catInitialized = true;
 
     // --- Configuration ---
     const speed = 10;
@@ -150,10 +155,20 @@ export default function RunningCat({
 
     const interval = setInterval(frame, 100);
 
-    return () => {
+    // Store cleanup function globally so it persists
+    cleanupFunction = () => {
       clearInterval(interval);
       document.removeEventListener("mousemove", onMouseMove);
-      // Don't remove the cat element on cleanup to persist across page navigation
+      if (document.body.contains(nekoEl)) {
+        document.body.removeChild(nekoEl);
+      }
+      catInitialized = false;
+      cleanupFunction = null;
+    };
+
+    // Don't cleanup on unmount - let the cat persist
+    return () => {
+      // No cleanup here to keep cat running across navigation
     };
   }, [startPos, imgUrl]);
 
