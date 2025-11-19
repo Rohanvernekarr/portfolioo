@@ -27,7 +27,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <RunningCat startPos={{ x: 425, y: 290 }} />
+          <RunningCat startPos={{ x: 380, y: 250 }} />
           <div className="relative flex min-h-screen flex-col">
             <main className="flex-1">
               {children}

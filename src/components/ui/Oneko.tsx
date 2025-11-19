@@ -19,11 +19,10 @@ export default function RunningCat({
   startPos = { x: 50, y: 50 },
   imgUrl = "https://raw.githubusercontent.com/adryd325/oneko.js/master/oneko.gif",
 }: RunningCatProps) {
-  const isStarted = useRef(false);
-
   useEffect(() => {
-    if (isStarted.current) return;
-    isStarted.current = true;
+    // Check if cat already exists to prevent duplicates
+    const existingCat = document.getElementById("oneko");
+    if (existingCat) return;
 
     // --- Configuration ---
     const speed = 10;
@@ -154,9 +153,7 @@ export default function RunningCat({
     return () => {
       clearInterval(interval);
       document.removeEventListener("mousemove", onMouseMove);
-      if (document.body.contains(nekoEl)) {
-        document.body.removeChild(nekoEl);
-      }
+      // Don't remove the cat element on cleanup to persist across page navigation
     };
   }, [startPos, imgUrl]);
 
