@@ -128,7 +128,7 @@ export function Hero() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-4xl sm:text-5xl md:text-6xl mt-25 font-extrabold tracking-tight bg-gradient-to-r from-primary to-zinc-700 bg-clip-text text-transparent leading-[1.2]"
+          className="text-4xl sm:text-5xl md:text-6xl mt-25 font-extrabold tracking-tight bg-gradient-to-r from-primary to-zinc-500 bg-clip-text text-transparent leading-[1.2]"
         >
           Code that speaks Imagination
         </motion.h1>

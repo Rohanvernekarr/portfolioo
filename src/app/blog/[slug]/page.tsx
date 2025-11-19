@@ -212,7 +212,7 @@ export default function BlogPostPage() {
 
       <footer className="mt-12 pt-8 border-t border-zinc-200 dark:border-zinc-800">
         <div className="flex items-center justify-between">
-          <Button variant="outline" onClick={() => router.push("/blog")}>
+          <Button variant="outline" onClick={() => router.back()}>
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back
           </Button>
