@@ -191,7 +191,7 @@ export function Hero() {
                   className="flex-1"
                   onClick={() => {
                     window.open(
-                      "https://drive.google.com/file/d/1WL0zuMnuF8aa1TM-D2QH8elR46BPmMzl/view?usp=drive_link",
+                      "https://drive.google.com/file/d/18twTvQCue_jpJPytl6fmwww9bdt1kBz4/view?usp=drive_link",
                       "_blank",
                       "noopener,noreferrer"
                     );
