@@ -28,8 +28,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <RunningCat startPos={{ x: 380, y: 250 }} />
-          <div className="relative flex min-h-screen flex-col">
-            <main className="flex-1">
+          <div className="relative flex min-h-screen flex-col bg-gradient-to-br from-background via-background to-muted/30">
+            <main className="flex-1 ">
               {children}
             </main>
             <Footer />

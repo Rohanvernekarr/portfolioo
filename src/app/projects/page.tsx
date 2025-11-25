@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation"
 const projects = [
    {
     title: "SystemDesign.ai",
-    description: "A freehand tool where you can create your system design with AI.",
+    description: "A freehand tool where you can create your system design with AI.Use it to draw diagrams.",
     github: "https://github.com/Rohanvernekarr/sketchai",
     demo: "https://sketchai-xi.vercel.app/",
     status: "in-progress",

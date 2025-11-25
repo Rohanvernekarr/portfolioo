@@ -11,7 +11,17 @@ import {
   ExternalLink,
   LoaderCircle,
   CheckCircle2,
-
+  Code2,
+  Layers,
+  Database,
+  Server,
+  Cloud,
+  Box,
+  Palette,
+  Zap,
+  GitBranch,
+  Container,
+  Wrench,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
@@ -37,7 +47,7 @@ const links = [
 const projects = [
   {
     title: "SystemDesign.ai",
-    description: "A freehand tool where you can create your system design with AI.",
+    description: "A freehand tool where you can create your system design with AI.Use it to draw diagrams.",
     github: "https://github.com/Rohanvernekarr/sketchai",
     demo: "https://sketchai-xi.vercel.app/",
     status: "in-progress",
@@ -59,39 +69,42 @@ const projects = [
 const techStack = [
   {
     title: "Frontend",
+    icon: Palette,
     items: [
-      "Next.js",
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Framer Motion",
-      "Vite",
-      "Redux",
+      { name: "Next.js", icon: Code2 },
+      { name: "React", icon: Code2 },
+      { name: "TypeScript", icon: Code2 },
+      { name: "Tailwind CSS", icon: Palette },
+      { name: "Framer Motion", icon: Zap },
+      { name: "Vite", icon: Zap },
+      { name: "Redux", icon: Layers },
     ],
   },
   {
     title: "Backend",
+    icon: Server,
     items: [
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "PostgreSQL",
-      "Prisma",
-      "Firebase",
-      "REST",
-      "GraphQL",
+      { name: "Node.js", icon: Server },
+      { name: "Express", icon: Server },
+      { name: "MongoDB", icon: Database },
+      { name: "PostgreSQL", icon: Database },
+      { name: "Prisma", icon: Database },
+      { name: "Firebase", icon: Cloud },
+      { name: "REST", icon: Layers },
+      { name: "GraphQL", icon: Layers },
     ],
   },
   {
     title: "DevOps & Tools",
+    icon: Wrench,
     items: [
-      "Git & GitHub",
-      "Docker",
-      "AWS",
-      "CI/CD",
-      "Upstash",
-      "Railway",
-      "Postman",
+      { name: "Git & GitHub", icon: GitBranch },
+      { name: "Docker", icon: Container },
+      { name: "AWS", icon: Cloud },
+      { name: "CI/CD", icon: GitBranch },
+      { name: "Upstash", icon: Database },
+      { name: "Railway", icon: Cloud },
+      { name: "Postman", icon: Box },
     ],
   },
 ];
@@ -243,30 +256,46 @@ export function Hero() {
                 </p>
 
                 <div className="space-y-6">
-                  <h3 className="text-2xl font-serif text-center mb-8">
-                    ⚒️ Tech Stack
+                  <h3 className="text-3xl font-serif text-center mb-10 bg-zinc-950 dark:bg-zic-100 bg-clip-text text-transparent">
+                    Tech Stack
                   </h3>
-                  <div className="max-w-4xl mx-auto space-y-4">
-                    {techStack.map((stack) => (
-                      <div
-                        key={stack.title}
-                        className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-6"
-                      >
-                        <h4 className="text-sm font-semibold mb-4 text-zinc-900 dark:text-zinc-100 uppercase tracking-wide">
-                          {stack.title}
-                        </h4>
-                        <div className="flex flex-wrap gap-2">
-                          {stack.items.map((item) => (
-                            <span
-                              key={item}
-                              className="px-3 py-1.5 text-sm rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
-                            >
-                              {item}
-                            </span>
-                          ))}
+                  <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {techStack.map((stack) => {
+                      const IconComponent = stack.icon;
+                      return (
+                        <div
+                          key={stack.title}
+                          className="group relative rounded-2xl border border-muted/50 bg-gradient-to-br from-background via-background to-muted/20 p-6 hover:border-primary/30 transition-all duration-300 hover:shadow-xl overflow-hidden"
+                        >
+                          <div className={`absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
+                          
+                          <div className="relative flex items-center gap-3 mb-5">
+                            <div className={`p-2.5 rounded-lg  shadow-lg`}>
+                              <IconComponent className="h-5 w-5 text-black dark:text-zinc-100" />
+                            </div>
+                            <h4 className="text-lg font-bold text-foreground">
+                              {stack.title}
+                            </h4>
+                          </div>
+                          
+                          {/* Tech items */}
+                          <div className="relative flex flex-wrap gap-2">
+                            {stack.items.map((item) => {
+                              const ItemIcon = item.icon;
+                              return (
+                                <span
+                                  key={item.name}
+                                  className="group/item inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium rounded-lg bg-muted/50 hover:bg-muted transition-all duration-200 hover:scale-105 cursor-default border border-transparent hover:border-primary/20"
+                                >
+                                  <ItemIcon className="h-3.5 w-3.5 text-zinc-700 dark:text-zinc-200 group-hover/item:text-primary transition-colors" />
+                                  <span>{item.name}</span>
+                                </span>
+                              );
+                            })}
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 </div>
               </div>
@@ -283,7 +312,6 @@ export function Hero() {
                            key={project.title}
                            className="relative group rounded-xl bg-muted/10 border border-muted  overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full"
                          >
-                           {/* Project Image */}
                            <div className="relative w-full h-48 sm:h-56 overflow-hidden bg-muted">
                              <Image
                                src={project.image}
@@ -293,7 +321,6 @@ export function Hero() {
                              />
                              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                              
-                             {/* Status Badge */}
                              <span
                                className={`absolute top-3 right-3 inline-flex items-center gap-1 px-3 py-1 text-xs rounded-full font-medium ${
                                  project.status === "deployed"
