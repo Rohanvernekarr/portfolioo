@@ -25,6 +25,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
+import Image from "next/image";
 
 
 const links = [
@@ -36,34 +37,22 @@ const links = [
 const projects = [
   {
     title: "SystemDesign.ai",
-    description: " A freehand tool where you can create your own system design with AI.Nextjs",
+    description: "A freehand tool where you can create your system design with AI.",
     github: "https://github.com/Rohanvernekarr/sketchai",
     demo: "https://sketchai-xi.vercel.app/",
     status: "in-progress",
+    image: "/projects/sketch.png",
+    techStack: ["Next.js", "AI", "Canvas API", "PostgreSql"],
   },
+ 
   {
     title: "SmartCV",
-    description:
-      "Full-stack AI web platform that helps users to create, customize, and optimize professional resumes.",
+    description: "Full-stack AI web platform that helps users to create, customize, and optimize professional resumes. With built-in templates, live editing and AI-driven resume analysis.",
     github: "https://github.com/Rohanvernekarr/smartcv",
     demo: "https://smartcv-eta.vercel.app/",
     status: "deployed",
-  },
-  {
-    title: "ContestTracker",
-    description:
-      "Track competitive programming contests from Codeforces, LeetCode, AtCoder and more.",
-    github: "https://github.com/Rohanvernekarr/contesttracker",
-    demo: "https://contesttracker-ruby.vercel.app/",
-    status: "deployed",
-  },
-  {
-    title: "FusionChat",
-    description:
-      "Real-time chat app built using Socket.io and MongoDB with custom avatars and group support.",
-    github: "https://github.com/Rohanvernekarr/FusionChat",
-    demo: "https://fusion-chat-plum.vercel.app/",
-    status: "deployed",
+    image: "/projects/smart.png",
+    techStack: ["Next.js", "Tailwind CSS", "Supabase", "AI"],
   },
 ];
 
@@ -288,62 +277,89 @@ export function Hero() {
                 <h2 className="text-2xl font-serif text-center">
                   🚀 Featured Projects
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {projects.map((project) => (
-                    <div
-                      key={project.title}
-                      className="relative group rounded-xl bg-muted/10 border border-muted backdrop-blur-md p-6 shadow-sm hover:shadow-xl transition-all duration-300"
-                    >
-                      <div>
-                        <h3 className="text-xl font-semibold mb-2 flex items-center justify-between gap-2">
-                          <span>{project.title}</span>
-                          <span
-                            className={`inline-flex items-center gap-1 px-2 py-0.5 text-xs rounded-full ${
-                              project.status === "deployed"
-                                ? "text-green-700"
-                                : "text-yellow-800"
-                            }`}
-                          >
-                            {project.status === "deployed" ? (
-                              <>
-                                <CheckCircle2 className="w-3 h-3" /> Deployed
-                              </>
-                            ) : (
-                              <>
-                                <LoaderCircle className="w-3 h-3 animate-spin" />{" "}
-                                In Progress
-                              </>
-                            )}
-                          </span>
-                        </h3>
-                        <p className="text-muted-foreground text-left mb-4 text-sm leading-relaxed">
-                          {project.description}
-                        </p>
-                      </div>
-
-                      <div className="flex gap-4 mt-2">
-                        <Link
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition"
-                        >
-                          <Github className="h-4 w-4" /> Code
-                        </Link>
-                        {project.demo && (
-                          <Link
-                            href={project.demo}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition"
-                          >
-                            <ExternalLink className="h-4 w-4" /> Demo
-                          </Link>
-                        )}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+                       {projects.map((project) => (
+                         <div
+                           key={project.title}
+                           className="relative group rounded-xl bg-muted/10 border border-muted  overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full"
+                         >
+                           {/* Project Image */}
+                           <div className="relative w-full h-48 sm:h-56 overflow-hidden bg-muted">
+                             <Image
+                               src={project.image}
+                               alt={project.title}
+                               fill
+                               className="object-cover group-hover:scale-105 transition-transform duration-300"
+                             />
+                             <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                             
+                             {/* Status Badge */}
+                             <span
+                               className={`absolute top-3 right-3 inline-flex items-center gap-1 px-3 py-1 text-xs rounded-full font-medium ${
+                                 project.status === "deployed"
+                                   ? " text-green-700 border border-green-500/30"
+                                   : " text-yellow-700 border border-yellow-500/30"
+                               }`}
+                             >
+                               {project.status === "deployed" ? (
+                                 <>
+                                   <CheckCircle2 className="w-3 h-3" /> Deployed
+                                 </>
+                               ) : (
+                                 <>
+                                   <LoaderCircle className="w-3 h-3 animate-spin" /> In Progress
+                                 </>
+                               )}
+                             </span>
+                           </div>
+               
+                           {/* Content */}
+                           <div className="p-5 sm:p-6 flex flex-col flex-grow">
+                             <h2 className="text-xl text-left sm:text-2xl font-semibold mb-2">
+                               {project.title}
+                             </h2>
+                             
+                             <p className="text-muted-foreground text-left mb-4 text-sm leading-relaxed flex-grow">
+                               {project.description}
+                             </p>
+               
+                             {/* Tech Stack */}
+                             <div className="flex flex-wrap gap-2 mb-4">
+                               {project.techStack.map((tech) => (
+                                 <span
+                                   key={tech}
+                                   className="px-2.5 py-1 text-xs rounded-md bg-primary/10 text-primary border border-primary/20 font-medium"
+                                 >
+                                   {tech}
+                                 </span>
+                               ))}
+                             </div>
+               
+                             {/* Links */}
+                             <div className="flex gap-4 pt-2 border-t border-muted">
+                               <Link
+                                 href={project.github}
+                                 target="_blank"
+                                 rel="noopener noreferrer"
+                                 className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground transition"
+                               >
+                                 <Github className="h-4 w-4" /> Code
+                               </Link>
+                               {project.demo && (
+                                 <Link
+                                   href={project.demo}
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground transition"
+                                 >
+                                   <ExternalLink className="h-4 w-4" /> Live Demo
+                                 </Link>
+                               )}
+                             </div>
+                           </div>
+                         </div>
+                       ))}
+                     </div>
                 <div className="text-center">
                   <Link href="/projects">
                     <Button variant="link" className="text-primary">
