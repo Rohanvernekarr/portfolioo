@@ -136,7 +136,7 @@ export function Hero() {
           >
             <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-background hover:scale-105 transition-transform cursor-pointer shadow-lg overflow-hidden relative bg-muted">
               <Image
-                src="/projects/cat.png"
+                src="/projects/rog.jpg"
                 alt="Rohan Vernekar"
                 fill
                 className="object-cover"
@@ -234,14 +234,14 @@ export function Hero() {
               </span>
               <span className="flex items-center gap-1.5 hover:text-foreground transition-colors">
                 <Calendar className="h-3.5 w-3.5" />
-                Since Aug 2024
+                Building since 2024
               </span>
             </div>
             
             {/* Stats */}
             <div className="flex gap-4 pt-2 text-sm">
               <div>
-                <span className="font-bold text-foreground">12</span>
+                <span className="font-bold text-foreground">13</span>
                 <span className="text-muted-foreground ml-1">Projects</span>
               </div>
               <div>
