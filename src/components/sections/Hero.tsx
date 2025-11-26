@@ -144,7 +144,7 @@ export function Hero() {
             </div>
           </motion.div>
           
-          <div className="flex justify-end items-center gap-2 pt-4">
+          <div className="flex justify-end items-center gap-1 pt-4">
             <Button
               variant="ghost"
               size="icon"
@@ -207,7 +207,7 @@ export function Hero() {
           
           {/* Name and Bio */}
           <motion.div 
-            className="mt-6 sm:mt-4 space-y-3"
+            className="mt-4 sm:mt-4 space-y-3"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -427,9 +427,9 @@ export function Hero() {
                   >
                     <div className="flex items-center gap-3 mb-4">
                       <div className="p-2 rounded-lg bg-primary/10 border border-primary/20">
-                        <IconComponent className="h-5 w-5 text-primary" />
+                        <IconComponent className="h-4 w-4 text-primary" />
                       </div>
-                      <h3 className="text-xl font-bold tracking-tight">{stack.title}</h3>
+                      <h3 className="text-xl font-sans tracking-tight">{stack.title}</h3>
                       <span className="ml-auto text-sm text-muted-foreground">{stack.items.length} skills</span>
                     </div>
                     
@@ -443,7 +443,7 @@ export function Hero() {
                             className="inline-flex items-center gap-1.5 px-3 py-2 text-sm rounded-lg bg-muted/50 hover:bg-muted hover:border-primary/20 transition-all border border-transparent cursor-default"
                           >
                             <ItemIcon className="h-4 w-4 text-muted-foreground" />
-                            <span className="font-medium">{item.name}</span>
+                            <span className="font-medium text-xs">{item.name}</span>
                           </motion.span>
                         );
                       })}

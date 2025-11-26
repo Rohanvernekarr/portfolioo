@@ -90,7 +90,11 @@ export function Footer() {
                 Old portfolio
               </a>
               <span className="text-muted-foreground/50">•</span>
-              <span>No rights reserved</span>
+              <span>inspired by{" "}
+                <Link href="https://x.com" className="text-muted-foreground hover:text-primary transition hover:underline" target="_blank" rel="noopener noreferrer">
+                x.com
+                </Link>
+                 </span>
             </div>
           </div>
         </div>
