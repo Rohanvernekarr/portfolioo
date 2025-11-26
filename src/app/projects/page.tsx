@@ -35,6 +35,15 @@ const projects = [
     techStack: ["React Three Fiber", "GSAP", "WebGL"],
   },
    {
+    title: "StrangerLoop",
+    description: "Connect with random strangers, End-to-end Encrypted. Built with Next.js + WebRTC.",
+    github: "https://github.com/Rohanvernekarr/StrangerLoop",
+    demo: "https://stranger-loop.vercel.app/",
+    status: "deployed",
+    image: "/projects/loop.png",
+    techStack: ["Next.js", "TypeScript", "WebRTC", "Tailwind CSS"],
+  },
+    {
     title: "Githive",
     description: "GitHub-powered project hub to manage, tag, and search repos easily. Built with Next.js + GitHub API.",
     github: "https://github.com/Rohanvernekarr/githive",
