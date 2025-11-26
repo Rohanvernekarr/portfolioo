@@ -402,7 +402,7 @@ export function Hero() {
                     ))}
                   </div>
                   
-                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
                     <div className="bg-primary/10 text-primary text-xs px-2 py-1 rounded">
                       {exp.type}
                     </div>
