@@ -5,28 +5,12 @@ import Link from "next/link";
 import {
   FileText,
   Briefcase,
-  User,
-  Sparkles,
   Github,
-  ExternalLink,
-  LoaderCircle,
-  CheckCircle2,
-  Code2,
-  Layers,
-  Database,
-  Server,
-  Cloud,
-  Box,
-  Palette,
-  Zap,
-  GitBranch,
   Container,
-  Wrench,
+   Palette, Code2, Zap, Layers, Server, Database, Cloud, GitBranch, Box,
+  Globe, Cpu, Network, Braces, TerminalSquare, Boxes, Hammer,
   MapPin,
   Calendar,
-  Link2,
-  Star,
-  Award,
   Linkedin,
   Twitter,
 } from "lucide-react";
@@ -51,44 +35,43 @@ const techStack = [
     title: "Frontend",
     icon: Palette,
     items: [
-      { name: "Next.js", icon: Code2 },
-      { name: "React", icon: Code2 },
-      { name: "TypeScript", icon: Code2 },
-      { name: "Tailwind CSS", icon: Palette },
-      { name: "Framer Motion", icon: Zap },
-      { name: "Vite", icon: Zap },
-      { name: "Redux", icon: Layers },
+      { name: "Next.js", icon: Globe },               // Framework / web
+      { name: "React", icon: Braces },                // Components
+      { name: "TypeScript", icon: Code2 },            // Code symbol
+      { name: "Tailwind CSS", icon: Palette },        // Styling
+      { name: "Framer Motion", icon: Zap },           // Animations
+      { name: "Vite", icon: TerminalSquare },         // Build tool
+      { name: "Redux", icon: Boxes },                 // State container
     ],
   },
   {
     title: "Backend",
     icon: Server,
     items: [
-      { name: "Node.js", icon: Server },
-      { name: "Express", icon: Server },
-      { name: "MongoDB", icon: Database },
-      { name: "PostgreSQL", icon: Database },
-      { name: "Prisma", icon: Database },
-      { name: "Firebase", icon: Cloud },
-      { name: "REST", icon: Layers },
-      { name: "GraphQL", icon: Layers },
+      { name: "Node.js", icon: Server },              // Runtime
+      { name: "Express", icon: Network },             // Server/network
+      { name: "MongoDB", icon: Database },            // Database icon
+      { name: "PostgreSQL", icon: Database },         // Same db icon
+      { name: "Prisma", icon: Cpu },                  // ORM / transformation
+      { name: "Firebase", icon: Cloud },              // Cloud platform
+      { name: "REST", icon: Layers },                 // API layers
+      { name: "GraphQL", icon: Layers },              // Schemas
     ],
   },
   {
     title: "DevOps & Tools",
-    icon: Wrench,
+    icon: Hammer,
     items: [
-      { name: "Git & GitHub", icon: GitBranch },
-      { name: "Docker", icon: Container },
-      { name: "AWS", icon: Cloud },
-      { name: "CI/CD", icon: GitBranch },
-      { name: "Upstash", icon: Database },
-      { name: "Railway", icon: Cloud },
-      { name: "Postman", icon: Box },
+      { name: "Git & GitHub", icon: GitBranch },      // Git
+      { name: "Docker", icon: Container },            // Containers
+      { name: "AWS", icon: Cloud },                   // Cloud infra
+      { name: "CI/CD", icon: GitBranch },             // Pipelines
+      { name: "Upstash", icon: Database },            // Redis DB
+      { name: "Railway", icon: Server },              // Deployment
+      { name: "Postman", icon: Box },                 // API testing
     ],
   },
 ];
-
 const experiences = [
   {
     id: 1,
