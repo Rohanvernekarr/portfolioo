@@ -94,7 +94,7 @@ const experiences = [
     id: 1,
     title: "Property Booking Website",
     company: "Freelance Project",
-    period: "Aug 2024",
+    period: "Aug 2025",
     description: "Developing a full-stack property booking platform with real-time availability checking and secure payment integration. Built with Next.js, TypeScript, and MongoDB for seamless user experience.",
     technologies: ["Next.js", "TypeScript", "Express", "PostgreSql", "Razorpay", "Tailwind CSS"],
     type: "Freelance"
@@ -369,7 +369,7 @@ export function Hero() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group relative border rounded-xl p-6 hover:border-primary/50 transition-all hover:shadow-lg"
+                  className="group relative  rounded-xl p-6 transition-all hover:shadow-lg"
                 >
                   <div className="flex items-start justify-between mb-3">
                     <div>
@@ -381,7 +381,7 @@ export function Hero() {
                         {exp.company}
                       </p>
                     </div>
-                    <div className="flex items-center gap-2 text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">
+                    <div className="flex items-center gap-2 text-xs text-primary">
                       <Calendar className="h-3 w-3" />
                       {exp.period}
                     </div>
@@ -423,10 +423,10 @@ export function Hero() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className="border border-muted rounded-xl p-5 hover:border-primary/30 hover:bg-muted/5 transition-all"
+                    className=" rounded-xl p-5 hover:bg-muted/5 transition-all"
                   >
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="p-2 rounded-lg bg-primary/10 border border-primary/20">
+                    <div className="flex items-center gap-2 mb-4">
+                      <div className="p-2 rounded-lg">
                         <IconComponent className="h-4 w-4 text-primary" />
                       </div>
                       <h3 className="text-xl font-sans tracking-tight">{stack.title}</h3>
