@@ -4,39 +4,7 @@ import Link from "next/link";
 import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-
-const blogPosts = [
-  {
-    id: 1,
-    title: "Building Scalable Full-Stack Applications with Next.js",
-    excerpt:
-      "Learn how to architect and build production-ready full-stack applications using Next.js, TypeScript, and modern best practices.",
-    date: "November 15, 2025",
-    readTime: "8 min read",
-    slug: "building-scalable-fullstack-apps-nextjs",
-    tags: ["Next.js", "TypeScript", "Full-Stack"],
-  },
-  {
-    id: 2,
-    title: "AI Integration in Modern Web Development",
-    excerpt:
-      "Exploring how to integrate AI capabilities into your web applications, from OpenAI APIs to custom ML models.",
-    date: "November 10, 2025",
-    readTime: "10 min read",
-    slug: "ai-integration-web-development",
-    tags: ["AI", "Web Development", "API"],
-  },
-  {
-    id: 3,
-    title: "Optimizing React Performance: Tips and Tricks",
-    excerpt:
-      "Deep dive into React optimization techniques including memoization, lazy loading, and efficient state management.",
-    date: "November 5, 2025",
-    readTime: "6 min read",
-    slug: "optimizing-react-performance",
-    tags: ["React", "Performance", "Optimization"],
-  },
-];
+import { blogPosts } from "@/components/sections/BlogPosts";
 
 export default function BlogPage() {
   const router = useRouter();

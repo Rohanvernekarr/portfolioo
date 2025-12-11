@@ -546,4 +546,114 @@ And remember: a working, slightly slow app beats a perfectly optimized app that 
 Good luck! ⚡
     `,
   },
+  "the-moment-i-fell-in-love-with-tech": {
+  "title": "The Moment I Fell in Love with Tech (And Didn’t Realise It Back Then)",
+  "date": "December 11, 2025",
+  "readTime": "7 min read",
+  "tags": ["Programming", "Developer Journey", "Tech Mindset"],
+  "content": `
+
+Hey there! So I wanted to talk about a moment from my past — something simple but meaningful. It was the moment I unknowingly fell in love with tech, long before I even called myself a developer.
+
+## That One Bug That Changed Everything
+
+It was late at night. I was stuck on a tiny bug in a project that didn’t even matter to anyone else. A missing bracket, a wrong variable name — something ridiculously small.
+
+But I remember the exact moment it finally worked.
+
+That sudden rush?  
+That tiny spark of “holy sh*t, I made this work”?  
+Yeah… that was the moment.
+
+I didn’t realize it then, but that feeling is what made me fall in love with building things.
+
+## When Code Stopped Feeling Like Code
+
+At first, I used to see programming as just syntax, errors, and tutorials I barely understood. But slowly…
+
+### Code started feeling like problem-solving  
+Not typing. Not memorizing. Just figuring things out logically.
+
+### Debugging felt like detective work  
+You follow clues. You eliminate suspects. And in the end, you catch the culprit.
+
+### Projects felt like building Lego  
+Piece by piece, things started coming together.
+
+This shift changed everything for me.
+
+## The First Time I Built Something Real
+
+I still remember the first project I actually shipped — not perfect, not pretty, but real.
+
+Maybe it was a small webpage.  
+Maybe a simple backend.  
+Maybe a React component that finally rendered correctly.
+
+Whatever it was, it made me think:
+
+“Wait… I can actually *create* things that live on the internet? Things people can use?”
+
+That blew my mind.
+
+## Burnout, Breakthroughs, and the Loop
+
+Let’s be honest. Tech isn’t always glamorous.
+
+### Burnout happens  
+Your brain gets fried from bugs and deadlines.
+
+### Impostor syndrome hits  
+You see someone build something insane in 2 hours and wonder why you struggle.
+
+### Learning feels endless  
+You finish one topic and suddenly there are 12 more frameworks waiting.
+
+But then comes the breakthrough — that one moment where everything clicks again.
+
+And suddenly…  
+You’re back in love with it.
+
+## What Tech Taught Me About Myself
+
+This part surprised me the most.
+
+### I love solving problems  
+Even outside coding — I approach everything like a bug that can be fixed.
+
+### I’m more patient than I thought  
+Hours of debugging can do that to you.
+
+### I enjoy creating things  
+Seeing an idea go from your head → your code → your screen? Addictive.
+
+### I like challenges  
+Even when I complain about them.
+
+## The Realisation That Changed My Journey
+
+The moment I truly understood was when I started choosing code even when nobody was forcing me.
+
+Not for marks.  
+Not for a job.  
+Not for an assignment.
+
+Just because I *wanted* to build something.
+
+That’s when tech stopped being a skill…  
+and became a part of who I am.
+
+## My Honest Take
+
+If you’ve ever stayed up late fixing a bug you could’ve solved tomorrow…  
+If you’ve ever felt that little high when your code finally runs…  
+If you’ve ever built something small and felt weirdly proud…
+
+Then yeah — you’re already in love with tech.
+
+You just haven’t admitted it yet.
+
+`
+},
+
 };

@@ -6,9 +6,20 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const blogPosts = [
+export const blogPosts = [
   {
     id: 1,
+    title: "The Moment I Fell in Love with Tech",
+    excerpt: "I'll be honest - a year ago, I thought AI integration was this super complex thing only big tech companies could do. Then I actually tried it, and realized it's way more accessible than I thought. Let me walk you through what I've learned.",
+    date: "Dec 11 2025",
+    readTime: "5 min",
+    slug: "the-moment-i-fell-in-love-with-tech",
+    tags: ["Tech", "Programming", "Developer Journey"],
+    likes: 31,
+    comments: 8,
+  },
+  {
+    id: 2,
     title: "Building Scalable Full-Stack Applications with Next.js",
     excerpt: "Learn how to architect and build production-ready full-stack applications using Next.js, TypeScript, and modern best practices.",
     date: "Nov 14 2025",
@@ -19,7 +30,7 @@ const blogPosts = [
     comments: 5,
   },
   {
-    id: 2,
+    id: 3,
     title: "AI Integration in Modern Web Development",
     excerpt: "Exploring how to integrate AI capabilities into your web applications, from OpenAI APIs to custom ML models.",
     date: "Nov 7 2025",
@@ -30,7 +41,7 @@ const blogPosts = [
     comments: 12,
   },
   {
-    id: 3,
+    id: 4,
     title: "Optimizing React Performance: Tips and Tricks",
     excerpt: "Deep dive into React optimization techniques including memoization, lazy loading, and efficient state management.",
     date: "Nov 2 2025",
@@ -40,6 +51,7 @@ const blogPosts = [
     likes: 31,
     comments: 8,
   },
+  
 ];
 
 export function BlogPosts() {
