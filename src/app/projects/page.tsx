@@ -11,7 +11,7 @@ const projects = [
     description: "A freehand tool where you can create your system design with AI.Use it to draw diagrams.",
     github: "https://github.com/Rohanvernekarr/sketchai",
     demo: "https://sketchai-xi.vercel.app/",
-    status: "in-progress",
+    status: "deployed",
     image: "/projects/sketch.png",
     techStack: ["Next.js", "AI", "Canvas API", "PostgreSql"],
   },
