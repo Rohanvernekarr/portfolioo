@@ -553,16 +553,16 @@ Good luck! ⚡
   "tags": ["Programming", "Developer Journey", "Tech Mindset"],
   "content": `
 
-Hey there! So I wanted to talk about a moment from my past — something simple but meaningful. It was the moment I unknowingly fell in love with tech, long before I even called myself a developer.
+Hey there! So I wanted to talk about a moment from my past - something simple but meaningful. It was the moment I unknowingly fell in love with tech, long before I even called myself a developer.
 
 ## That One Bug That Changed Everything
 
-It was late at night. I was stuck on a tiny bug in a project that didn’t even matter to anyone else. A missing bracket, a wrong variable name — something ridiculously small.
+It was late at night. I was stuck on a tiny bug in a project that didn’t even matter to anyone else. A missing bracket, a wrong variable name - something ridiculously small.
 
 But I remember the exact moment it finally worked.
 
 That sudden rush?  
-That tiny spark of “holy sh*t, I made this work”?  
+That tiny spark of “Ohhh, I made this work”?  
 Yeah… that was the moment.
 
 I didn’t realize it then, but that feeling is what made me fall in love with building things.
@@ -584,7 +584,7 @@ This shift changed everything for me.
 
 ## The First Time I Built Something Real
 
-I still remember the first project I actually shipped — not perfect, not pretty, but real.
+I still remember the first project I actually shipped - not perfect, not pretty, but real.
 
 Maybe it was a small webpage.  
 Maybe a simple backend.  
@@ -609,7 +609,7 @@ You see someone build something insane in 2 hours and wonder why you struggle.
 ### Learning feels endless  
 You finish one topic and suddenly there are 12 more frameworks waiting.
 
-But then comes the breakthrough — that one moment where everything clicks again.
+But then comes the breakthrough - that one moment where everything clicks again.
 
 And suddenly…  
 You’re back in love with it.
@@ -619,7 +619,7 @@ You’re back in love with it.
 This part surprised me the most.
 
 ### I love solving problems  
-Even outside coding — I approach everything like a bug that can be fixed.
+Even outside coding - I approach everything like a bug that can be fixed.
 
 ### I’m more patient than I thought  
 Hours of debugging can do that to you.
@@ -649,7 +649,7 @@ If you’ve ever stayed up late fixing a bug you could’ve solved tomorrow…
 If you’ve ever felt that little high when your code finally runs…  
 If you’ve ever built something small and felt weirdly proud…
 
-Then yeah — you’re already in love with tech.
+Then yeah - you’re already in love with tech.
 
 You just haven’t admitted it yet.
 
