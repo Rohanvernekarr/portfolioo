@@ -75,10 +75,10 @@ const techStack = [
 const experiences = [
   {
     id: 1,
-    title: "Property Booking Website",
+    title: "Property Booking Application",
     company: "Freelance Project",
     period: "Aug 2025",
-    description: "Developing a full-stack property booking platform with real-time availability checking and secure payment integration. Built with Next.js, TypeScript, and MongoDB for seamless user experience.",
+    description: "Developing a full-stack Multi booking platform with real-time availability checking multiple roles and secure payment integration. Built with Next.js, TypeScript, and Postgresql for seamless user experience.",
     technologies: ["Next.js", "TypeScript", "Express", "PostgreSql", "Razorpay", "Tailwind CSS"],
     type: "Freelance"
   },
