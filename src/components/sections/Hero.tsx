@@ -35,40 +35,40 @@ const techStack = [
     title: "Frontend",
     icon: Palette,
     items: [
-      { name: "Next.js", icon: Globe },               // Framework / web
-      { name: "React", icon: Braces },                // Components
-      { name: "TypeScript", icon: Code2 },            // Code symbol
-      { name: "Tailwind CSS", icon: Palette },        // Styling
-      { name: "Framer Motion", icon: Zap },           // Animations
-      { name: "Vite", icon: TerminalSquare },         // Build tool
-      { name: "Redux", icon: Boxes },                 // State container
+      { name: "Next.js", icon: Globe },               
+      { name: "React", icon: Braces },                
+      { name: "TypeScript", icon: Code2 },            
+      { name: "Tailwind CSS", icon: Palette },        
+      { name: "Framer Motion", icon: Zap },           
+      { name: "Vite", icon: TerminalSquare },         
+      { name: "Redux", icon: Boxes },                 
     ],
   },
   {
     title: "Backend",
     icon: Server,
     items: [
-      { name: "Node.js", icon: Server },              // Runtime
-      { name: "Express", icon: Network },             // Server/network
-      { name: "MongoDB", icon: Database },            // Database icon
-      { name: "PostgreSQL", icon: Database },         // Same db icon
-      { name: "Prisma", icon: Cpu },                  // ORM / transformation
-      { name: "Firebase", icon: Cloud },              // Cloud platform
-      { name: "REST", icon: Layers },                 // API layers
-      { name: "GraphQL", icon: Layers },              // Schemas
+      { name: "Node.js", icon: Server },              
+      { name: "Express", icon: Network },             
+      { name: "MongoDB", icon: Database },            
+      { name: "PostgreSQL", icon: Database },         
+      { name: "Prisma", icon: Cpu },                  
+      { name: "Firebase", icon: Cloud },              
+      { name: "REST", icon: Layers },                 
+      { name: "GraphQL", icon: Layers },              
     ],
   },
   {
     title: "DevOps & Tools",
     icon: Hammer,
     items: [
-      { name: "Git & GitHub", icon: GitBranch },      // Git
-      { name: "Docker", icon: Container },            // Containers
-      { name: "AWS", icon: Cloud },                   // Cloud infra
-      { name: "CI/CD", icon: GitBranch },             // Pipelines
-      { name: "Upstash", icon: Database },            // Redis DB
-      { name: "Railway", icon: Server },              // Deployment
-      { name: "Postman", icon: Box },                 // API testing
+      { name: "Git & GitHub", icon: GitBranch },      
+      { name: "Docker", icon: Container },            
+      { name: "AWS", icon: Cloud },                   
+      { name: "CI/CD", icon: GitBranch },             
+      { name: "Upstash", icon: Database },            
+      { name: "Railway", icon: Server },              
+      { name: "Postman", icon: Box },                 
     ],
   },
 ];
