@@ -18,6 +18,8 @@ import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { EmailButton } from "./EmailButton";
 import { BlogPosts } from "./BlogPosts";
+import { Experience } from "./Experience";
+import { TechStack } from "./TechStack";
 import {
   Dialog,
   DialogTrigger,
@@ -28,6 +30,7 @@ import {
 } from "@/components/ui/dialog";
 import Image from "next/image";
 import Projects  from "./Projects";
+
 
 
 const techStack = [
@@ -72,17 +75,7 @@ const techStack = [
     ],
   },
 ];
-const experiences = [
-  {
-    id: 1,
-    title: "Property Booking Application",
-    company: "Freelance Project",
-    period: "Aug 2025",
-    description: "Developing a full-stack Multi booking platform with real-time availability checking multiple roles and secure payment integration. Built with Next.js, TypeScript, and Postgresql for seamless user experience.",
-    technologies: ["Next.js", "TypeScript", "Express", "PostgreSql", "Razorpay", "Tailwind CSS"],
-    type: "Freelance"
-  },
-];
+
 
 export function Hero() {
   const [activeTab, setActiveTab] = useState<"posts" | "projects" | "about" | "experience">("posts");
@@ -201,7 +194,7 @@ export function Hero() {
             </div>
             
             <p className=" leading-relaxed text-sm text-foreground/90">
-              <span className="font-semibold text-sm text-foreground">Full-Stack Developer</span> crafting innovative experiences 🚀
+              <span className="font-semibold text-sm text-foreground">Full-Stack Developer</span> crafting innovative experiences
               <br />
               Building with Next.js, React, TypeScript & AI • Passionate about clean code & user experience
             </p>
@@ -345,96 +338,12 @@ export function Hero() {
 
           {/* Experience Tab */}
           {activeTab === "experience" && (
-            <div className="space-y-4">
-              {experiences.map((exp, index) => (
-                <motion.div
-                  key={exp.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group relative  rounded-xl p-6 transition-all hover:shadow-lg"
-                >
-                  <div className="flex items-start justify-between mb-3">
-                    <div>
-                      <h3 className="text-lg font-bold mb-1 group-hover:text-primary transition-colors">
-                        {exp.title}
-                      </h3>
-                      <p className="text-muted-foreground text-sm flex items-center gap-2">
-                        <Briefcase className="h-4 w-4" />
-                        {exp.company}
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-2 text-xs text-primary">
-                      <Calendar className="h-3 w-3" />
-                      {exp.period}
-                    </div>
-                  </div>
-                  
-                  <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
-                    {exp.description}
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2">
-                    {exp.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="text-xs bg-muted px-3 py-1 rounded-full hover:bg-primary/20 hover:text-primary transition-colors cursor-default"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  
-                  <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <div className="bg-primary/10 text-primary text-xs px-2 py-1 rounded">
-                      {exp.type}
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+           <Experience/>
           )}
 
           {/* Tech Stack Tab */}
           {activeTab === "about" && (
-            <div className="space-y-4">
-              {techStack.map((stack, index) => {
-                const IconComponent = stack.icon;
-                return (
-                  <motion.div
-                    key={stack.title}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className=" rounded-xl p-5 hover:bg-muted/5 transition-all"
-                  >
-                    <div className="flex items-center gap-2 mb-4">
-                      <div className="p-2 rounded-lg">
-                        <IconComponent className="h-4 w-4 text-primary" />
-                      </div>
-                      <h3 className="text-xl font-sans tracking-tight">{stack.title}</h3>
-                      <span className="ml-auto text-sm text-muted-foreground">{stack.items.length} skills</span>
-                    </div>
-                    
-                    <div className="flex flex-wrap gap-2">
-                      {stack.items.map((item) => {
-                        const ItemIcon = item.icon;
-                        return (
-                          <motion.span
-                            key={item.name}
-                            whileHover={{ scale: 1.05 }}
-                            className="inline-flex items-center gap-1.5 px-3 py-2 text-sm rounded-lg bg-muted/50 hover:bg-muted hover:border-primary/20 transition-all border border-transparent cursor-default"
-                          >
-                            <ItemIcon className="h-4 w-4 text-muted-foreground" />
-                            <span className="font-medium text-xs">{item.name}</span>
-                          </motion.span>
-                        );
-                      })}
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
+            <TechStack/>
           )}
         </motion.div>
       </AnimatePresence>
