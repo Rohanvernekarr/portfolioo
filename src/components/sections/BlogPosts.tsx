@@ -104,10 +104,12 @@ export function BlogPosts() {
                 
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between gap-2 flex-wrap">
-                    <div className="flex items-center gap-2 mt-1 flex-wrap">
-                      <span className="font-semibold text-md">Rohan Vernekar</span>
-                      <span className="text-muted-foreground text-sm">@Rohanvrnkr</span>
-                      <span className="text-muted-foreground mt-0.5 text-xs">{post.date}</span>
+                    <div className="flex items-center justify-between gap-2 mt-1 w-full">
+                      <div className="flex items-center gap-2">
+                        <span className="font-semibold text-md">Rohan Vernekar</span>
+                        <span className="text-muted-foreground text-sm">@Rohanvrnkr</span>
+                      </div>
+                      <span className="text-muted-foreground text-xs whitespace-nowrap">{post.date}</span>
                     </div>
                    
                   </div>
