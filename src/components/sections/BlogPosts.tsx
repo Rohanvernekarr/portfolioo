@@ -7,8 +7,19 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 export const blogPosts = [
-  {
+   {
     id: 1,
+    title: "Choosing the Right Python Data Structure: A Beginner’s Decision Guide",
+    excerpt: "When I first started learning Python, one of the most confusing things for me was understanding data structures. I knew about lists, tuples, sets, and dictionaries, but I didn’t really understand when to use each one.",
+    date: "Feb 22, 2026",
+    readTime: "6 min",
+    slug: "choosing-the-right-python-data-structure",
+    tags: ["Python", "Data Structure", "Beginner", "Programming"],
+    likes: 31,
+    comments: 8,
+  },
+  {
+    id: 2,
     title: "The Moment I Fell in Love with Tech",
     excerpt: "I'll be honest - a year ago, I thought AI integration was this super complex thing only big tech companies could do. Then I actually tried it, and realized it's way more accessible than I thought. Let me walk you through what I've learned.",
     date: "Dec 11 2025",
@@ -19,7 +30,7 @@ export const blogPosts = [
     comments: 8,
   },
   {
-    id: 2,
+    id: 3,
     title: "Building Scalable Full-Stack Applications with Next.js",
     excerpt: "Learn how to architect and build production-ready full-stack applications using Next.js, TypeScript, and modern best practices.",
     date: "Nov 14 2025",
@@ -30,7 +41,7 @@ export const blogPosts = [
     comments: 5,
   },
   {
-    id: 3,
+    id: 4,
     title: "AI Integration in Modern Web Development",
     excerpt: "Exploring how to integrate AI capabilities into your web applications, from OpenAI APIs to custom ML models.",
     date: "Nov 7 2025",
@@ -41,7 +52,7 @@ export const blogPosts = [
     comments: 12,
   },
   {
-    id: 4,
+    id: 5,
     title: "Optimizing React Performance: Tips and Tricks",
     excerpt: "Deep dive into React optimization techniques including memoization, lazy loading, and efficient state management.",
     date: "Nov 2 2025",
@@ -75,7 +86,7 @@ export function BlogPosts() {
   };
 
   return (
-    <div className="space-y-3">
+    <div className="space-y-2">
       {blogPosts.map((post, index) => (
         <motion.article
           key={post.id}
@@ -87,21 +98,18 @@ export function BlogPosts() {
           <Link href={`/blog/${post.slug}`} className="block">
             <div className="p-1">
               <div className="flex items-start gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-purple-500/20 flex items-center justify-center flex-shrink-0">
-                  <User className="w-5 h-5 text-primary" />
+                <div className="w-8 h-8  rounded-full bg-gradient-to-br from-primary/20 to-purple-500/20 flex items-center justify-center flex-shrink-0">
+                  <User className="w-4 h-4 text-primary" />
                 </div>
                 
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between gap-2 flex-wrap">
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <span className="font-semibold text-sm">Rohan Vernekar</span>
+                    <div className="flex items-center gap-2 mt-1 flex-wrap">
+                      <span className="font-semibold text-md">Rohan Vernekar</span>
                       <span className="text-muted-foreground text-sm">@Rohanvrnkr</span>
-                      <span className="text-muted-foreground text-xs">{post.date}</span>
+                      <span className="text-muted-foreground mt-0.5 text-xs">{post.date}</span>
                     </div>
-                    <span className="flex items-center gap-1 text-xs text-muted-foreground">
-                      <Clock className="h-3 w-3" />
-                      {post.readTime}
-                    </span>
+                   
                   </div>
                   
                 </div>
@@ -109,7 +117,7 @@ export function BlogPosts() {
               </div>
 
               {/* Content */}
-              <div className="space-y-2 mb-3 ml-13">
+              <div className="space-y-2 mb-3 ml-11">
                 <h3 className="text-base font-semibold leading-snug hover:underline">
                   {post.title}
                 </h3>
