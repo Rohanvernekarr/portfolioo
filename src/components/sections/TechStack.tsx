@@ -66,7 +66,7 @@ export function TechStack() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className=" rounded-xl p-5 hover:bg-muted/5 transition-all"
+                    className=" rounded-xl p-2 hover:bg-muted/5 transition-all "
                   >
                     <div className="flex items-center gap-2 mb-4">
                       <div className="p-2 rounded-lg">
