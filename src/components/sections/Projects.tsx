@@ -7,23 +7,23 @@ import { Button } from '@/components/ui/button';
 
 const projects = [
   {
-    title: "SystemDesign.ai",
+    title: "Sketch.ai",
     description: "A freehand tool where you can create your system design with AI.Use it to draw diagrams.",
     github: "https://github.com/Rohanvernekarr/sketchai",
     demo: "https://sketchai-xi.vercel.app/",
     status: "deployed",
     image: "/projects/sketch.png",
-    techStack: ["Next.js", "AI", "Canvas API", "PostgreSql"],
+    techStack: ["Next.js", "React","Typescript", "Canvas API", "PostgreSql"],
   },
  
   {
-    title: "SmartCV",
-    description: "Full-stack AI web platform that helps users to create, customize, and optimize professional resumes. With built-in templates, live editing and AI-driven resume analysis.",
-    github: "https://github.com/Rohanvernekarr/smartcv",
-    demo: "https://smartcv-eta.vercel.app/",
+    title: "WarMonitor",
+    description: "Real-time conflict monitoring platform aggregating news, social media, and official sources. With interactive map. 2026 War.",
+    github: "https://github.com/Rohanvernekarr/warmonitor",
+    demo: "https://warmonitor-eta.vercel.app/",
     status: "deployed",
-    image: "/projects/smart.png",
-    techStack: ["Next.js", "Tailwind CSS", "Supabase", "AI"],
+    image: "/projects/war1.png",
+    techStack: ["Next.js", "React", "Typescript","API"],
   },
 ];
 
