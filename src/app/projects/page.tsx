@@ -7,13 +7,13 @@ import { useRouter } from "next/navigation"
 
 const projects = [
    {
-    title: "SystemDesign.ai",
+    title: "Sketch.ai",
     description: "A freehand tool where you can create your system design with AI.Use it to draw diagrams.",
     github: "https://github.com/Rohanvernekarr/sketchai",
     demo: "https://sketchai-xi.vercel.app/",
     status: "deployed",
     image: "/projects/sketch.png",
-    techStack: ["Next.js", "AI", "Canvas API", "PostgreSql"],
+    techStack: ["Next.js", "React","Tailwind CSS", "Canvas API", "PostgreSql"],
   },
  
   {
@@ -26,15 +26,15 @@ const projects = [
     techStack: ["Next.js", "Tailwind CSS", "Supabase", "AI"],
   },
    {
-    title: "NeonVerse",
-    description: "3D cosmic experience using React Three Fiber, Drei, and GSAP. A storytelling journey through the stars.",
-    github: "https://github.com/Rohanvernekarr/NeonVerse",
-    demo: "",
-    status: "in-progress",
-    image: "/projects/space.png",
-    techStack: ["React Three Fiber", "GSAP", "WebGL"],
+    title: "WarMonitor",
+    description: "Real-time conflict monitoring platform aggregating news, social media, and official sources.With interactive map.",
+    github: "https://github.com/Rohanvernekarr/warmonitor",
+    demo: "https://warmonitor-eta.vercel.app/",
+    status: "deployed",
+    image: "/projects/war1.png",
+    techStack: ["Next.js", "React", "Typescript","API"],
   },
-   {
+    {
     title: "StrangerLoop",
     description: "Connect with random strangers, End-to-end Encrypted. Built with Next.js + WebRTC.",
     github: "https://github.com/Rohanvernekarr/StrangerLoop",
@@ -43,6 +43,16 @@ const projects = [
     image: "/projects/loop.png",
     techStack: ["Next.js", "TypeScript", "WebRTC", "Tailwind CSS"],
   },
+   {
+    title: "NeonVerse",
+    description: "3D cosmic experience using React Three Fiber, Drei, and GSAP. A storytelling journey through the stars.",
+    github: "https://github.com/Rohanvernekarr/NeonVerse",
+    demo: "",
+    status: "in-progress",
+    image: "/projects/space.png",
+    techStack: ["React Three Fiber", "GSAP", "WebGL"],
+  },
+ 
     {
     title: "Githive",
     description: "GitHub-powered project hub to manage, tag, and search repos easily. Built with Next.js + GitHub API.",
