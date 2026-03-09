@@ -43,6 +43,15 @@ const projects = [
     image: "/projects/loop.png",
     techStack: ["Next.js", "TypeScript", "WebRTC", "Tailwind CSS"],
   },
+    {
+    title: "CodeHub",
+    description: "A GitHub alternative built using lovable.dev",
+    github: "https://lovable.dev/projects/30c4b5ad-961a-41cc-b3dc-c43b4a30bf79",
+    demo: "https://codehubv1.lovable.app/",
+    status: "deployed",
+    image: "/projects/codehub.png",
+    techStack: ["TypeScript", "React", "Tailwind CSS", "Supabase", "Lovable.dev"],
+  },
    {
     title: "NeonVerse",
     description: "3D cosmic experience using React Three Fiber, Drei, and GSAP. A storytelling journey through the stars.",

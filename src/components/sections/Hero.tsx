@@ -217,7 +217,7 @@ export function Hero() {
             {/* Stats */}
             <div className="flex gap-4 pt-2 text-sm">
               <div>
-                <span className="font-bold text-foreground">13</span>
+                <span className="font-bold text-foreground">15</span>
                 <span className="text-muted-foreground ml-1">Projects</span>
               </div>
               <div>
