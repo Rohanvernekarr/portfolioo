@@ -80,7 +80,7 @@ export function Footer() {
           <div className="flex flex-col items-center text-center text-xs text-muted-foreground">
            
             <div className="flex items-center gap-2 mt-0.5">
-              <a
+              {/* <a
                 href="https://rohanrv.me"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -88,8 +88,8 @@ export function Footer() {
               >
                 <ExternalLink className="h-3 w-3 mr-1" />
                 Old portfolio
-              </a>
-              <span className="text-muted-foreground/50">•</span>
+              </a> */}
+              {/* <span className="text-muted-foreground/50">•</span> */}
               <span>inspired by{" "}
                 <Link href="https://x.com" className="text-muted-foreground hover:text-primary transition hover:underline" target="_blank" rel="noopener noreferrer">
                 x.com
