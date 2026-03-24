@@ -198,7 +198,7 @@ export function Hero() {
               <br />
               Building with Next.js, React, TypeScript & AI • Passionate about clean code & user experience
             </p>
-            
+
             <div className="flex flex-wrap gap-3 text-sm text-muted-foreground pt-1">
               <span className="flex items-center gap-1.5 hover:text-foreground transition-colors">
                 <MapPin className="h-3.5 w-3.5" />
@@ -214,7 +214,6 @@ export function Hero() {
               </span>
             </div>
             
-            {/* Stats */}
             <div className="flex gap-4 pt-2 text-sm">
               <div>
                 <span className="font-bold text-foreground">15</span>
