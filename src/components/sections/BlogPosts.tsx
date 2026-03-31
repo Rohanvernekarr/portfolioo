@@ -9,6 +9,18 @@ import { useState } from "react";
 export const blogPosts = [
    {
     id: 1,
+    title: "Understanding the NLP Pipeline: How Machines Learn to Understand Human Language",
+    excerpt: "Natural Language Processing (NLP) is one of the most exciting areas of Artificial Intelligence. It focuses on enabling computers to understand, interpret, and generate human language.  Every day, we interact with systems that use NLP without even realizing it",
+    date: "March 30, 2026",
+    readTime: "12 min",
+    slug: "understanding-the-nlp-pipeline",
+    tags: ["NLP", "Machine Learning", "Artificial Intelligence", "Beginner"],
+    likes: 31,
+    comments: 8,
+    mediumLink: "https://medium.com/@rohanvrnkr/understanding-the-nlp-pipeline-how-machines-learn-to-understand-human-language-7bfa8dec9a21",
+  },
+   {
+    id: 2,
     title: "Choosing the Right Python Data Structure: A Beginner’s Decision Guide",
     excerpt: "When I first started learning Python, one of the most confusing things for me was understanding data structures. I knew about lists, tuples, sets, and dictionaries, but I didn’t really understand when to use each one.",
     date: "Feb 22, 2026",
@@ -19,7 +31,7 @@ export const blogPosts = [
     comments: 8,
   },
   {
-    id: 2,
+    id: 3,
     title: "The Moment I Fell in Love with Tech",
     excerpt: "I'll be honest - a year ago, I thought AI integration was this super complex thing only big tech companies could do. Then I actually tried it, and realized it's way more accessible than I thought. Let me walk you through what I've learned.",
     date: "Dec 11 2025",
@@ -30,7 +42,7 @@ export const blogPosts = [
     comments: 8,
   },
   {
-    id: 3,
+    id: 4,
     title: "Building Scalable Full-Stack Applications with Next.js",
     excerpt: "Learn how to architect and build production-ready full-stack applications using Next.js, TypeScript, and modern best practices.",
     date: "Nov 14 2025",
@@ -41,7 +53,7 @@ export const blogPosts = [
     comments: 5,
   },
   {
-    id: 4,
+    id: 5,
     title: "AI Integration in Modern Web Development",
     excerpt: "Exploring how to integrate AI capabilities into your web applications, from OpenAI APIs to custom ML models.",
     date: "Nov 7 2025",
@@ -52,7 +64,7 @@ export const blogPosts = [
     comments: 12,
   },
   {
-    id: 5,
+    id: 6,
     title: "Optimizing React Performance: Tips and Tricks",
     excerpt: "Deep dive into React optimization techniques including memoization, lazy loading, and efficient state management.",
     date: "Nov 2 2025",

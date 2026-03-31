@@ -1,7 +1,7 @@
 "use client";
 
 import { useParams, useRouter } from "next/navigation";
-import { ArrowLeft, Calendar, Clock, Share2, Copy, Check } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, Share2, Copy, Check, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import {blogPosts} from "@/components/sections/Blogs";
@@ -205,6 +205,32 @@ export default function BlogPostPage() {
           ))}
         </div>
       </header>
+
+      {post.mediumLink && (
+        <div className="mb-8 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-black dark:bg-white flex items-center justify-center">
+              <svg 
+                viewBox="0 0 24 24" 
+                className="w-5 h-5 fill-white dark:fill-black"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.82 6.82 0 010 12a6.82 6.82 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42zM24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75c.66 0 1.19 2.58 1.19 5.75z"/>
+              </svg>
+            </div>
+            <div>
+              <p className="font-semibold text-sm">Prefer reading on Medium?</p>
+              <p className="text-xs text-muted-foreground">This post is also available on Medium.</p>
+            </div>
+          </div>
+          <Button asChild variant="outline" size="sm" className="w-full sm:w-auto gap-2">
+            <a href={post.mediumLink} target="_blank" rel="noopener noreferrer">
+              Read on Medium
+              <ExternalLink className="h-4 w-4" />
+            </a>
+          </Button>
+        </div>
+      )}
     
       <div className="prose prose-zinc dark:prose-invert max-w-none">
         {parseContent(post.content)}

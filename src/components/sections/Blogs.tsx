@@ -1,6 +1,15 @@
 "use client";
 
-export const blogPosts = {
+export interface BlogPost {
+  title: string;
+  date: string;
+  readTime: string;
+  tags: string[];
+  content: string;
+  mediumLink?: string;
+}
+
+export const blogPosts: Record<string, BlogPost> = {
   "building-scalable-fullstack-apps-nextjs": {
     title: "Building Scalable Full-Stack Applications with Next.js",
     date: "November 15, 2025",
@@ -659,6 +668,7 @@ You just haven’t admitted it yet.
   title: "Choosing the Right Python Data Structure: A Beginner’s Decision Guide",
   date: "February 22, 2026",
   readTime: "6 min read",
+  mediumLink: "https://medium.com/@rohanrv/choosing-the-right-python-data-structure-a-beginners-decision-guide-9f8ade46205c",
   tags: ["Python", "Data Structures", "Beginner", "Programming"],
   content: `
 
@@ -775,6 +785,343 @@ Choosing the right data structure early will save you time, reduce bugs, and mak
 Mastering these fundamentals is an important step in every Python programmer’s journey.
 
 Happy Coding 
+
+  `,
+},
+"understanding-the-nlp-pipeline": {
+  title: "Understanding the NLP Pipeline: How Machines Learn to Understand Human Language",
+  date: "March 30, 2026",
+  readTime: "12 min read",
+  tags: ["NLP", "Machine Learning", "Artificial Intelligence", "Beginner"],
+  mediumLink: "https://medium.com/@rohanrv/understanding-the-nlp-pipeline-how-machines-learn-to-understand-human-language-1a5ca34de357",
+  content: `
+
+Natural Language Processing (NLP) is one of the most exciting areas of Artificial Intelligence. It focuses on enabling computers to understand, interpret, and generate human language. Every day we interact with NLP systems without even realizing it -when we talk to chatbots, search on Google, or analyze customer reviews on platforms like Amazon.
+
+However, machines cannot directly understand raw human language. Before text can be analyzed by machine learning models, it must pass through a sequence of processing steps known as the **NLP Pipeline**. In this blog, we’ll explore how raw text is transformed into structured data that machines can understand.
+
+
+## Introduction to NLP
+
+### What is NLP?
+
+Natural Language Processing is a field that combines computer science, artificial intelligence, and linguistics to help computers understand human language.
+
+Human language is complex and unstructured. Machines cannot interpret sentences the way humans do, so NLP techniques convert language into structured formats that algorithms can process.
+
+Example:
+
+“I absolutely love this phone!”
+
+A human easily understands that this expresses **positive sentiment**, but a computer needs preprocessing and feature extraction to interpret it.
+
+
+### Why is Preprocessing Required?
+
+Raw text data often contains unnecessary elements such as capital letters, punctuation, stopwords, emojis, URLs, and repeated characters. These elements may not always contribute meaningful information for machine learning models.
+
+Preprocessing cleans and standardizes the text so models can learn patterns more effectively. Without preprocessing, models may learn incorrect patterns or become inefficient.
+
+
+## Real-World Applications of NLP
+
+### Chatbots
+
+Chatbots used in customer support systems understand user questions and provide automated responses.
+
+Example:
+
+User: “Where is my order?”
+
+The chatbot interprets the question and retrieves order information automatically.
+
+
+### Sentiment Analysis
+
+Companies analyze product reviews to understand customer opinions.
+
+Example:
+
+“This laptop is amazing and super fast!”
+
+An NLP model classifies this sentence as **positive sentiment**.
+
+
+### Search Engines
+
+Search engines analyze queries and return the most relevant results.
+
+Example search query:
+
+“best budget smartphone”
+
+The search engine understands the intent and retrieves relevant webpages.
+
+
+## Text Preprocessing Steps
+
+Text preprocessing prepares raw text for analysis. Some of the most common steps include:
+
+
+### Lowercasing
+
+Lowercasing converts all characters to lowercase so that words like “Love” and “love” are treated as the same token.
+
+Example:
+
+Before: “I Love NLP”  
+After: “i love nlp”
+
+This reduces unnecessary variations in the dataset.
+
+
+### Removing Punctuation
+
+Punctuation marks such as commas, exclamation marks, and question marks are often removed because they usually do not contribute meaning in many NLP tasks.
+
+Example:
+
+Before: “This phone is amazing!!!”  
+After: “This phone is amazing”
+
+
+### Removing Stopwords
+
+Stopwords are common words that appear frequently but carry little meaningful information.
+
+Examples include: the, is, at, on, and, a.
+
+Example:
+
+“This phone is very good” → “phone good”
+
+However, in some tasks like machine translation, removing stopwords may remove important context.
+
+
+### Tokenization
+
+Tokenization is the process of splitting text into smaller pieces called tokens. These tokens can be words, sentences, or characters.
+
+Example sentence:
+
+“I love learning NLP”
+
+Word tokens:
+
+["I", "love", "learning", "NLP"]
+
+Tokenization allows machines to analyze text step by step.
+
+
+### Stemming
+
+Stemming reduces words to their root form by removing suffixes.
+
+Example:
+
+playing, played, player → play
+
+However, stemming may sometimes produce incorrect words, such as:
+
+studies → studi
+
+
+### Lemmatization
+
+Lemmatization converts words to their correct dictionary base form.
+
+Examples:
+
+running → run  
+better → good  
+studies → study
+
+Lemmatization is more accurate than stemming but requires more computational resources.
+
+
+## Text Cleaning Challenges
+
+Real-world text data, especially from social media, is often messy.
+
+### Handling Emojis
+
+Emojis often carry strong sentiment information.
+
+Example:
+
+“This movie is amazing 😍🔥”
+
+Some NLP pipelines convert emojis into words:
+
+😍 → love  
+🔥 → awesome
+
+
+### Handling URLs
+
+Many texts contain URLs that do not contribute to meaning.
+
+Example:
+
+“Check this product https://example.com”
+
+After cleaning:
+
+“Check this product”
+
+
+### Handling Noisy Text
+
+Social media text often includes repeated letters, slang, and abbreviations.
+
+Example:
+
+“Sooo happppyyyy with this phone!!!”
+
+After cleaning:
+
+“so happy with this phone”
+
+
+## Feature Engineering (Vectorization)
+
+Machines cannot understand text directly. Therefore, text must be converted into numerical representations -a process known as **vectorization**.
+
+
+### Bag of Words (BoW)
+
+Bag of Words represents text by counting how many times each word appears.
+
+Example sentences:
+
+“I love NLP”  
+“I love machine learning”
+
+Vocabulary:
+
+[I, love, NLP, machine, learning]
+
+Vector representation:
+
+Sentence 1 → [1, 1, 1, 0, 0]  
+Sentence 2 → [1, 1, 0, 1, 1]
+
+Advantages:
+- Simple to implement
+- Works well for basic tasks
+
+Limitations:
+- Ignores context
+- Produces sparse vectors
+
+
+### TF-IDF
+
+TF-IDF improves Bag of Words by assigning higher weights to important words and lower weights to very common words.
+
+Common words like “the” receive low importance, while rare meaningful words receive higher importance.
+
+Advantages:
+- Highlights important words
+- Reduces impact of frequent words
+
+Limitations:
+- Still ignores context
+- Cannot capture semantic meaning
+
+
+### Word2Vec
+
+Word2Vec generates dense vector representations where words with similar meanings have similar vectors.
+
+Example relationship:
+
+king – man + woman ≈ queen
+
+Advantages:
+- Captures semantic relationships
+- Dense vector representation
+
+Limitations:
+- Requires large datasets
+- More computationally complex
+
+
+### Average Word2Vec
+
+Average Word2Vec creates sentence-level vectors by averaging the vectors of all words in a sentence.
+
+Example:
+
+“I love NLP”
+
+Word vectors are averaged to produce one vector representing the entire sentence.
+
+Advantages:
+- Simple sentence representation
+- Captures some semantic meaning
+
+Limitations:
+- Ignores word order
+- May lose contextual information
+
+
+## Comparison of Techniques
+
+Bag of Words counts word frequency and treats all words equally.
+
+TF-IDF improves this by giving higher importance to meaningful words.
+
+Word2Vec learns semantic relationships between words using neural networks.
+
+Average Word2Vec converts entire sentences into vectors by averaging word embeddings.
+
+
+## Final NLP Pipeline Flow
+
+The NLP pipeline transforms raw text into structured data that machine learning models can process.
+
+Pipeline flow:
+
+Raw Text  
+↓  
+Text Cleaning  
+↓  
+Text Preprocessing  
+↓  
+Feature Extraction  
+↓  
+Machine Learning Model
+
+
+### Example Pipeline
+
+Raw text:
+
+“OMG!!! This phone is soooo amazing 😍🔥”
+
+After preprocessing:
+
+phone amazing
+
+Vector representation:
+
+[0.34, 0.87, 0.22 ...]
+
+This numerical vector is then used as input for machine learning models such as Logistic Regression, Naive Bayes, or Neural Networks.
+
+
+## Conclusion
+
+Natural Language Processing allows machines to understand human language by converting raw text into structured data. Before text can be analyzed, it must go through several stages including cleaning, preprocessing, and vectorization.
+
+Techniques such as Bag of Words, TF-IDF, and Word2Vec transform text into numerical representations, enabling machines to detect patterns and meaning in language.
+
+Understanding the NLP pipeline is the foundation for building applications such as chatbots, sentiment analysis systems, recommendation engines, and intelligent search systems.
+
+As NLP continues to evolve, modern approaches like transformers and large language models are pushing the boundaries of what machines can understand and generate.
+
+Happy Learning 🚀
 
   `,
 },
