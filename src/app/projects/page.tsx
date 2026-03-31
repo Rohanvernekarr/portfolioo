@@ -15,7 +15,6 @@ const projects = [
     image: "/projects/sketch.png",
     techStack: ["Next.js", "React","Tailwind CSS", "Canvas API", "PostgreSql"],
   },
- 
   {
     title: "SmartCV",
     description: "Full-stack AI web platform that helps users to create, customize, and optimize professional resumes. With built-in templates, live editing and AI-driven resume analysis.",
