@@ -1125,5 +1125,229 @@ Happy Learning 🚀
 
   `,
 },
+"understanding-token-classification-in-nlp": {
+  title: "Understanding Token Classification in NLP: NER, POS Tagging, and Chunking",
+  date: "April 5, 2026",
+  readTime: "10 min read",
+  mediumLink: "https://medium.com/@rohanrv/understanding-token-classification-in-nlp-ner-pos-tagging-and-chunking-6ab0e25ddad6",
+  tags: ["NLP", "Machine Learning", "AI", "Python", "DataScience"],
+  content: `
+
+When we read a sentence, we naturally understand the meaning of each word and how it relates to the others. For computers, however, language is just a sequence of characters unless we teach them how to interpret it.
+
+This is where Natural Language Processing (NLP) comes in. NLP allows machines to understand, analyze, and process human language. One of the most important techniques used in NLP is token classification.
+
+Token classification is the process of assigning labels to individual words in a sentence so that machines can understand grammar, meaning, and relationships between words.
+
+In this blog, we will explore three important token classification tasks used in NLP systems: Named Entity Recognition (NER), Part-of-Speech (POS) Tagging, and Chunking.
+
+
+## Introduction to NLP and Token Classification
+
+Natural Language Processing is a field of Artificial Intelligence that focuses on helping computers understand human language. It powers many modern applications such as chatbots, translation systems, search engines, and voice assistants.
+
+Before a computer can understand text, it first breaks sentences into smaller units called tokens. A token is usually a word or sub-word in a sentence.
+
+For example, the sentence:
+
+"Apple released the new iPhone in California"
+
+can be broken into tokens like this:
+
+Apple | released | the | new | iPhone | in | California
+
+Token classification assigns a label to each of these words so the system can understand their role or meaning.
+
+
+## Why Token-Level Understanding Matters
+
+Understanding text at the token level allows NLP systems to extract meaningful information from sentences.
+
+For example, chatbots rely on token classification to identify important information in user queries.
+
+If a user says:
+
+"Book a flight to Paris tomorrow"
+
+the system must recognize that "Paris" refers to a location and "tomorrow" refers to a date.
+
+Search engines also use token analysis to understand user intent. When someone searches for "best restaurants in Bangalore", the system detects that Bangalore is a location and restaurants are the target entity.
+
+Token-level analysis also helps in information extraction. For instance, in the sentence "Tesla acquired SolarCity in 2016", an NLP system can identify Tesla and SolarCity as organizations and 2016 as a date.
+
+
+## Named Entity Recognition (NER)
+
+Named Entity Recognition is a token classification task that identifies real-world entities in text.
+
+These entities can include people, organizations, locations, dates, products, or other important objects.
+
+For example, in the sentence:
+
+"Elon Musk founded SpaceX in California"
+
+NER identifies the following entities:
+
+Elon Musk → Person  
+SpaceX → Organization  
+California → Location
+
+NER systems often use something called the BIO tagging format.
+
+BIO stands for:
+
+B – Beginning of an entity  
+I – Inside an entity  
+O – Outside an entity
+
+For example:
+
+Barack → B-PER  
+Obama → I-PER  
+visited → O  
+India → B-LOC
+
+This tagging approach helps models detect multi-word entities such as "Barack Obama".
+
+Another example could be:
+
+"Google launched a new product in New York"
+
+Here, Google is an organization and New York is a location.
+
+NER is widely used in news analysis, document processing, financial analysis, and healthcare applications.
+
+
+## Part-of-Speech (POS) Tagging
+
+Part-of-Speech tagging focuses on identifying the grammatical role of each word in a sentence.
+
+Every word in a sentence belongs to a category such as noun, verb, adjective, or adverb.
+
+Consider the sentence:
+
+"The cat sat on the mat"
+
+POS tagging would assign the following labels:
+
+The → Determiner  
+cat → Noun  
+sat → Verb  
+on → Preposition  
+the → Determiner  
+mat → Noun
+
+Another example is:
+
+"She reads books daily"
+
+Here, the system identifies:
+
+She → Pronoun  
+reads → Verb  
+books → Noun  
+daily → Adverb
+
+POS tagging helps NLP systems understand sentence structure and grammar.
+
+It is widely used in grammar checking tools, text summarization systems, and machine translation systems.
+
+
+## Chunking (Phrase Detection)
+
+Chunking, also known as phrase detection, groups words together into meaningful phrases instead of labeling them individually.
+
+These phrases can include noun phrases, verb phrases, or prepositional phrases.
+
+For example, consider the sentence:
+
+"The quick brown fox jumps over the lazy dog"
+
+Chunking identifies groups like:
+
+The quick brown fox → Noun Phrase  
+jumps → Verb Phrase  
+over the lazy dog → Prepositional Phrase
+
+Another example is:
+
+"She bought a new laptop"
+
+Chunking identifies the noun phrase:
+
+a new laptop
+
+Unlike NER, which identifies specific entities, chunking focuses on identifying general grammatical phrases.
+
+Chunking is useful in tasks such as question answering systems, text summarization, and information extraction.
+
+
+## Comparing NER, POS Tagging, and Chunking
+
+Although POS tagging, NER, and chunking all operate at the token level, they focus on different aspects of language understanding.
+
+POS tagging focuses on grammar by identifying the role of each word in a sentence, such as nouns or verbs.
+
+NER focuses on identifying real-world entities like people, organizations, and locations.
+
+Chunking works at a higher level by grouping words together into phrases such as noun phrases or verb phrases.
+
+In simple terms, POS tagging understands grammar, NER identifies entities, and chunking detects meaningful phrases in sentences.
+
+
+## Simple Code Example Using spaCy
+
+Below is a small example using the spaCy library to perform token classification tasks.
+
+\`\`\`python
+import spacy
+
+nlp = spacy.load("en_core_web_sm")
+
+text = "Elon Musk founded SpaceX in California"
+
+doc = nlp(text)
+
+print("POS TAGGING")
+for token in doc:
+    print(token.text, token.pos_)
+
+print("\\nNAMED ENTITY RECOGNITION")
+for ent in doc.ents:
+    print(ent.text, ent.label_)
+\`\`\`
+
+This code loads a pre-trained NLP model and performs POS tagging and Named Entity Recognition on a sample sentence.
+
+
+## Transformer-Based Models and BERT
+
+Modern NLP systems often use transformer-based models such as BERT.
+
+BERT stands for Bidirectional Encoder Representations from Transformers. Unlike older models, BERT understands the context of words by looking at the entire sentence.
+
+For example, the word "Apple" could refer to a fruit or a company. BERT can understand the difference based on context.
+
+Transformer models have significantly improved the accuracy of token classification tasks such as NER and POS tagging.
+
+They are widely used in chatbots, search engines, document analysis systems, and intelligent assistants.
+
+
+## Final Thoughts
+
+Token classification is a fundamental concept in Natural Language Processing. It helps machines analyze text by labeling words and understanding their roles in a sentence.
+
+In this article, we explored three important techniques: Named Entity Recognition, Part-of-Speech Tagging, and Chunking.
+
+NER identifies important entities in text, POS tagging explains the grammatical role of words, and chunking groups words into meaningful phrases.
+
+Together, these techniques help machines extract structure and meaning from language, making many modern AI applications possible.
+
+Understanding token classification is an important step for anyone starting their journey in NLP and machine learning.
+
+Happy Learning 🚀
+
+  `,
+},
 
 };
