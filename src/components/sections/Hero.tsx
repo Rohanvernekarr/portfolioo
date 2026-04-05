@@ -133,7 +133,7 @@ export function Hero() {
               variant="ghost"
               size="icon"
               className="rounded-full h-9 w-9 hover:bg-primary/10 hover:text-primary"
-              onClick={() => window.open("https://linkedin.com/in/rohan-vernekar", "_blank", "noopener,noreferrer")}
+              onClick={() => window.open("https://www.linkedin.com/in/rohan-vernekar-b57913283/", "_blank", "noopener,noreferrer")}
             >
               <Linkedin className="h-4 w-4" />
             </Button>
