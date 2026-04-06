@@ -4,34 +4,13 @@ import { Github, ExternalLink, LoaderCircle, CheckCircle2 } from 'lucide-react'
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-
-const projects = [
-  {
-    title: "Sketch.ai",
-    description: "A freehand tool where you can create your system design with AI.Use it to draw diagrams.",
-    github: "https://github.com/Rohanvernekarr/sketchai",
-    demo: "https://sketchai-xi.vercel.app/",
-    status: "deployed",
-    image: "/projects/sketch.png",
-    techStack: ["Next.js", "React","Typescript", "Canvas API", "PostgreSql"],
-  },
- 
-  {
-    title: "WarMonitor",
-    description: "Real-time conflict monitoring platform aggregating news, social media, and official sources. With interactive map. 2026 War.",
-    github: "https://github.com/Rohanvernekarr/warmonitor",
-    demo: "https://warmonitor-eta.vercel.app/",
-    status: "deployed",
-    image: "/projects/war1.png",
-    techStack: ["Next.js", "React", "Typescript","API"],
-  },
-];
+import { projects } from '../static/Allproject';
 
 function Projects() {
   return (
    <div className="space-y-6">
              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-                    {projects.map((project) => (
+                    {projects.slice(0,2).map((project) => (
                       <div
                         key={project.title}
                         className="relative group rounded-xl bg-muted/10 border border-muted  overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full"
@@ -83,8 +62,6 @@ function Projects() {
                               </span>
                             ))}
                           </div>
-            
-                          {/* Links */}
                           <div className="flex gap-4 pt-2 border-t border-muted">
                             <Link
                               href={project.github}
