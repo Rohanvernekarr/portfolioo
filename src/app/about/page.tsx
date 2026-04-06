@@ -4,7 +4,6 @@ import { Sparkles, ArrowLeft } from "lucide-react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-
 export default function AboutPage() {
   const router = useRouter();
 
@@ -99,11 +98,11 @@ export default function AboutPage() {
           pursuing my Bachelor&apos;s in Information Science. I build fast,
           responsive, and intelligent web applications using modern tech stacks
           and <span className="font-medium">AI tools</span>. Beyond the screen,
-          I&apos;m passionate about sports — especially{" "}
+          I&apos;m passionate about sports - especially{" "}
           <span className="font-medium">football</span>,{" "}
           <span className="font-medium">cricket</span>, and{" "}
           <span className="font-medium">volleyball</span>. Always learning,
-          always building — one line of code and one game at a time.
+          always building - one line of code and one game at a time.
         </p>
       </section>
 
