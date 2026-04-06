@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { blogPosts } from "@/components/sections/BlogPosts";
+import { blogPosts } from "@/components/static/Blog";
 
 export default function BlogPage() {
   const router = useRouter();

@@ -4,7 +4,7 @@ import { useParams, useRouter } from "next/navigation";
 import { ArrowLeft, Calendar, Clock, Share2, Copy, Check, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import {blogPosts} from "@/components/sections/Blogs";
+import {blogPosts} from "@/components/static/Blogs";
 
 
 function CodeBlock({ code, language = "typescript" }: { code: string; language?: string }) {
