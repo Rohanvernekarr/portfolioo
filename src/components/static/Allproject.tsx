@@ -10,7 +10,7 @@ export const projects = [
   },
   {
     title: "Poller",
-    description: "Poller is a high-performance, full-stack polling platform built with Next.js and Prisma, featuring real-time analytics and a premium monochrome design. It includes a comprehensive admin dashboard for user management, detailed vote tracking, and automated interaction telemetry via PostHog.",
+    description: "Poller is a high-performance, full-stack polling platform built with Next.js and Prisma, featuring real-time analytics and a premium monochrome design.",
     github: "https://github.com/Rohanvernekarr/poller",
     demo: "https://poller-web.vercel.app/",
     status: "deployed",
