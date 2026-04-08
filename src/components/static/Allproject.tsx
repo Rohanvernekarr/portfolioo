@@ -9,6 +9,15 @@ export const projects = [
     techStack: ["Next.js", "React","Tailwind CSS", "Canvas API", "PostgreSql"],
   },
   {
+    title: "Poller",
+    description: "Poller is a high-performance, full-stack polling platform built with Next.js and Prisma, featuring real-time analytics and a premium monochrome design. It includes a comprehensive admin dashboard for user management, detailed vote tracking, and automated interaction telemetry via PostHog.",
+    github: "https://github.com/Rohanvernekarr/poller",
+    demo: "https://poller-web.vercel.app/",
+    status: "deployed",
+    image: "/projects/poller.png",
+    techStack: ["Next.js", "Tailwind CSS", "PostgreSql","Prisma", "PostHog"],
+  },
+  {
     title: "SmartCV",
     description: "Full-stack AI web platform that helps users to create, customize, and optimize professional resumes. With built-in templates, live editing and AI-driven resume analysis.",
     github: "https://github.com/Rohanvernekarr/smartcv",
@@ -16,15 +25,6 @@ export const projects = [
     status: "deployed",
     image: "/projects/smart.png",
     techStack: ["Next.js", "Tailwind CSS", "Supabase", "AI"],
-  },
-  {
-    title: "Poller",
-    description: "Poller is a high-performance, full-stack polling platform built with Next.js and Prisma, featuring real-time analytics and a premium monochrome design. It includes a comprehensive admin dashboard for user management, detailed vote tracking, and automated interaction telemetry via PostHog.",
-    github: "https://github.com/Rohanvernekarr/poller",
-    demo: "",
-    status: "in-progress",
-    image: "/projects/poller.png",
-    techStack: ["Next.js", "Tailwind CSS", "PostgreSql","Prisma", "PostHog"],
   },
    {
     title: "WarMonitor",
