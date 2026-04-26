@@ -17,6 +17,15 @@ export const projects = [
     image: "/projects/poller.png",
     techStack: ["Next.js", "Tailwind CSS", "PostgreSql","Prisma", "PostHog"],
   },
+     {
+    title: "Scheduler",
+    description: "Meetings scheduling assistant that can find and book the best time slots for meetings.",
+    github: "https://github.com/Rohanvernekarr/Scheduler",
+    demo: "https://scheduler-kappa-teal.vercel.app/",
+    status: "in-pregress",
+    image: "/projects/Scheduler.png",
+    techStack: ["Next.js", "React.js", "Tailwind CSS", "Node.js", "Express.js", "TanstackQuery", "PostgreSql"],
+  },
   {
     title: "SmartCV",
     description: "Full-stack AI web platform that helps users to create, customize, and optimize professional resumes. With built-in templates, live editing and AI-driven resume analysis.",
@@ -26,7 +35,7 @@ export const projects = [
     image: "/projects/smart.png",
     techStack: ["Next.js", "Tailwind CSS", "Supabase", "AI"],
   },
-   {
+   {  
     title: "WarMonitor",
     description: "Real-time conflict monitoring platform aggregating news, social media, and official sources.With interactive map.",
     github: "https://github.com/Rohanvernekarr/warmonitor",
