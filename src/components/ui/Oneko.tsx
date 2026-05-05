@@ -152,9 +152,6 @@ export default function RunningCat({
       setSprite(directionKey, frameCount);
     }
 
-    const interval = setInterval(frame, 100);
-
-
     // Don't cleanup on unmount - let the cat persist
     return () => {
       // No cleanup here to keep cat running across navigation
