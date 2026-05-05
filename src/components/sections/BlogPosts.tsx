@@ -9,16 +9,6 @@ import { blogPosts } from "../static/Blog";
 
 
 export function BlogPosts() {
-  const [likedPosts, setLikedPosts] = useState<number[]>([]);
-  const [bookmarkedPosts, setBookmarkedPosts] = useState<number[]>([]);
-
-  const toggleLike = (postId: number) => {
-    setLikedPosts(prev => 
-      prev.includes(postId) 
-        ? prev.filter(id => id !== postId)
-        : [...prev, postId]
-    );
-  };
 
   // const toggleBookmark = (postId: number) => {
   //   setBookmarkedPosts(prev => 

@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { VisitorCount } from "@/components/sections/VisitorCount";
 import { TimeSpent } from "@/components/sections/TimeSpent";
 import { MusicPlayer } from "@/components/sections/MusicPlayer";
-import {  ExternalLink } from "lucide-react"
 
 const socialLinks = [
   {

@@ -129,7 +129,7 @@ export default function BlogPostPage() {
       <div className="max-w-4xl mx-auto px-6 py-16 text-center">
         <h1 className="text-4xl font-bold mb-4">Post Not Found</h1>
         <p className="text-muted-foreground mb-8">
-          The blog post you're looking for doesn't exist.
+          The blog post you&apos;re looking for doesn&apos;t exist.
         </p>
         <Button onClick={() => router.push("/")}>
           <ArrowLeft className="h-4 w-4 mr-2" />

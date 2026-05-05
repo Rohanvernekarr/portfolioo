@@ -1,14 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import {
   FileText,
   Briefcase,
   Github,
-  Container,
-   Palette, Code2, Zap, Layers, Server, Database, Cloud, GitBranch, Box,
-  Globe, Cpu, Network, Braces, TerminalSquare, Boxes, Hammer,
   MapPin,
   Calendar,
   Linkedin,
