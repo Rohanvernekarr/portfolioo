@@ -4,7 +4,6 @@ import Link from "next/link";
 import { ArrowRight, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { useState } from "react";
 import { blogPosts } from "../static/Blog";
 
 

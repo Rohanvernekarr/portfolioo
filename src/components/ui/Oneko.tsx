@@ -17,7 +17,6 @@ interface RunningCatProps {
 
 // Global state to track if cat is initialized
 let catInitialized = false;
-let cleanupFunction: (() => void) | null = null;
 
 export default function RunningCat({
   startPos = { x: 50, y: 50 },
@@ -155,16 +154,6 @@ export default function RunningCat({
 
     const interval = setInterval(frame, 100);
 
-    // Store cleanup function globally so it persists
-    cleanupFunction = () => {
-      clearInterval(interval);
-      document.removeEventListener("mousemove", onMouseMove);
-      if (document.body.contains(nekoEl)) {
-        document.body.removeChild(nekoEl);
-      }
-      catInitialized = false;
-      cleanupFunction = null;
-    };
 
     // Don't cleanup on unmount - let the cat persist
     return () => {
