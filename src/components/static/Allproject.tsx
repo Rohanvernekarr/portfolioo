@@ -21,10 +21,10 @@ export const projects = [
     title: "Scheduler",
     description: "Meetings scheduling assistant that can find and book the best time slots for meetings.",
     github: "https://github.com/Rohanvernekarr/Scheduler",
-    demo: "https://scheduler-kappa-teal.vercel.app/",
+    demo: "https://schedulers.app/",
     status: "in-pregress",
     image: "/projects/Scheduler.png",
-    techStack: ["Next.js", "React.js", "Tailwind CSS", "Node.js", "Express.js", "TanstackQuery", "PostgreSql"],
+    techStack: ["Next.js", "React.js", "Tailwind CSS", "Node.js", "Express.js", "TanstackQuery", "PostgreSql","BullMQ"],
   },
   {
     title: "SmartCV",
