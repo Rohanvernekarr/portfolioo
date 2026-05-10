@@ -18,7 +18,7 @@ export const projects = [
     techStack: ["Next.js", "Tailwind CSS", "PostgreSql","Prisma", "PostHog"],
   },
      {
-    title: "Scheduler",
+    title: "Schedulers",
     description: "Meetings scheduling assistant that can find and book the best time slots for meetings.",
     github: "https://github.com/Rohanvernekarr/Scheduler",
     demo: "https://schedulers.app/",
