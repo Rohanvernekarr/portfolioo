@@ -22,7 +22,7 @@ export const projects = [
     description: "Meetings scheduling assistant that can find and book the best time slots for meetings.",
     github: "https://github.com/Rohanvernekarr/Scheduler",
     demo: "https://schedulers.app/",
-    status: "in-pregress",
+    status: "deployed",
     image: "/projects/Scheduler.png",
     techStack: ["Next.js", "React.js", "Tailwind CSS", "Node.js", "Express.js", "TanstackQuery", "PostgreSql","BullMQ"],
   },
