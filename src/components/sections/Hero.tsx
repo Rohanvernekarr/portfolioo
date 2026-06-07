@@ -158,7 +158,7 @@ export function Hero() {
               </span>
               <span className="flex items-center gap-1.5 hover:text-foreground transition-colors">
                 <Briefcase className="h-3.5 w-3.5" />
-                Freelance Developer
+                Software Engineer
               </span>
               <span className="flex items-center gap-1.5 hover:text-foreground transition-colors">
                 <Calendar className="h-3.5 w-3.5" />
