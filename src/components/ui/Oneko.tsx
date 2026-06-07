@@ -17,7 +17,6 @@ interface RunningCatProps {
 
 // Global state to track if cat is initialized
 let catInitialized = false;
-let cleanupFunction: (() => void) | null = null;
 
 export default function RunningCat({
   startPos = { x: 50, y: 50 },
@@ -153,7 +152,6 @@ export default function RunningCat({
       setSprite(directionKey, frameCount);
     }
 
-    const interval = setInterval(frame, 100);
 
 
     // Don't cleanup on unmount - let the cat persist
