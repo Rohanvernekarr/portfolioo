@@ -1,7 +1,16 @@
 import { NextResponse } from "next/server"
-import { redis } from "@/lib/redis"
+import { getRedis } from "@/lib/redis"
 
 export async function POST(request: Request) {
+  const redis = getRedis()
+
+  if (!redis) {
+    return NextResponse.json(
+      { error: "Messages are unavailable" },
+      { status: 503 }
+    )
+  }
+
   try {
     const { message } = await request.json()
 
@@ -26,6 +35,15 @@ export async function POST(request: Request) {
 }
 
 export async function GET() {
+  const redis = getRedis()
+
+  if (!redis) {
+    return NextResponse.json(
+      { error: "Messages are unavailable" },
+      { status: 503 }
+    )
+  }
+
   try {
     const messages = await redis.lrange("messages", 0, -1)
     const parsedMessages = messages.map((msg) => JSON.parse(msg))

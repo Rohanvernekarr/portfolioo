@@ -1,7 +1,16 @@
 import { NextResponse } from "next/server"
-import { redis } from "@/lib/redis"
+import { getRedis } from "@/lib/redis"
 
 export async function GET() {
+  const redis = getRedis()
+
+  if (!redis) {
+    return NextResponse.json(
+      { error: "Visitor count is unavailable" },
+      { status: 503 }
+    )
+  }
+
   try {
     const count = await redis.incr("visitor_count")
     return NextResponse.json({ count })
