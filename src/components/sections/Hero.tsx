@@ -35,10 +35,10 @@ export function Hero() {
   return (
     <section className="flex flex-col items-center relative w-full max-w-4xl mx-auto">
       <EmailButton />
-      
+
       <div className="w-full mt-0 sm:mt-8">
         {/* Cover Image */}
-        <motion.div 
+        <motion.div
           className="w-full h-34 sm:h-48 bg-gradient-to-r from-primary/20 via-purple-500/20 to-pink-500/20 sm:rounded-t-xl relative overflow-hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -54,9 +54,9 @@ export function Hero() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background/60" />
         </motion.div>
-        
+
         <div className="relative px-4 sm:px-6 pb-4 sm:border-x sm:border-b border-muted sm:rounded-b-xl">
-          <motion.div 
+          <motion.div
             className="absolute -top-12 sm:-top-16 left-4 sm:left-6"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -71,7 +71,7 @@ export function Hero() {
               />
             </div>
           </motion.div>
-          
+
           <div className="flex justify-end items-center gap-1 pt-4">
             <Button
               variant="ghost"
@@ -120,7 +120,7 @@ export function Hero() {
                     className="flex-1"
                     onClick={() => {
                       window.open(
-                        "https://drive.google.com/file/d/18twTvQCue_jpJPytl6fmwww9bdt1kBz4/view?usp=drive_link",
+                        "https://drive.google.com/file/d/1ZaN0fbrsEe1U_nGQiE78C3IF2IF_j6Iw/view?usp=drive_link",
                         "_blank",
                         "noopener,noreferrer"
                       );
@@ -132,9 +132,9 @@ export function Hero() {
               </DialogContent>
             </Dialog>
           </div>
-          
+
           {/* Name and Bio */}
-          <motion.div 
+          <motion.div
             className="mt-4 sm:mt-4 space-y-3"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -144,11 +144,11 @@ export function Hero() {
               <h1 className="text-2xl sm:text-xl font-bold tracking-tight">Rohan Vernekar</h1>
               <p className="text-muted-foreground text-sm">@Rohanvrnkr</p>
             </div>
-            
-            <p className=" leading-relaxed text-sm text-foreground/90">
-              <span className="font-semibold text-sm text-foreground">Full-Stack Developer</span> crafting innovative experiences
+
+            <p className="leading-relaxed text-sm text-foreground/90">
+              I&apos;m a <span className="font-semibold text-foreground">Software Engineer</span> based in Bengaluru.
               <br />
-              Building with Next.js, React, TypeScript & AI • Passionate about clean code & user experience
+              Building things, exploring AI, and shipping ideas I&apos;d actually use.
             </p>
 
             <div className="flex flex-wrap gap-3 text-sm text-muted-foreground pt-1">
@@ -158,14 +158,14 @@ export function Hero() {
               </span>
               <span className="flex items-center gap-1.5 hover:text-foreground transition-colors">
                 <Briefcase className="h-3.5 w-3.5" />
-                Software Engineer
+                Full-Stack Development
               </span>
               <span className="flex items-center gap-1.5 hover:text-foreground transition-colors">
                 <Calendar className="h-3.5 w-3.5" />
-                Building since 2024
+                Available for freelance
               </span>
             </div>
-            
+
             <div className="flex gap-4 pt-2 text-sm">
               <div>
                 <span className="font-bold text-foreground">{projects.length}</span>
@@ -178,7 +178,7 @@ export function Hero() {
             </div>
           </motion.div>
         </div>
-        
+
         <div className="flex border-b border-muted mt-2">
           <button
             onClick={() => setActiveTab("posts")}
@@ -221,7 +221,7 @@ export function Hero() {
               />
             )}
           </button>
-          
+
           <button
             onClick={() => setActiveTab("projects")}
             className={`flex-1 px-4 py-4 text-sm font-semibold transition-all relative hover:bg-muted/50 ${
@@ -242,7 +242,7 @@ export function Hero() {
               />
             )}
           </button>
-          
+
           <button
             onClick={() => setActiveTab("about")}
             className={`flex-1 px-4 py-4 text-sm font-semibold transition-all relative hover:bg-muted/50 ${

@@ -9,8 +9,9 @@ import RunningCat from "@/components/ui/Oneko";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Rohanrv",
-  description: "FullStack Developer | AI Engineer",
+  title: "Rohan Vernekar | Software Engineer",
+  description:
+    "Rohan Vernekar is a software engineer who builds useful products and experiments with AI.",
 };
 
 export default function RootLayout({

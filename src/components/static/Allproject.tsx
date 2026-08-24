@@ -1,4 +1,32 @@
 export const projects = [
+  {
+ title: "Schedulers",
+ description: "Meetings scheduling assistant that can find and book the best time slots for meetings.",
+ github: "https://github.com/Rohanvernekarr/Scheduler",
+ demo: "https://schedulers.app/",
+ status: "deployed",
+ image: "/projects/Scheduler.png",
+ techStack: ["Next.js", "React.js", "Tailwind CSS", "Node.js", "Express.js", "TanstackQuery", "PostgreSql","BullMQ"],
+  },
+  {
+    title: "ListYourSite",
+    description: "Put your favorite sites on the map and back them to climb a country-based leaderboard.",
+    github: "",
+    demo: "https://listyoursite.vercel.app/",
+    status: "deployed",
+    image: "/projects/listyoursite.png",
+    techStack: [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "react-simple-maps",
+      "Supabase",
+      "PostgreSQL",
+      "Dodo Payments",
+      "Upstash Redis",
+    ],
+  },
    {
     title: "Sketch.ai",
     description: "A freehand tool where you can create your system design with AI.Use it to draw diagrams.",
@@ -17,15 +45,6 @@ export const projects = [
     image: "/projects/poller.png",
     techStack: ["Next.js", "Tailwind CSS", "PostgreSql","Prisma", "PostHog"],
   },
-     {
-    title: "Schedulers",
-    description: "Meetings scheduling assistant that can find and book the best time slots for meetings.",
-    github: "https://github.com/Rohanvernekarr/Scheduler",
-    demo: "https://schedulers.app/",
-    status: "deployed",
-    image: "/projects/Scheduler.png",
-    techStack: ["Next.js", "React.js", "Tailwind CSS", "Node.js", "Express.js", "TanstackQuery", "PostgreSql","BullMQ"],
-  },
   {
     title: "SmartCV",
     description: "Full-stack AI web platform that helps users to create, customize, and optimize professional resumes. With built-in templates, live editing and AI-driven resume analysis.",
@@ -35,7 +54,7 @@ export const projects = [
     image: "/projects/smart.png",
     techStack: ["Next.js", "Tailwind CSS", "Supabase", "AI"],
   },
-   {  
+   {
     title: "WarMonitor",
     description: "Real-time conflict monitoring platform aggregating news, social media, and official sources.With interactive map.",
     github: "https://github.com/Rohanvernekarr/warmonitor",
@@ -71,7 +90,7 @@ export const projects = [
     image: "/projects/space.png",
     techStack: ["React Three Fiber", "GSAP", "WebGL"],
   },
- 
+
     {
     title: "Githive",
     description: "GitHub-powered project hub to manage, tag, and search repos easily. Built with Next.js + GitHub API.",
@@ -90,7 +109,7 @@ export const projects = [
     image: "/projects/contest.png",
     techStack: ["MongoDB", "Express", "React", "Node.js"],
   },
- 
+
   {
     title: "FusionChat",
     description: "Real-time chat app built using Socket.io and MongoDB with custom avatars and group support.",
@@ -154,5 +173,5 @@ export const projects = [
     image: "/projects/cat.png",
     techStack: ["Python", "Flask", "AI", "Chrome Extension"],
   },
- 
+
 ]
