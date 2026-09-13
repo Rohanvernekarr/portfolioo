@@ -38,14 +38,15 @@ export function EmailButton() {
       <DialogTrigger asChild>
         <Button
           variant="outline"
-          className="fixed top-8 left-6 z-50 rounded-full p-3 shadow-lg hover:bg-primary hover:text-white transition"
+          size="icon"
+          className="absolute top-3 left-3 z-10 h-9 w-9 rounded-full bg-background/80 backdrop-blur-sm border border-white/20 text-foreground shadow-md hover:bg-background hover:text-foreground transition"
           style={{
             opacity: isScrolled ? 0 : 1,
             pointerEvents: isScrolled ? "none" : "auto",
             transition: "opacity 0.3s ease"
           }}
         >
-          <Mail className="h-5 w-5" />
+          <Mail className="h-4 w-4" />
         </Button>
       </DialogTrigger>
       <DialogContent className="z-100">

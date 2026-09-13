@@ -12,11 +12,13 @@ import {
   NotebookPen,
   FolderKanban,
   Cpu,
+  MessageSquare,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { EmailButton } from "./EmailButton";
 import { BlogPosts } from "./BlogPosts";
+import { MessageBox } from "./MessageBox";
 import { Experience } from "../static/Experience";
 import { TechStack } from "./TechStack";
 import {
@@ -37,8 +39,6 @@ export function Hero() {
 
   return (
     <section className="flex flex-col items-center relative w-full max-w-4xl mx-auto animate-fade-in-up">
-      <EmailButton />
-
       <div className="w-full mt-0 sm:mt-8">
         {/* Cover Image */}
         <motion.div
@@ -56,9 +56,28 @@ export function Hero() {
             sizes="(max-width: 640px) 100vw, 896px"
           />
           <div className="absolute inset-0 cover-overlay" />
+
+          <EmailButton />
+
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button
+                variant="secondary"
+                size="icon"
+                className="absolute top-3 right-3 z-10 h-9 w-9 rounded-full bg-background/80 backdrop-blur-sm border border-white/20 text-foreground shadow-md hover:bg-background"
+              >
+                <MessageSquare className="h-4 w-4" />
+                <span className="sr-only">Open anonymous message box</span>
+              </Button>
+            </DialogTrigger>
+
+            <DialogContent className="sm:max-w-md">
+              <MessageBox />
+            </DialogContent>
+          </Dialog>
         </motion.div>
 
-        <div className="relative px-4 sm:px-6 pb-4 sm:border-x sm:border-b border-muted sm:rounded-b-xl">
+        <div className="relative bg-background px-4 sm:px-6 pb-4 sm:border-x sm:border-b border-muted sm:rounded-b-xl">
           <motion.div
             className="absolute -top-12 sm:-top-16 left-4 sm:left-6"
             initial={{ scale: 0.8, opacity: 0 }}
@@ -144,7 +163,7 @@ export function Hero() {
             transition={{ delay: 0.3, duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
           >
             <div>
-              <h1 className="text-shimmer text-2xl sm:text-2xl font-bold tracking-tight">Rohan Vernekar</h1>
+              <h1 className=" text-2xl sm:text-2xl font-bold tracking-tight">Rohan Vernekar</h1>
               <p className="text-muted-foreground text-sm">@Rohanvrnkr</p>
             </div>
 
