@@ -29,7 +29,7 @@ export const metadata: Metadata = {
       "Software engineer building useful products and experimenting with AI.",
     images: [
       {
-        url: "/opengraph-image",
+        url: "/social-preview.png",
         width: 1200,
         height: 630,
         alt: "Rohan Vernekar — Software Engineer",
@@ -38,11 +38,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@Rohanvrnkr",
     creator: "@Rohanvrnkr",
     title: "Rohan Vernekar | Software Engineer",
     description:
       "Software engineer building useful products and experimenting with AI.",
-    images: ["/opengraph-image"],
+    images: ["/social-preview.png"],
   },
   other: {
     "google-adsense-account": "ca-pub-2562933140972204",

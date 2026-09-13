@@ -204,10 +204,10 @@ html {
 .background-word {
     display: block;
     color: transparent;
-    font-size: clamp(3.5rem, 15vw, 12rem);
+    font-size: clamp(4.75rem, 17vw, 14rem);
     font-weight: 900;
-    line-height: 0.72;
-    letter-spacing: -0.09em;
+    line-height: 0.76;
+    letter-spacing: -0.055em;
     text-transform: uppercase;
     white-space: nowrap;
     will-change: transform;
@@ -224,7 +224,7 @@ html {
     text-stroke: 0;
 }
 .dark .background-word-solid {
-    color: oklch(1 0 0 / 0.035);
+    color: oklch(1 0 0 / 0.036);
 }
 .typewriter-caret {
     display: inline-block;

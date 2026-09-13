@@ -200,17 +200,17 @@ export function Hero() {
           </motion.div>
         </div>
 
-        <div className="flex border-b border-muted mt-2">
+        <div className="flex w-full overflow-hidden border-b border-muted mt-2">
           <button
             onClick={() => setActiveTab("posts")}
-            className={`flex-1 px-4 py-3 text-sm font-semibold transition-all relative hover:bg-muted/50 ${
+            className={`relative min-w-0 flex-1 px-1.5 py-3 text-xs font-semibold transition-all hover:bg-muted/50 sm:px-4 sm:py-4 sm:text-sm ${
               activeTab === "posts"
                 ? "text-foreground"
                 : "text-muted-foreground hover:text-foreground"
             }`}
           >
-            <span className="flex items-center justify-center gap-2">
-              <NotebookPen className="h-3.5 w-3.5" />
+            <span className="flex items-center justify-center gap-1 sm:gap-2">
+              <NotebookPen className="h-3.5 w-3.5 shrink-0" />
               Posts
             </span>
             {activeTab === "posts" && (
@@ -224,14 +224,14 @@ export function Hero() {
 
              <button
             onClick={() => setActiveTab("experience")}
-            className={`flex-1 px-4 py-4 text-sm font-semibold transition-all relative hover:bg-muted/50 ${
+            className={`relative min-w-0 flex-1 px-1.5 py-3 text-xs font-semibold transition-all hover:bg-muted/50 sm:px-4 sm:py-4 sm:text-sm ${
               activeTab === "experience"
                 ? "text-foreground"
                 : "text-muted-foreground hover:text-foreground"
             }`}
           >
-            <span className="flex items-center justify-center gap-2">
-              <Briefcase className="h-3.5 w-3.5" />
+            <span className="flex items-center justify-center gap-1 sm:gap-2">
+              <Briefcase className="h-3.5 w-3.5 shrink-0" />
               Experience
             </span>
             {activeTab === "experience" && (
@@ -245,14 +245,14 @@ export function Hero() {
 
           <button
             onClick={() => setActiveTab("projects")}
-            className={`flex-1 px-4 py-4 text-sm font-semibold transition-all relative hover:bg-muted/50 ${
+            className={`relative min-w-0 flex-1 px-1.5 py-3 text-xs font-semibold transition-all hover:bg-muted/50 sm:px-4 sm:py-4 sm:text-sm ${
               activeTab === "projects"
                 ? "text-foreground"
                 : "text-muted-foreground hover:text-foreground"
             }`}
           >
-            <span className="flex items-center justify-center gap-2">
-              <FolderKanban className="h-3.5 w-3.5" />
+            <span className="flex items-center justify-center gap-1 sm:gap-2">
+              <FolderKanban className="h-3.5 w-3.5 shrink-0" />
               Projects
             </span>
             {activeTab === "projects" && (
@@ -266,14 +266,14 @@ export function Hero() {
 
           <button
             onClick={() => setActiveTab("about")}
-            className={`flex-1 px-4 py-4 text-sm font-semibold transition-all relative hover:bg-muted/50 ${
+            className={`relative min-w-0 flex-1 px-1.5 py-3 text-xs font-semibold transition-all hover:bg-muted/50 sm:px-4 sm:py-4 sm:text-sm ${
               activeTab === "about"
                 ? "text-foreground"
                 : "text-muted-foreground hover:text-foreground"
             }`}
           >
-            <span className="flex items-center justify-center gap-2">
-              <Cpu className="h-3.5 w-3.5" />
+            <span className="flex items-center justify-center gap-1 sm:gap-2">
+              <Cpu className="h-3.5 w-3.5 shrink-0" />
               Tech
             </span>
             {activeTab === "about" && (
