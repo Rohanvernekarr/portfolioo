@@ -44,6 +44,9 @@ export const metadata: Metadata = {
       "Software engineer building useful products and experimenting with AI.",
     images: ["/opengraph-image"],
   },
+  other: {
+    "google-adsense-account": "ca-pub-2562933140972204",
+  },
 };
 
 export default function RootLayout({
@@ -53,6 +56,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2562933140972204"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className={`bg-grid-lines ${inter.className} antialiased min-h-screen `}>
         <ThemeProvider
           attribute="class"
