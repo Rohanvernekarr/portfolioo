@@ -45,8 +45,8 @@
 
 :root {
     --radius: 0.625rem;
-    --background: oklch(1 0 0);
-    --foreground: oklch(0.145 0 0);
+    --background: oklch(0.99 0 0);
+    --foreground: oklch(0.08 0 0);
     --card: oklch(1 0 0);
     --card-foreground: oklch(0.145 0 0);
     --popover: oklch(1 0 0);
@@ -56,11 +56,11 @@
     --secondary: oklch(0.97 0 0);
     --secondary-foreground: oklch(0.205 0 0);
     --muted: oklch(0.97 0 0);
-    --muted-foreground: oklch(0.556 0 0);
+    --muted-foreground: oklch(0.42 0 0);
     --accent: oklch(0.97 0 0);
     --accent-foreground: oklch(0.205 0 0);
     --destructive: oklch(0.577 0.245 27.325);
-    --border: oklch(0.922 0 0);
+    --border: oklch(0.88 0 0);
     --input: oklch(0.922 0 0);
     --ring: oklch(0.708 0 0);
     --chart-1: oklch(0.646 0.222 41.116);
@@ -79,8 +79,8 @@
 }
 
 .dark {
-    --background: oklch(0.145 0 0);
-    --foreground: oklch(0.985 0 0);
+    --background: oklch(0.10 0 0);
+    --foreground: oklch(0.97 0 0);
     --card: oklch(0.205 0 0);
     --card-foreground: oklch(0.985 0 0);
     --popover: oklch(0.205 0 0);
@@ -90,11 +90,11 @@
     --secondary: oklch(0.269 0 0);
     --secondary-foreground: oklch(0.985 0 0);
     --muted: oklch(0.269 0 0);
-    --muted-foreground: oklch(0.708 0 0);
+    --muted-foreground: oklch(0.65 0 0);
     --accent: oklch(0.269 0 0);
     --accent-foreground: oklch(0.985 0 0);
     --destructive: oklch(0.704 0.191 22.216);
-    --border: oklch(1 0 0 / 10%);
+    --border: oklch(1 0 0 / 12%);
     --input: oklch(1 0 0 / 15%);
     --ring: oklch(0.556 0 0);
     --chart-1: oklch(0.488 0.243 264.376);
@@ -146,3 +146,133 @@
         background-position: 50px 50px;
     }
 } */
+
+/* ── Smooth scroll ── */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
+/* ── Custom scrollbar ── */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: oklch(0.6 0 0 / 30%);
+    border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.6 0 0 / 55%);
+}
+
+/* ── Page background – subtle dot grid ── */
+.bg-grid-lines {
+    background-image: radial-gradient(
+        circle,
+        oklch(0.5 0 0 / 0.07) 1px,
+        transparent 1px
+    );
+    background-size: 28px 28px;
+}
+.dark .bg-grid-lines {
+    background-image: radial-gradient(
+        circle,
+        oklch(1 0 0 / 0.05) 1px,
+        transparent 1px
+    );
+}
+
+/* ── Scroll-reveal utility ── */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.animate-fade-in-up {
+    animation: fadeInUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ── Shimmer text (for name) ── */
+@keyframes shimmer {
+    0%   { background-position: -200% center; }
+    100% { background-position:  200% center; }
+}
+.text-shimmer {
+    background: linear-gradient(
+        90deg,
+        var(--foreground) 25%,
+        oklch(0.55 0 0) 50%,
+        var(--foreground) 75%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 4s linear infinite;
+}
+.dark .text-shimmer {
+    background: linear-gradient(
+        90deg,
+        oklch(0.97 0 0) 25%,
+        oklch(0.7 0 0) 50%,
+        oklch(0.97 0 0) 75%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 4s linear infinite;
+}
+
+/* ── Avatar glow ── */
+.avatar-glow {
+    box-shadow:
+        0 0 0 3px var(--background),
+        0 0 0 5px oklch(0.5 0 0 / 0.2),
+        0 8px 32px oklch(0 0 0 / 0.18);
+}
+.dark .avatar-glow {
+    box-shadow:
+        0 0 0 3px var(--background),
+        0 0 0 5px oklch(1 0 0 / 0.12),
+        0 8px 32px oklch(0 0 0 / 0.5);
+}
+
+/* ── Cover image overlay ── */
+.cover-overlay {
+    background: linear-gradient(
+        to bottom,
+        transparent 40%,
+        oklch(0 0 0 / 0.25) 80%,
+        oklch(0 0 0 / 0.55) 100%
+    );
+}
+
+/* ── Tab active indicator ── */
+.tab-indicator {
+    background: linear-gradient(90deg, transparent, var(--foreground), transparent);
+}
+
+/* ── Section card ── */
+.section-card {
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: 0.875rem;
+    transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.section-card:hover {
+    box-shadow: 0 4px 24px oklch(0 0 0 / 0.07);
+    border-color: oklch(0.7 0 0 / 0.3);
+}
+.dark .section-card:hover {
+    box-shadow: 0 4px 24px oklch(0 0 0 / 0.4);
+    border-color: oklch(1 0 0 / 0.15);
+}

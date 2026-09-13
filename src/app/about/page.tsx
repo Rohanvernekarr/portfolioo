@@ -9,41 +9,28 @@ export default function AboutPage() {
 
   const techStack = [
     {
-      title: "Frontend",
-      items: [
-        "Next.js",
-        "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "Framer Motion",
-        "Vite",
-        "Redux",
-      ],
+      title: "Languages",
+      items: ["JavaScript", "TypeScript", "Python", "C++", "C"],
     },
     {
-      title: "Backend",
-      items: [
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "PostgreSQL",
-        "Prisma",
-        "Firebase",
-        "REST",
-        "GraphQL",
-      ],
+      title: "Technologies",
+      items: ["HTML", "CSS", "React.js", "Next.js", "Tailwind CSS", "Framer Motion", "Redux", "Vite", "Express.js", "Node.js", "FastAPI", "GraphQL", "REST"],
     },
     {
-      title: "DevOps & Tools",
-      items: [
-        "Git & GitHub",
-        "Docker",
-        "AWS",
-        "CI/CD",
-        "Upstash",
-        "Railway",
-        "Postman",
-      ],
+      title: "Database",
+      items: ["PostgreSQL", "MongoDB", "MySQL", "Prisma", "Supabase", "Firebase", "Upstash Redis"],
+    },
+    {
+      title: "Cloud & DevOps",
+      items: ["AWS", "GCP", "Vercel", "Supabase", "Jenkins", "Docker", "CI/CD", "Railway", "VPS"],
+    },
+    {
+      title: "Developer Tools",
+      items: ["GitHub", "Docker", "VS Code", "Postman", "Android Studio", "pnpm"],
+    },
+    {
+      title: "AI & GenAI",
+      items: ["LangChain", "LangGraph", "RAG", "NLP", "Generative AI", "AI Agents", "Prompt Engineering", "OpenAI"],
     },
   ];
 

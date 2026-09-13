@@ -9,6 +9,9 @@ import {
   Calendar,
   Linkedin,
   Twitter,
+  NotebookPen,
+  FolderKanban,
+  Cpu,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
@@ -33,7 +36,7 @@ export function Hero() {
   const [activeTab, setActiveTab] = useState<"posts" | "projects" | "about" | "experience">("posts");
 
   return (
-    <section className="flex flex-col items-center relative w-full max-w-4xl mx-auto">
+    <section className="flex flex-col items-center relative w-full max-w-4xl mx-auto animate-fade-in-up">
       <EmailButton />
 
       <div className="w-full mt-0 sm:mt-8">
@@ -52,7 +55,7 @@ export function Hero() {
             priority
             sizes="(max-width: 640px) 100vw, 896px"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background/60" />
+          <div className="absolute inset-0 cover-overlay" />
         </motion.div>
 
         <div className="relative px-4 sm:px-6 pb-4 sm:border-x sm:border-b border-muted sm:rounded-b-xl">
@@ -60,9 +63,9 @@ export function Hero() {
             className="absolute -top-12 sm:-top-16 left-4 sm:left-6"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+            transition={{ delay: 0.15, type: "spring", stiffness: 180, damping: 18 }}
           >
-            <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-background hover:scale-105 transition-transform cursor-pointer shadow-lg overflow-hidden relative bg-muted">
+            <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full avatar-glow hover:scale-105 transition-transform duration-300 cursor-pointer overflow-hidden relative bg-muted">
               <Image
                 src="/projects/rog.jpg"
                 alt="Rohan Vernekar"
@@ -136,16 +139,16 @@ export function Hero() {
           {/* Name and Bio */}
           <motion.div
             className="mt-4 sm:mt-4 space-y-3"
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
+            transition={{ delay: 0.3, duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
           >
             <div>
-              <h1 className="text-2xl sm:text-xl font-bold tracking-tight">Rohan Vernekar</h1>
+              <h1 className="text-shimmer text-2xl sm:text-2xl font-bold tracking-tight">Rohan Vernekar</h1>
               <p className="text-muted-foreground text-sm">@Rohanvrnkr</p>
             </div>
 
-            <p className="leading-relaxed text-sm text-foreground/90">
+            <p className="leading-relaxed text-sm text-foreground/80">
               I&apos;m a <span className="font-semibold text-foreground">Software Engineer</span> based in Bengaluru.
               <br />
               Building things, exploring AI, and shipping ideas I&apos;d actually use.
@@ -189,7 +192,7 @@ export function Hero() {
             }`}
           >
             <span className="flex items-center justify-center gap-2">
-              {/* <Sparkles className="h-4 w-4" /> */}
+              <NotebookPen className="h-3.5 w-3.5" />
               Posts
             </span>
             {activeTab === "posts" && (
@@ -210,7 +213,7 @@ export function Hero() {
             }`}
           >
             <span className="flex items-center justify-center gap-2">
-              {/* <Award className="h-4 w-4" /> */}
+              <Briefcase className="h-3.5 w-3.5" />
               Experience
             </span>
             {activeTab === "experience" && (
@@ -231,7 +234,7 @@ export function Hero() {
             }`}
           >
             <span className="flex items-center justify-center gap-2">
-              {/* <Briefcase className="h-4 w-4" /> */}
+              <FolderKanban className="h-3.5 w-3.5" />
               Projects
             </span>
             {activeTab === "projects" && (
@@ -252,7 +255,7 @@ export function Hero() {
             }`}
           >
             <span className="flex items-center justify-center gap-2">
-              {/* <Code2 className="h-4 w-4" /> */}
+              <Cpu className="h-3.5 w-3.5" />
               Tech
             </span>
             {activeTab === "about" && (
@@ -269,10 +272,10 @@ export function Hero() {
       <AnimatePresence mode="wait">
         <motion.div
           key={activeTab}
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.3 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
           className="w-full mt-6 pb-16 px-4 sm:px-0"
         >
           {/* Posts Tab */}

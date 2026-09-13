@@ -1,97 +1,100 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, User } from "lucide-react";
+import { ArrowRight, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { blogPosts } from "../static/Blog";
 
-
 export function BlogPosts() {
-
-  // const toggleBookmark = (postId: number) => {
-  //   setBookmarkedPosts(prev => 
-  //     prev.includes(postId) 
-  //       ? prev.filter(id => id !== postId)
-  //       : [...prev, postId]
-  //   );
-  // };
-
   return (
-    <div className="space-y-2">
-      {blogPosts.slice(0,3).map((post, index) => (
+    <div className="divide-y divide-border">
+      {blogPosts.slice(0, 3).map((post, index) => (
         <motion.article
           key={post.id}
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: index * 0.1 }}
-          className="rounded-xl hover:bg-muted/5 hover:border-primary/30 transition-all"
+          transition={{ delay: index * 0.08, duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
         >
-          <Link href={`/blog/${post.slug}`} className="block">
-            <div className="p-1">
-              <div className="flex items-start gap-3">
-                <div className="w-8 h-8  rounded-full bg-gradient-to-br from-primary/20 to-purple-500/20 flex items-center justify-center flex-shrink-0">
-                  <User className="w-4 h-4 text-primary" />
+          <Link
+            href={`/blog/${post.slug}`}
+            className="flex gap-4 px-1 py-5 rounded-lg transition-colors hover:bg-muted/40 group"
+          >
+            {/* Avatar */}
+            <div className="shrink-0 mt-0.5">
+              <div className="w-10 h-10 rounded-full overflow-hidden border border-border">
+                <Image
+                  src="/projects/rog.jpg"
+                  alt="Rohan Vernekar"
+                  width={36}
+                  height={36}
+                  className="object-cover w-full h-full"
+                />
+              </div>
+            </div>
+
+            {/* Body */}
+            <div className="flex-1 min-w-0 space-y-2">
+              {/* Author row */}
+              <div className="flex items-center justify-between gap-2">
+                <div className="flex items-center gap-2 min-w-0">
+                  <span className="text-sm font-semibold whitespace-nowrap">Rohan Vernekar</span>
+                  <span className="text-sm text-muted-foreground whitespace-nowrap">@Rohanvrnkr</span>
                 </div>
-                
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center justify-between gap-2 flex-wrap">
-                    <div className="flex items-center justify-between gap-2 mt-1 w-full">
-                      <div className="flex items-center gap-2">
-                        <span className="font-semibold text-md">Rohan Vernekar</span>
-                        <span className="text-muted-foreground text-sm">@Rohanvrnkr</span>
-                      </div>
-                      <span className="text-muted-foreground text-xs whitespace-nowrap">{post.date}</span>
-                    </div>
-                   
-                  </div>
-                  
-                </div>
-                
+                <span className="text-xs text-muted-foreground whitespace-nowrap shrink-0">{post.date}</span>
               </div>
 
-              {/* Content */}
-              <div className="space-y-2 mb-3 ml-11">
-                <h3 className="text-base font-semibold leading-snug hover:underline">
-                  {post.title}
-                </h3>
-                
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {post.excerpt}
-                </p>
+              {/* Title */}
+              <h3 className="text-base font-semibold leading-snug text-foreground group-hover:underline decoration-muted-foreground/40 underline-offset-2">
+                {post.title}
+              </h3>
 
-                {/* Tags */}
-                <div className="flex flex-wrap gap-1.5 pt-1">
-                  {post.tags.map((tag) => (
+              {/* Excerpt */}
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {post.excerpt}
+              </p>
+
+              {/* Footer */}
+              <div className="flex items-center justify-between pt-1">
+                <div className="flex flex-wrap gap-1.5">
+                  {post.tags.slice(0, 3).map((tag) => (
                     <span
                       key={tag}
-                      className="px-2 py-0.5 text-xs rounded bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+                      className="px-2.5 py-1 text-xs rounded-md bg-muted text-muted-foreground"
                     >
-                      #{tag.toLowerCase().replace(/\s+/g, '')}
+                      #{tag.toLowerCase().replace(/\s+/g, "")}
                     </span>
                   ))}
+                  {post.tags.length > 3 && (
+                    <span className="px-2.5 py-1 text-xs rounded-md bg-muted text-muted-foreground">
+                      +{post.tags.length - 3}
+                    </span>
+                  )}
                 </div>
+                <span className="flex items-center gap-1.5 text-xs text-muted-foreground shrink-0">
+                  <Clock className="w-3.5 h-3.5" />
+                  {post.readTime}
+                </span>
               </div>
             </div>
           </Link>
-
-        
         </motion.article>
       ))}
 
-      <motion.div 
-                    className="text-center pt-6"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.3 }}
-                  >
-                    <Link href="/blog">
-                      <Button variant="outline" className="gap-2 transition-colors w-full sm:w-auto">
-                        View All posts
-                        <ArrowRight className="h-4 w-4" />
-                      </Button>
-                    </Link>
-                  </motion.div>
+      <motion.div
+        className="pt-5"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3 }}
+      >
+        <Link href="/blog">
+          <Button variant="outline" className="gap-2 w-full sm:w-auto">
+            View all posts
+            <ArrowRight className="h-4 w-4" />
+          </Button>
+        </Link>
+      </motion.div>
     </div>
   );
 }
