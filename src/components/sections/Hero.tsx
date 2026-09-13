@@ -40,7 +40,6 @@ export function Hero() {
   return (
     <section className="flex flex-col items-center relative w-full max-w-4xl mx-auto animate-fade-in-up">
       <div className="w-full mt-0 sm:mt-8">
-        {/* Cover Image */}
         <motion.div
           className="w-full h-34 sm:h-48 bg-gradient-to-r from-primary/20 via-purple-500/20 to-pink-500/20 sm:rounded-t-xl relative overflow-hidden"
           initial={{ opacity: 0 }}

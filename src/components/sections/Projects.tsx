@@ -23,7 +23,7 @@ function Projects() {
                   >
                     <Link href="/projects">
                       <Button variant="outline" className="gap-2 transition-colors w-full sm:w-auto">
-                        View All Projects
+                        View all {projects.length} projects
                         <ExternalLink className="h-4 w-4" />
                       </Button>
                     </Link>

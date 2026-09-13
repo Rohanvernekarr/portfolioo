@@ -80,7 +80,7 @@ export function Footer() {
            
             <div className="flex items-center gap-2 mt-0.5">
               {/* <a
-                href="https://rohanrv.me"
+                href="https://rohan.schedulers.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-muted-foreground hover:text-primary transition hover:underline"

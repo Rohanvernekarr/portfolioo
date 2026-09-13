@@ -10,9 +10,40 @@ import RunningCat from "@/components/ui/Oneko";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Rohan Vernekar | Software Engineer",
+  metadataBase: new URL("https://rohan.schedulers.app"),
+  title: {
+    default: "Rohan Vernekar | Software Engineer",
+    template: "%s | Rohan Vernekar",
+  },
   description:
     "Rohan Vernekar is a software engineer who builds useful products and experiments with AI.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "Rohan Vernekar",
+    title: "Rohan Vernekar | Software Engineer",
+    description:
+      "Software engineer building useful products and experimenting with AI.",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Rohan Vernekar — Software Engineer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@Rohanvrnkr",
+    title: "Rohan Vernekar | Software Engineer",
+    description:
+      "Software engineer building useful products and experimenting with AI.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function RootLayout({

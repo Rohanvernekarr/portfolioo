@@ -1,4 +1,18 @@
 export const blogPosts = [
+  {
+    id: 8,
+    title: "Does AI Need to Slow Down?",
+    excerpt:
+      "I love AI and use it every day. But as models become faster, smarter, and more autonomous, I keep returning to one uncomfortable question: are we cooked?",
+    date: "Sep 13, 2026",
+    readTime: "10 min",
+    slug: "does-ai-need-to-slow-down",
+    tags: ["AI", "AI Agents", "Future of Work", "Technology"],
+    likes: 0,
+    comments: 0,
+    mediumLink: "https://medium.com/@rohanrv/does-ai-need-to-slow-down-c7cc00c0b449?sharedUserId=rohanrv",
+
+  },
    {
     id: 1,
     title: "Understanding Token Classification in NLP: NER, POS Tagging, and Chunking",
@@ -78,5 +92,5 @@ export const blogPosts = [
     likes: 31,
     comments: 8,
   },
-  
+
 ];

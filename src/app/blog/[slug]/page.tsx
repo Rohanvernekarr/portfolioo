@@ -79,15 +79,31 @@ function parseContent(content: string) {
       );
     } else if (line.startsWith('## ')) {
       elements.push(
-        <h2 key={i} className="text-3xl font-semibold mt-6 mb-3 scroll-mt-20">
+        <h2 key={i} className="text-2xl sm:text-3xl font-semibold tracking-tight mt-10 sm:mt-12 mb-4 scroll-mt-20 text-zinc-950 dark:text-zinc-50">
           {line.slice(3)}
         </h2>
       );
     } else if (line.startsWith('### ')) {
       elements.push(
-        <h3 key={i} className="text-2xl font-semibold mt-5 mb-2 scroll-mt-20">
+        <h3 key={i} className="text-xl sm:text-2xl font-semibold mt-8 mb-3 scroll-mt-20 text-zinc-950 dark:text-zinc-50">
           {line.slice(4)}
         </h3>
+      );
+    } else if (line.startsWith('> ')) {
+      elements.push(
+        <blockquote
+          key={i}
+          className="my-7 border-l-2 border-zinc-900 dark:border-zinc-100 pl-4 sm:pl-6 text-xl sm:text-2xl font-serif italic leading-relaxed text-zinc-800 dark:text-zinc-200"
+        >
+          {line.slice(2)}
+        </blockquote>
+      );
+    } else if (line.startsWith('- ')) {
+      elements.push(
+        <div key={i} className="mb-2 flex gap-3 text-base sm:text-lg leading-7 sm:leading-8 text-zinc-700 dark:text-zinc-300">
+          <span aria-hidden="true" className="mt-[0.7rem] h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-500" />
+          <p>{line.slice(2)}</p>
+        </div>
       );
     } else if (line.trim() === '') {
       elements.push(<div key={i} className="h-2" />);
@@ -105,7 +121,7 @@ function parseContent(content: string) {
       };
 
       elements.push(
-        <p key={i} className="mb-4 leading-relaxed text-zinc-700 dark:text-zinc-300">
+        <p key={i} className="mb-5 text-base sm:text-lg leading-7 sm:leading-8 text-zinc-700 dark:text-zinc-300">
           {processInlineCode(line)}
         </p>
       );
@@ -157,7 +173,7 @@ export default function BlogPostPage() {
   };
 
   return (
-    <article className="max-w-4xl mx-auto px-6 py-16">
+    <article className="mx-auto w-full max-w-3xl px-4 py-10 sm:px-6 sm:py-16 lg:py-20">
       <button
         onClick={() => router.back()}
         className="flex items-center text-sm font-medium text-muted-foreground hover:text-foreground transition mb-8"
@@ -166,13 +182,13 @@ export default function BlogPostPage() {
         Go back
       </button>
 
-      <header className="mb-8 space-y-4">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
+      <header className="mb-10 space-y-5 border-b border-zinc-200 pb-8 dark:border-zinc-800 sm:mb-12 sm:pb-10">
+        <h1 className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl md:leading-[1.1]">
           {post.title}
         </h1>
 
         <div className="flex items-center justify-between flex-wrap gap-4">
-          <div className="flex items-center gap-4 text-sm text-muted-foreground">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
             <span className="flex items-center gap-1">
               <Calendar className="h-4 w-4" />
               {post.date}
@@ -232,12 +248,12 @@ export default function BlogPostPage() {
         </div>
       )}
     
-      <div className="prose prose-zinc dark:prose-invert max-w-none">
+      <div className="max-w-none break-words">
         {parseContent(post.content)}
       </div>
 
       <footer className="mt-12 pt-8 border-t border-zinc-200 dark:border-zinc-800">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col items-stretch justify-between gap-3 sm:flex-row sm:items-center">
           <Button variant="outline" onClick={() => router.back()}>
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back

@@ -8,6 +8,188 @@ export interface BlogPost {
 }
 
 export const blogPosts: Record<string, BlogPost> = {
+  "does-ai-need-to-slow-down": {
+    title: "Does AI Need to Slow Down?",
+    date: "September 13, 2026",
+    readTime: "10 min read",
+    tags: ["AI", "AI Agents", "Future of Work", "Technology"],
+    mediumLink: "https://medium.com/@rohanrv/does-ai-need-to-slow-down-c7cc00c0b449?sharedUserId=rohanrv",
+    content: `
+I love AI. I use it every day, whether it is for my job or my own projects.
+
+And maybe that is exactly why I have started thinking about this more seriously.
+
+AI is moving ridiculously fast. You see a new model or feature, you are impressed for a few days, and then somehow it just becomes normal. A year ago, something felt impossible. Today, you are annoyed if the AI takes 30 seconds to do it.
+
+As a developer, I have watched this happen very closely because it is changing the way I work.
+
+And lately I have had this question in my head:
+
+> Should they slow down?
+
+By “they,” I do not mean one particular company or one group of researchers. I am talking about the AI race in general. Everyone seems to be trying to build something smarter, faster, and more autonomous than everyone else.
+
+And I am not sure anyone can actually afford to stop.
+
+## It Started with Autocomplete
+
+My experience with AI started pretty simply.
+
+It helped complete code. Sometimes it saved me from Googling something. Sometimes it generated a function I did not feel like writing myself.
+
+It was useful, but I was still clearly the one doing the work.
+
+Then it got better.
+
+Instead of writing a function, I could explain what I wanted. Then, instead of explaining a function, I could explain a feature. Eventually, I could give it an error and ask it to figure out what went wrong.
+
+Now we are reaching the point where I can give AI access to a project and basically say: understand this codebase, figure out what is wrong, fix it, and test whether your fix works.
+
+That is a pretty massive change when you actually think about it.
+
+Not long ago, I thought this was simply what the future of development would look like. Developers would still be developers. We would just write less code.
+
+Our job would become understanding the system, making decisions, and giving AI good instructions. Basically, we would become really good at prompting.
+
+But I am not even sure about that anymore.
+
+## Because There Are Agents
+
+This is the part I find much more interesting.
+
+If AI can understand a goal, look through a project, break the problem into smaller tasks, write the code, run it, see an error, fix the error, and keep going—why do I need to keep prompting it?
+
+Maybe I just tell it what I want at the beginning.
+
+And if agents keep improving, maybe even that interaction changes.
+
+Imagine an agent working on a project that can notice an issue itself, understand what is causing it, decide what needs to change, make the change, test it, and move on.
+
+At that point, we are not just automating coding anymore. We are automating parts of the job that we assumed would still belong to the developer.
+
+That is what I find strange about all of this. Every time AI gets better, we move the line.
+
+When it started writing code, the answer was, “Developers will still need to design the system.” Then AI got better at understanding systems, so the answer became, “Developers will still need to prompt it.” Then agents arrived. Now the answer is, “Developers will manage the agents.”
+
+Okay. But what happens when the agents get better at managing themselves?
+
+I do not know. And I do not think anyone really does.
+
+## I Am Not Saying Developers Are Finished
+
+I do not believe we are going to wake up one morning and suddenly nobody needs developers anymore. That is way too simplistic.
+
+Software development is not just producing code. There are users, business decisions, trade-offs, security, architecture, weird production problems, and a lot of context that is not sitting neatly inside a repository.
+
+But I also do not like the opposite argument that says, “AI is just another tool.”
+
+Technically, yes. But this is a tool that is slowly learning to use the tools.
+
+That is a pretty important difference.
+
+If it can write the code, use the terminal, read documentation, inspect logs, run tests, and correct its own mistakes, then the role of the person sitting in front of it is obviously going to change.
+
+How much? That is the part I am trying to understand.
+
+## And Everyone Keeps Pushing
+
+What is interesting is that nobody seems to have the option of simply saying, “This is good enough.”
+
+Someone builds a smarter model. Someone else makes one faster. Another makes it cheaper. Then someone gives it memory. Someone gives it tools. Someone makes it use a computer. Someone makes it work for hours instead of minutes. Someone tries to make it more autonomous.
+
+Then everyone starts working on the next thing.
+
+And as someone who loves technology, I enjoy watching it happen. Whenever something new comes out, I am probably going to try it.
+
+But sometimes I look at how quickly all of this is progressing and think:
+
+> What exactly are they racing toward?
+
+There are already people close to this technology saying that the kind of general intelligence we have talked about for years is not that far away—or may already exist in some form.
+
+Maybe they are right. Maybe they are exaggerating.
+
+I am not particularly interested in arguing about the definition of AGI. If AI eventually becomes capable of independently doing a huge amount of useful intellectual work, does it really matter what we decided to call it?
+
+The capability matters more than the name.
+
+## So Should They Actually Slow Down?
+
+My first thought is yes.
+
+Not stop. Just slow down.
+
+Give people some time to understand what is happening.
+
+AI development is moving much faster than everything around it. Education cannot change that quickly. Governments definitely cannot. Companies are still trying to figure out how their employees should use these tools. And a lot of people are still trying to understand what AI means for their careers.
+
+Maybe giving everyone a little more time would not be such a bad thing.
+
+But then I think about what slowing down actually means.
+
+Say one AI company decides to take it easy for a year. Its competitors probably will not. Say companies in one country decide to slow down. Another country might decide this is the perfect opportunity to move faster.
+
+That is the problem.
+
+Everyone might benefit from having more time, but nobody wants to be the one who gives everyone else that time.
+
+If advanced AI ends up being as economically and strategically important as people expect, being first matters too much.
+
+So even if some of the people building these systems privately think things are moving too quickly, what are they supposed to do? Stop while everyone else continues?
+
+I do not know if that is realistic.
+
+## Maybe None of This Turns Out as Badly as We Think
+
+There is obviously another possibility: maybe we are worrying too much.
+
+People have worried about technology replacing them for a very long time. Computers changed jobs. The internet changed jobs. Automation killed some types of work and created completely new ones.
+
+AI could do the same thing.
+
+Maybe one developer with AI will eventually be able to build what used to require twenty developers. That sounds scary if you are thinking about those twenty jobs.
+
+But it is also incredible if you are the person who has an idea and can suddenly build something that would have previously required millions of dollars and a whole team.
+
+The same thing could happen outside software. Research could move faster. Education could become much more personalized. Small companies could compete with huge ones. People who do not know how to code could build software.
+
+There is a version of this future that is genuinely amazing.
+
+I want that version.
+
+I just do not know what the transition to it looks like. And I think that is the part we do not talk about enough.
+
+## That Is the Contradiction
+
+The funny thing about writing all of this is that I am not anti-AI at all.
+
+Quite the opposite.
+
+If a better model comes out tomorrow, I am using it. If an agent can do something in ten minutes that would take me three hours, I am not going to spend three hours doing it manually just to prove that I can.
+
+That would make no sense.
+
+I want better AI. I want better coding agents. I want to see what becomes possible when these systems get genuinely good.
+
+But at the same time, every big improvement makes me think a little more about where this ends.
+
+A few years ago, AI helped us write code. Then we started asking it to write the code. Now we are building agents that can figure out how to do the work themselves.
+
+And we are still pushing.
+
+Maybe that is completely fine. Maybe this becomes one of the best things we have ever built.
+
+Or maybe we are moving faster than our ability to understand what we are building.
+
+I really do not know.
+
+And I think that is why I keep coming back to the same question.
+
+> Should they slow down?
+
+The problem is, even if the answer is yes… who is going to go first?
+    `,
+  },
   "building-scalable-fullstack-apps-nextjs": {
     title: "Building Scalable Full-Stack Applications with Next.js",
     date: "November 15, 2025",

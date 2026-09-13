@@ -34,9 +34,7 @@ export function BlogPosts() {
               </div>
             </div>
 
-            {/* Body */}
             <div className="flex-1 min-w-0 space-y-2">
-              {/* Author row */}
               <div className="flex items-center justify-between gap-2">
                 <div className="flex items-center gap-2 min-w-0">
                   <span className="text-sm font-semibold whitespace-nowrap">Rohan Vernekar</span>
@@ -45,20 +43,17 @@ export function BlogPosts() {
                 <span className="text-xs text-muted-foreground whitespace-nowrap shrink-0">{post.date}</span>
               </div>
 
-              {/* Title */}
               <h3 className="text-base font-semibold leading-snug text-foreground group-hover:underline decoration-muted-foreground/40 underline-offset-2">
                 {post.title}
               </h3>
 
-              {/* Excerpt */}
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {post.excerpt}
               </p>
 
-              {/* Footer */}
               <div className="flex items-center justify-between pt-1">
                 <div className="flex flex-wrap gap-1.5">
-                  {post.tags.slice(0, 3).map((tag) => (
+                  {post.tags.map((tag) => (
                     <span
                       key={tag}
                       className="px-2.5 py-1 text-xs rounded-md bg-muted text-muted-foreground"
@@ -66,11 +61,6 @@ export function BlogPosts() {
                       #{tag.toLowerCase().replace(/\s+/g, "")}
                     </span>
                   ))}
-                  {post.tags.length > 3 && (
-                    <span className="px-2.5 py-1 text-xs rounded-md bg-muted text-muted-foreground">
-                      +{post.tags.length - 3}
-                    </span>
-                  )}
                 </div>
                 <span className="flex items-center gap-1.5 text-xs text-muted-foreground shrink-0">
                   <Clock className="w-3.5 h-3.5" />
@@ -83,14 +73,14 @@ export function BlogPosts() {
       ))}
 
       <motion.div
-        className="pt-5"
+        className="flex justify-center pt-5"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
       >
         <Link href="/blog">
           <Button variant="outline" className="gap-2 w-full sm:w-auto">
-            View all posts
+            View all {blogPosts.length} posts
             <ArrowRight className="h-4 w-4" />
           </Button>
         </Link>

@@ -1,10 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Briefcase, ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
+import { Briefcase, ChevronDown, ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 
 const typeColors: Record<string, string> = {
   "Full Time":  "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300",
@@ -114,19 +112,6 @@ export function Experience() {
       {experiences.map((exp, index) => (
         <ExperienceCard key={exp.id} exp={exp} index={index} />
       ))}
-      <motion.div
-        className="pt-4"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3 }}
-      >
-        <Link href="/about">
-          <Button variant="outline" className="gap-2 w-full sm:w-auto">
-            See all experience
-            <ArrowRight className="h-4 w-4" />
-          </Button>
-        </Link>
-      </motion.div>
     </div>
   );
 }
