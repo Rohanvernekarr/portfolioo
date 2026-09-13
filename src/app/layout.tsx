@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "sonner";
 import { Footer } from "@/components/layout/Footer";
+import { BackgroundTypography } from "@/components/layout/BackgroundTypography";
 import RunningCat from "@/components/ui/Oneko";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -29,11 +30,15 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <RunningCat startPos={{ x: 380, y: 250 }} />
-          <div className="relative flex min-h-screen flex-col bg-gradient-to-br from-background via-background to-muted/30">
-            <main className="flex-1 ">
+          <div className="relative flex min-h-screen flex-col overflow-hidden bg-gradient-to-br from-background via-background to-muted/30">
+            <BackgroundTypography />
+
+            <main className="relative z-10 flex-1">
               {children}
             </main>
-            <Footer />
+            <div className="relative z-10">
+              <Footer />
+            </div>
           </div>
           <Toaster />
         </ThemeProvider>

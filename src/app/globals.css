@@ -200,6 +200,39 @@ html {
     animation: fadeInUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+/* Oversized decorative words behind page content */
+.background-word {
+    display: block;
+    color: transparent;
+    font-size: clamp(3.5rem, 15vw, 12rem);
+    font-weight: 900;
+    line-height: 0.72;
+    letter-spacing: -0.09em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    will-change: transform;
+    -webkit-text-stroke: 2px oklch(0.08 0 0 / 0.095);
+    text-stroke: 2px oklch(0.08 0 0 / 0.095);
+}
+.dark .background-word {
+    -webkit-text-stroke-color: oklch(1 0 0 / 0.075);
+    text-stroke-color: oklch(1 0 0 / 0.075);
+}
+.background-word-solid {
+    color: oklch(0.08 0 0 / 0.04);
+    -webkit-text-stroke: 0;
+    text-stroke: 0;
+}
+.dark .background-word-solid {
+    color: oklch(1 0 0 / 0.035);
+}
+.typewriter-caret {
+    display: inline-block;
+    margin-left: 0.04em;
+    font-weight: 400;
+    transform: translateY(-0.04em);
+}
+
 /* ── Shimmer text (for name) ── */
 @keyframes shimmer {
     0%   { background-position: -200% center; }
