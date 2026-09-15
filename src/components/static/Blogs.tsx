@@ -57,7 +57,7 @@ But I am not even sure about that anymore.
 
 This is the part I find much more interesting.
 
-If AI can understand a goal, look through a project, break the problem into smaller tasks, write the code, run it, see an error, fix the error, and keep going—why do I need to keep prompting it?
+If AI can understand a goal, look through a project, break the problem into smaller tasks, write the code, run it, see an error, fix the error, and keep going-why do I need to keep prompting it?
 
 Maybe I just tell it what I want at the beginning.
 
@@ -105,7 +105,7 @@ But sometimes I look at how quickly all of this is progressing and think:
 
 > What exactly are they racing toward?
 
-There are already people close to this technology saying that the kind of general intelligence we have talked about for years is not that far away—or may already exist in some form.
+There are already people close to this technology saying that the kind of general intelligence we have talked about for years is not that far away-or may already exist in some form.
 
 Maybe they are right. Maybe they are exaggerating.
 
@@ -287,10 +287,10 @@ Always use the \`Image\` component. I learned this when my landing page was load
 \`\`\`typescript
 import Image from 'next/image';
 
-<Image 
-  src="/hero.jpg" 
-  alt="Hero" 
-  width={1200} 
+<Image
+  src="/hero.jpg"
+  alt="Hero"
+  width={1200}
   height={600}
   priority  // For above-the-fold images
 />
@@ -359,7 +359,7 @@ async function semanticSearch(query: string, documents: string[]) {
     model: "text-embedding-3-small",
     input: query,
   });
-  
+
   // Compare with pre-computed document embeddings
   // Return most similar results
 }
@@ -393,17 +393,17 @@ async function generateProductDescription(productName: string, features: string[
   const completion = await openai.chat.completions.create({
     model: "gpt-4",
     messages: [
-      { 
-        role: "system", 
-        content: "You write compelling, concise product descriptions." 
+      {
+        role: "system",
+        content: "You write compelling, concise product descriptions."
       },
-      { 
-        role: "user", 
-        content: \`Product: \${productName}\nFeatures: \${features.join(', ')}\` 
+      {
+        role: "user",
+        content: \`Product: \${productName}\nFeatures: \${features.join(', ')}\`
       }
     ],
   });
-  
+
   return completion.choices[0].message.content;
 }
 \`\`\`
@@ -455,10 +455,10 @@ Same prompt? Don't call the API again. Use Redis or any cache:
 async function getCachedAIResponse(prompt: string) {
   const cached = await redis.get(\`ai:\${prompt}\`);
   if (cached) return JSON.parse(cached);
-  
+
   const response = await openai.chat.completions.create({...});
   await redis.set(\`ai:\${prompt}\`, JSON.stringify(response), 'EX', 3600);
-  
+
   return response;
 }
 \`\`\`
@@ -546,7 +546,7 @@ function DataTable({ items }) {
   const sortedItems = useMemo(() => {
     return items.sort((a, b) => a.value - b.value);
   }, [items]);
-  
+
   return <Table data={sortedItems} />;
 }
 \`\`\`
@@ -561,7 +561,7 @@ This one's subtle but important. I was passing callbacks to child components, an
 function Parent() {
   // ❌ New function every render
   const handleClick = () => console.log('clicked');
-  
+
   return <Child onClick={handleClick} />; // Child re-renders every time
 }
 
@@ -570,7 +570,7 @@ function Parent() {
   const handleClick = useCallback(() => {
     console.log('clicked');
   }, []); // Only created once
-  
+
   return <Child onClick={handleClick} />; // Child doesn't re-render unnecessarily
 }
 \`\`\`
@@ -702,7 +702,7 @@ const onClick = useCallback(() => handleClick(id), [id]);
 
 ## The Most Important Lesson
 
-Don't optimize prematurely. Seriously. I wasted weeks over-optimizing a form that was already fast. 
+Don't optimize prematurely. Seriously. I wasted weeks over-optimizing a form that was already fast.
 
 My process now:
 1. Build the feature
@@ -750,8 +750,8 @@ It was late at night. I was stuck on a tiny bug in a project that didn’t even 
 
 But I remember the exact moment it finally worked.
 
-That sudden rush?  
-That tiny spark of “Ohhh, I made this work”?  
+That sudden rush?
+That tiny spark of “Ohhh, I made this work”?
 Yeah… that was the moment.
 
 I didn’t realize it then, but that feeling is what made me fall in love with building things.
@@ -760,13 +760,13 @@ I didn’t realize it then, but that feeling is what made me fall in love with b
 
 At first, I used to see programming as just syntax, errors, and tutorials I barely understood. But slowly…
 
-### Code started feeling like problem-solving  
+### Code started feeling like problem-solving
 Not typing. Not memorizing. Just figuring things out logically.
 
-### Debugging felt like detective work  
+### Debugging felt like detective work
 You follow clues. You eliminate suspects. And in the end, you catch the culprit.
 
-### Projects felt like building Lego  
+### Projects felt like building Lego
 Piece by piece, things started coming together.
 
 This shift changed everything for me.
@@ -775,8 +775,8 @@ This shift changed everything for me.
 
 I still remember the first project I actually shipped - not perfect, not pretty, but real.
 
-Maybe it was a small webpage.  
-Maybe a simple backend.  
+Maybe it was a small webpage.
+Maybe a simple backend.
 Maybe a React component that finally rendered correctly.
 
 Whatever it was, it made me think:
@@ -789,53 +789,53 @@ That blew my mind.
 
 Let’s be honest. Tech isn’t always glamorous.
 
-### Burnout happens  
+### Burnout happens
 Your brain gets fried from bugs and deadlines.
 
-### Impostor syndrome hits  
+### Impostor syndrome hits
 You see someone build something insane in 2 hours and wonder why you struggle.
 
-### Learning feels endless  
+### Learning feels endless
 You finish one topic and suddenly there are 12 more frameworks waiting.
 
 But then comes the breakthrough - that one moment where everything clicks again.
 
-And suddenly…  
+And suddenly…
 You’re back in love with it.
 
 ## What Tech Taught Me About Myself
 
 This part surprised me the most.
 
-### I love solving problems  
+### I love solving problems
 Even outside coding - I approach everything like a bug that can be fixed.
 
-### I’m more patient than I thought  
+### I’m more patient than I thought
 Hours of debugging can do that to you.
 
-### I enjoy creating things  
+### I enjoy creating things
 Seeing an idea go from your head → your code → your screen? Addictive.
 
-### I like challenges  
+### I like challenges
 Even when I complain about them.
 
 ## The Realisation That Changed My Journey
 
 The moment I truly understood was when I started choosing code even when nobody was forcing me.
 
-Not for marks.  
-Not for a job.  
+Not for marks.
+Not for a job.
 Not for an assignment.
 
 Just because I *wanted* to build something.
 
-That’s when tech stopped being a skill…  
+That’s when tech stopped being a skill…
 and became a part of who I am.
 
 ## My Honest Take
 
-If you’ve ever stayed up late fixing a bug you could’ve solved tomorrow…  
-If you’ve ever felt that little high when your code finally runs…  
+If you’ve ever stayed up late fixing a bug you could’ve solved tomorrow…
+If you’ve ever felt that little high when your code finally runs…
 If you’ve ever built something small and felt weirdly proud…
 
 Then yeah - you’re already in love with tech.
@@ -936,10 +936,10 @@ They represent real-world information naturally, such as usernames and passwords
 
 ## Comparing the Data Structures
 
-- Lists and tuples both maintain order  
-- Lists are mutable, tuples are immutable  
-- Sets remove duplicates but don’t preserve order  
-- Dictionaries store structured data using keys  
+- Lists and tuples both maintain order
+- Lists are mutable, tuples are immutable
+- Sets remove duplicates but don’t preserve order
+- Dictionaries store structured data using keys
 
 Each structure solves a different type of problem.
 
@@ -948,10 +948,10 @@ Each structure solves a different type of problem.
 
 Instead of memorizing rules, think about your data:
 
-- Use lists when data changes often  
-- Use tuples when data should stay fixed  
-- Use sets when uniqueness matters  
-- Use dictionaries when working with key-value information  
+- Use lists when data changes often
+- Use tuples when data should stay fixed
+- Use sets when uniqueness matters
+- Use dictionaries when working with key-value information
 
 
 ## Final Thoughts
@@ -964,7 +964,7 @@ Choosing the right data structure early will save you time, reduce bugs, and mak
 
 Mastering these fundamentals is an important step in every Python programmer’s journey.
 
-Happy Coding 
+Happy Coding
 
   `,
 },
@@ -1049,7 +1049,7 @@ Lowercasing converts all characters to lowercase so that words like “Love” a
 
 Example:
 
-Before: “I Love NLP”  
+Before: “I Love NLP”
 After: “i love nlp”
 
 This reduces unnecessary variations in the dataset.
@@ -1061,7 +1061,7 @@ Punctuation marks such as commas, exclamation marks, and question marks are ofte
 
 Example:
 
-Before: “This phone is amazing!!!”  
+Before: “This phone is amazing!!!”
 After: “This phone is amazing”
 
 
@@ -1112,8 +1112,8 @@ Lemmatization converts words to their correct dictionary base form.
 
 Examples:
 
-running → run  
-better → good  
+running → run
+better → good
 studies → study
 
 Lemmatization is more accurate than stemming but requires more computational resources.
@@ -1133,7 +1133,7 @@ Example:
 
 Some NLP pipelines convert emojis into words:
 
-😍 → love  
+😍 → love
 🔥 → awesome
 
 
@@ -1174,7 +1174,7 @@ Bag of Words represents text by counting how many times each word appears.
 
 Example sentences:
 
-“I love NLP”  
+“I love NLP”
 “I love machine learning”
 
 Vocabulary:
@@ -1183,7 +1183,7 @@ Vocabulary:
 
 Vector representation:
 
-Sentence 1 → [1, 1, 1, 0, 0]  
+Sentence 1 → [1, 1, 1, 0, 0]
 Sentence 2 → [1, 1, 0, 1, 1]
 
 Advantages:
@@ -1263,14 +1263,14 @@ The NLP pipeline transforms raw text into structured data that machine learning 
 
 Pipeline flow:
 
-Raw Text  
-↓  
-Text Cleaning  
-↓  
-Text Preprocessing  
-↓  
-Feature Extraction  
-↓  
+Raw Text
+↓
+Text Cleaning
+↓
+Text Preprocessing
+↓
+Feature Extraction
+↓
 Machine Learning Model
 
 
@@ -1368,23 +1368,23 @@ For example, in the sentence:
 
 NER identifies the following entities:
 
-Elon Musk → Person  
-SpaceX → Organization  
+Elon Musk → Person
+SpaceX → Organization
 California → Location
 
 NER systems often use something called the BIO tagging format.
 
 BIO stands for:
 
-B – Beginning of an entity  
-I – Inside an entity  
+B – Beginning of an entity
+I – Inside an entity
 O – Outside an entity
 
 For example:
 
-Barack → B-PER  
-Obama → I-PER  
-visited → O  
+Barack → B-PER
+Obama → I-PER
+visited → O
 India → B-LOC
 
 This tagging approach helps models detect multi-word entities such as "Barack Obama".
@@ -1410,11 +1410,11 @@ Consider the sentence:
 
 POS tagging would assign the following labels:
 
-The → Determiner  
-cat → Noun  
-sat → Verb  
-on → Preposition  
-the → Determiner  
+The → Determiner
+cat → Noun
+sat → Verb
+on → Preposition
+the → Determiner
 mat → Noun
 
 Another example is:
@@ -1423,9 +1423,9 @@ Another example is:
 
 Here, the system identifies:
 
-She → Pronoun  
-reads → Verb  
-books → Noun  
+She → Pronoun
+reads → Verb
+books → Noun
 daily → Adverb
 
 POS tagging helps NLP systems understand sentence structure and grammar.
@@ -1445,8 +1445,8 @@ For example, consider the sentence:
 
 Chunking identifies groups like:
 
-The quick brown fox → Noun Phrase  
-jumps → Verb Phrase  
+The quick brown fox → Noun Phrase
+jumps → Verb Phrase
 over the lazy dog → Prepositional Phrase
 
 Another example is:
