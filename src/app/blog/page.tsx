@@ -2,23 +2,20 @@
 
 import Link from "next/link";
 import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
-import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { blogPosts } from "@/components/static/Blog";
 
 export default function BlogPage() {
-  const router = useRouter();
-
   return (
     <div className="max-w-5xl mx-auto px-6 py-16 space-y-12">
     
-      <button
-        onClick={() => router.back()}
+      <Link
+        href="/"
         className="flex items-center text-sm font-medium text-muted-foreground hover:text-foreground transition mb-4"
       >
         <ArrowLeft className="h-4 w-4 mr-1" />
-        Go back
-      </button>
+        Back to home
+      </Link>
 
       <header className="text-center space-y-4">
         <h1 className="text-2xl sm:text-2xl font-serif tracking-tight">

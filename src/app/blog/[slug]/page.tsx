@@ -1,6 +1,7 @@
 "use client";
 
 import { useParams, useRouter } from "next/navigation";
+import Link from "next/link";
 import { ArrowLeft, Calendar, Clock, Share2, Copy, Check, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
@@ -174,13 +175,13 @@ export default function BlogPostPage() {
 
   return (
     <article className="mx-auto w-full max-w-3xl px-4 py-10 sm:px-6 sm:py-16 lg:py-20">
-      <button
-        onClick={() => router.back()}
+      <Link
+        href="/blog"
         className="flex items-center text-sm font-medium text-muted-foreground hover:text-foreground transition mb-8"
       >
         <ArrowLeft className="h-4 w-4 mr-1" />
-        Go back
-      </button>
+        Back to blogs
+      </Link>
 
       <header className="mb-10 space-y-5 border-b border-zinc-200 pb-8 dark:border-zinc-800 sm:mb-12 sm:pb-10">
         <h1 className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl md:leading-[1.1]">
@@ -254,9 +255,11 @@ export default function BlogPostPage() {
 
       <footer className="mt-12 pt-8 border-t border-zinc-200 dark:border-zinc-800">
         <div className="flex flex-col items-stretch justify-between gap-3 sm:flex-row sm:items-center">
-          <Button variant="outline" onClick={() => router.back()}>
-            <ArrowLeft className="h-4 w-4 mr-2" />
-            Back
+          <Button asChild variant="outline">
+            <Link href="/blog">
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              Back to blogs
+            </Link>
           </Button>
 
           <Button variant="outline" onClick={handleShare}>
