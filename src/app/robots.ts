@@ -12,6 +12,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
+    sitemap: "https://rohan.schedulers.app/sitemap.xml",
     host: "https://rohan.schedulers.app",
   };
 }

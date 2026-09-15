@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   },
   description:
     "Rohan Vernekar is a software engineer who builds useful products and experiments with AI.",
+  verification: {
+    google: "14XXF0GDwUH4gemyOudOkdHdYBlorp12bZcjsQ1dgRE",
+  },
   alternates: {
     canonical: "/",
   },
